@@ -1,0 +1,11 @@
+{
+  "**/*.{css,md,json}": [
+    "prettier --write --config ./.prettierrc"
+  ],
+  "**/*.{js,jsx,ts,tsx}": [
+    "prettier --write --config ./.prettierrc",
+    "bash -c tsc --noemit",
+    "eslint",
+    "jest --findRelatedTests"
+  ]
+}
