@@ -1,0 +1,41 @@
+# This docker-compose file is designed for development purposes only
+
+version: '3.8'
+
+services:
+  db:
+    restart: always
+    image: postgres:15.3-alpine
+    env_file:
+      - .envs/.postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+  backend:
+    build:
+      context: backend
+      dockerfile: local.Dockerfile
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    env_file:
+      - .envs/.django
+      - .envs/.postgres
+    command: sh -c "python manage.py migrate &&
+                    python manage.py runserver 0.0.0.0:8000"
+
+  frontend:
+    build:
+      context: frontend
+      dockerfile: local.Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+
+volumes:
+  postgres_data:

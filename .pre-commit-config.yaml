@@ -1,0 +1,31 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: check-case-conflict
+      - id: check-json
+      - id: check-yaml
+      - id: debug-statements
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: requirements-txt-fixer
+      - id: trailing-whitespace
+
+  - repo: https://github.com/myint/docformatter
+    rev: v1.7.0
+    hooks:
+      - id: docformatter
+        args: [ --in-place ]
+
+  - repo: local
+    hooks:
+      - id: lint
+        name: lint
+        entry: bash -c 'make lint'
+        language: system
+        require_serial: true
+      - id: frontcheck
+        name: frontcheck
+        entry: bash -c 'make frontcheck'
+        language: system
+        require_serial: true
