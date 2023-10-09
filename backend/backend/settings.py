@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "users",
 ]
 
 MIDDLEWARE = [
@@ -89,6 +90,8 @@ AUTH_PASSWORD_VALIDATORS = [
         "OPTIONS": {"min_length": 8},
     },
 ]
+
+AUTH_USER_MODEL = "users.User"
 
 LANGUAGE_CODE = "en-us"
 
