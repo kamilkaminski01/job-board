@@ -1,4 +1,4 @@
-.PHONY: build run recreate superuser check frontcheck lint migrations migrate clear
+.PHONY: build run recreate superuser initial-data check frontcheck lint migrations migrate clear
 
 build:
 	docker compose build
@@ -11,6 +11,9 @@ recreate:
 
 superuser:
 	docker compose run --rm backend python manage.py createsuperuser
+
+initial-data:
+	docker compose run --rm backend python manage.py initialize_data
 
 check:
 	docker compose run --rm backend isort --check-only .
