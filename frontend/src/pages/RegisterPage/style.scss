@@ -1,0 +1,23 @@
+@import 'utils/variables.scss';
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+
+  .register-form__fields-wrapper {
+    display: flex;
+    gap: 1em;
+
+    width: 100%;
+  }
+
+  .register-form__checkbox {
+    margin-right: auto;
+
+    .checkbox__terms-link {
+      color: $primary-color;
+    }
+  }
+}

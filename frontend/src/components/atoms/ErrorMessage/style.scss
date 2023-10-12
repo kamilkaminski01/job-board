@@ -1,0 +1,9 @@
+@import 'utils/variables.scss';
+
+.error-message {
+  padding-left: 0.375em;
+  margin-top: 0.375em;
+
+  font-size: 0.75em;
+  color: $error-color;
+}

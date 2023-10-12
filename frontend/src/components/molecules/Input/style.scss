@@ -1,0 +1,75 @@
+@import 'utils/variables.scss';
+
+.input-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  .input-wrapper__input {
+    width: 100%;
+    padding: 0 1em;
+
+    line-height: 2.5em;
+    font-size: 1em;
+    font-family: inherit;
+    color: $carbon;
+
+    border: 1px solid $moon;
+    border-radius: 3px;
+
+    &:focus {
+      outline: 0;
+      border-color: $primary-color;
+
+      & + .input-wrapper__label {
+        @extend .input-wrapper__label--transform;
+        color: $primary-color;
+      }
+    }
+  }
+
+  .input-wrapper__input--filled + .input-wrapper__label {
+    @extend .input-wrapper__label--transform;
+  }
+
+  .input-wrapper__input--required ~ .input-wrapper__label::after {
+    content: '*';
+
+    position: relative;
+    left: 1px;
+
+    color: $error-color;
+  }
+
+  .input-wrapper__input--invalid {
+    border-color: $error-color !important;
+
+    & + .input-wrapper__label {
+      color: $error-color !important;
+    }
+  }
+
+  .input-wrapper__label {
+    position: absolute;
+
+    top: 0.25em;
+    left: 1.3em;
+
+    line-height: 2.5em;
+    font-size: 0.875em;
+    color: $devil;
+
+    transition: 300ms all;
+  }
+
+  .input-wrapper__label--transform {
+    top: -0.625em;
+    left: 0.625em;
+    padding: 0 0.375em;
+
+    line-height: 1.25em;
+    font-size: 0.75em;
+
+    background: $snow;
+  }
+}

@@ -1,0 +1,23 @@
+@import 'utils/variables.scss';
+
+.btn {
+  height: fit-content;
+  padding: 0.625em 1.25em;
+
+  color: $snow;
+  font-size: 1.125em;
+  background-color: $primary-color;
+
+  border: 0;
+  border-radius: 2px;
+
+  transition: 0.15s background-color ease-in;
+
+  &:hover {
+    background-color: $primary-color--light;
+  }
+
+  &:disabled {
+    background-color: $moon;
+  }
+}
