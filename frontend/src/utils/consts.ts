@@ -13,7 +13,9 @@ export const ENDPOINTS = {
 export const PATHS = {
   home: '/',
   login: '/login',
-  register: '/register'
+  register: '/register',
+  profile: '/profile',
+  settings: '/settings'
 }
 
 export const LOCAL_STORAGE = {

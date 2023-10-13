@@ -28,7 +28,7 @@ const useAuth = () => {
       localStorage.setItem(LOCAL_STORAGE.refreshToken, response.data.refresh)
 
       loginContext()
-      navigate(PATHS.home)
+      navigate(PATHS.profile)
 
       return { succeed: true }
     } catch (error) {

@@ -7,6 +7,9 @@ import LoginPage from './pages/LoginPage'
 import ProtectedRoutes from './components/atoms/ProtectedRoutes'
 import AuthLayout from './components/atoms/AuthLayout'
 import RegisterPage from './pages/RegisterPage'
+import SharedLayout from './components/atoms/SharedLayout'
+import ProfilePage from './pages/ProfilePage'
+import SettingsPage from './pages/SettingsPage'
 
 function App() {
   return (
@@ -17,8 +20,13 @@ function App() {
           <Route path={PATHS.register} element={<RegisterPage />} />
         </Route>
 
-        <Route element={<ProtectedRoutes />}>
+        <Route element={<SharedLayout />}>
           <Route path={PATHS.home} element={<HomePage />} />
+
+          <Route element={<ProtectedRoutes />}>
+            <Route path={PATHS.profile} element={<ProfilePage />} />
+            <Route path={PATHS.settings} element={<SettingsPage />} />
+          </Route>
         </Route>
       </Routes>
     </div>

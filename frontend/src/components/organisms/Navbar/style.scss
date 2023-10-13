@@ -1,0 +1,44 @@
+@import 'utils/variables.scss';
+
+nav {
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  top: 0;
+  width: 100%;
+  height: $navbar-height;
+  padding: 1.125em 1.5em;
+
+  color: $carbon;
+
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 1px 10px 0 #0000001a;
+
+  z-index: 100;
+
+  .nav__brand {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav__menu {
+    display: flex;
+    align-items: center;
+    gap: 1.25em;
+
+    .nav__links {
+      display: flex;
+      gap: 1.5em;
+
+      padding-right: 1.25em;
+
+      border-right: 1px solid $moon;
+    }
+
+    .nav__btn {
+      padding: 0.5em 1.5em;
+    }
+  }
+}

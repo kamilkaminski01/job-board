@@ -1,0 +1,62 @@
+@import 'utils/variables.scss';
+
+.nav-dropdown {
+  position: relative;
+
+  .nav-dropdown__header {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+
+    user-select: none;
+    cursor: pointer;
+  }
+
+  .nav-dropdown__menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+
+    top: 4.2em;
+    right: -0.5em;
+    width: 15em;
+    padding: 1.5em 0 1em 0;
+
+    font-size: 0.875em;
+    background-color: $snow;
+
+    border-radius: 0.5em;
+    box-shadow: 0 0 8px 8px #0000000d;
+
+    & > * {
+      padding: 0 1em;
+    }
+
+    .nav-dropdown__userinfo {
+      display: flex;
+      flex-direction: column;
+
+      .userinfo__label {
+        color: $devil;
+      }
+    }
+
+    .nav-dropdown__links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+
+      padding-top: 0.75em;
+      padding-bottom: 0.75em;
+      margin: 0.75em 0;
+
+      border-top: 1px solid $fog;
+      border-bottom: 1px solid $fog;
+    }
+
+    .nav-dropdown__logout {
+      color: $error-color;
+      cursor: pointer;
+    }
+  }
+}
