@@ -25,7 +25,7 @@ const LoginPage = () => {
         linkText: 'Register',
         link: PATHS.register
       }}
-      externalAuth={{ text: 'Login with' }}
+      externalAuth={{ text: 'Continue with' }}
       submitButton={{ text: 'Login', formID, disabled: isLoading }}>
       <Form className="login-form" formID={formID} onSubmit={onSubmit}>
         <>

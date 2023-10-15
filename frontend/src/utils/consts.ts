@@ -7,7 +7,8 @@ export const ENDPOINTS = {
   user: 'user/',
 
   getToken: 'token/',
-  refreshToken: 'token/refresh/'
+  refreshToken: 'token/refresh/',
+  externalAuth: 'login/social/jwt-pair-user/'
 }
 
 export const PATHS = {

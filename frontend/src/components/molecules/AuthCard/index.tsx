@@ -1,9 +1,9 @@
 import { AuthCardProps } from './interface'
 import { Link } from 'react-router-dom'
 import { FaFacebookF } from 'react-icons/fa'
-import { FcGoogle } from 'react-icons/fc'
 import Button from 'components/atoms/Button'
 import './style.scss'
+import GoogleAuth from 'components/molecules/GoogleAuth'
 
 const AuthCard = ({
   children,
@@ -35,9 +35,7 @@ const AuthCard = ({
           <div className="auth-card__external-auth">
             <h3 className="external-auth__title">{externalAuth.text}</h3>
             <div className="external-auth__services">
-              <div className="external-auth__service external-auth__service--google">
-                <FcGoogle />
-              </div>
+              <GoogleAuth />
               <div className="external-auth__service external-auth__service--facebook">
                 <FaFacebookF color="white" />
               </div>

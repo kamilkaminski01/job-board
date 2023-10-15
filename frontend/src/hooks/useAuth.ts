@@ -76,6 +76,8 @@ const useAuth = () => {
   return {
     errorMessage,
     isLoading,
+    setIsLoading,
+    setErrorMessage,
     login,
     register,
     logout

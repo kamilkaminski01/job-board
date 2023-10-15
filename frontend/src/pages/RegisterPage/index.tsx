@@ -30,7 +30,7 @@ const RegisterPage = () => {
     <AuthCard
       title="Register"
       switchBox={{ text: 'Already signed up?', linkText: 'Login', link: PATHS.login }}
-      externalAuth={{ text: 'Sign up with' }}
+      externalAuth={{ text: 'Continue with' }}
       submitButton={{ text: 'Sign Up', formID, disabled: isLoading }}>
       <FormProvider {...methods}>
         <form className="register-form" id={formID} onSubmit={methods.handleSubmit(onSubmit)}>

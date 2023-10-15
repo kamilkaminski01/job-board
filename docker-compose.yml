@@ -16,7 +16,8 @@ services:
       context: backend
       dockerfile: local.Dockerfile
     depends_on:
-      - db
+      db:
+          condition: service_started
     ports:
       - "8000:8000"
     volumes:
