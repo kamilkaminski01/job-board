@@ -1,22 +1,15 @@
 # This docker-compose file is designed for development purposes only
 
-version: '3'
+version: '3.8'
 
 services:
-  db:
-    restart: always
-    image: postgres:15.3-alpine
-    env_file:
-      - .envs/.postgres
-    volumes:
-      - postgres_data:/var/lib/postgresql/data/
-
   web:
     build:
       context: backend
       dockerfile: local.Dockerfile
     depends_on:
-        - db
+        db:
+          condition: service_healthy
     ports:
       - "8000:8000"
     volumes:
@@ -26,6 +19,19 @@ services:
       - .envs/.postgres
     command: sh -c "python manage.py migrate &&
                     python manage.py runserver 0.0.0.0:8000"
+
+  db:
+    restart: always
+    image: postgres:15.3-alpine
+    env_file:
+      - .envs/.postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    healthcheck:
+        test: sh -c "pg_isready -U postgres"
+        interval: 3s
+        timeout: 3s
+        retries: 5
 
   frontend:
     build:
