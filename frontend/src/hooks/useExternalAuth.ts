@@ -1,16 +1,17 @@
 import { useGoogleLogin } from '@react-oauth/google'
 import axiosAuth from 'setup/axios/authInstance'
 import { ENDPOINTS, LOCAL_STORAGE, PATHS } from 'utils/consts'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { UserContext } from 'providers/user/context'
 import { useNavigate } from 'react-router-dom'
 import { parseApiErrors } from 'utils/parseApiErrors'
-import useAuth from 'hooks/useAuth'
 
 const useExternalAuth = () => {
   const { login: loginContext } = useContext(UserContext)
   const navigate = useNavigate()
-  const { setIsLoading, setErrorMessage } = useAuth()
+
+  const [isLoading, setIsLoading] = useState(false)
+  const [errorMessage, setErrorMessage] = useState<string | null>(null)
 
   const googleLogin = useGoogleLogin({
     flow: 'auth-code',
@@ -48,7 +49,11 @@ const useExternalAuth = () => {
     }
   })
 
-  return { googleLogin }
+  const secondaryLogin = () => {
+    console.log('test')
+  }
+
+  return { googleLogin, secondaryLogin, isLoading, errorMessage }
 }
 
 export default useExternalAuth

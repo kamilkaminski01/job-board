@@ -29,7 +29,7 @@ const LoginPage = () => {
       submitButton={{ text: 'Login', formID, disabled: isLoading }}>
       <Form className="login-form" formID={formID} onSubmit={onSubmit}>
         <>
-          {errorMessage && <p className="login-form__error-message">{errorMessage}</p>}
+          {errorMessage && <p className="auth-card__error-message">{errorMessage}</p>}
 
           <Input
             name="email"
