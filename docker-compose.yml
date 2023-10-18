@@ -1,6 +1,6 @@
 # This docker-compose file is designed for development purposes only
 
-version: '3.8'
+version: '3'
 
 services:
   db:
@@ -11,13 +11,12 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
 
-  backend:
+  web:
     build:
       context: backend
       dockerfile: local.Dockerfile
     depends_on:
-      db:
-          condition: service_started
+        - db
     ports:
       - "8000:8000"
     volumes:
