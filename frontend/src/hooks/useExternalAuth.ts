@@ -5,6 +5,7 @@ import { useContext, useState } from 'react'
 import { UserContext } from 'providers/user/context'
 import { useNavigate } from 'react-router-dom'
 import { parseApiErrors } from 'utils/parseApiErrors'
+import { IServerResponse } from 'models/serverResponse'
 
 const useExternalAuth = () => {
   const { login: loginContext } = useContext(UserContext)
@@ -49,11 +50,33 @@ const useExternalAuth = () => {
     }
   })
 
-  const secondaryLogin = () => {
-    console.log('test')
+  const githubLogin = async (code: string): Promise<IServerResponse> => {
+    try {
+      const response = await axiosAuth.post(ENDPOINTS.externalAuth, {
+        provider: 'github',
+        code,
+        redirectUri: `${window.location.origin}/login`
+      })
+
+      localStorage.setItem(LOCAL_STORAGE.accessToken, response.data.token)
+      localStorage.setItem(LOCAL_STORAGE.refreshToken, response.data.refresh)
+
+      loginContext()
+      navigate(PATHS.profile)
+
+      return { succeed: true }
+    } catch (error) {
+      const serverResponse = parseApiErrors(error)
+
+      setErrorMessage(serverResponse.errorMessage || '')
+
+      return { succeed: false }
+    } finally {
+      setIsLoading(false)
+    }
   }
 
-  return { googleLogin, secondaryLogin, isLoading, errorMessage }
+  return { googleLogin, githubLogin, isLoading, errorMessage }
 }
 
 export default useExternalAuth

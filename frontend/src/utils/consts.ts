@@ -23,3 +23,12 @@ export const LOCAL_STORAGE = {
   accessToken: 'accessToken',
   refreshToken: 'refreshToken'
 }
+
+export const GOOGLE_AUTH = {
+  clientId: '661500498894-e9g8dpfm40ggk27sqire5eavm86lik5f.apps.googleusercontent.com'
+}
+
+export const GITHUB_AUTH = {
+  authUrl: 'https://github.com/login/oauth/authorize',
+  clientId: '3fac93f687a04c52de98'
+}

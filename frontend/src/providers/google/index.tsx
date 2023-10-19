@@ -1,10 +1,9 @@
 import { GoogleOAuthProvider } from '@react-oauth/google'
 import React, { PropsWithChildren } from 'react'
+import { GOOGLE_AUTH } from 'utils/consts'
 
 const GoogleProvider: React.FC<PropsWithChildren> = ({ children }) => {
-  const cliendId: string =
-    '661500498894-e9g8dpfm40ggk27sqire5eavm86lik5f.apps.googleusercontent.com'
-  return <GoogleOAuthProvider clientId={cliendId}>{children}</GoogleOAuthProvider>
+  return <GoogleOAuthProvider clientId={GOOGLE_AUTH.clientId}>{children}</GoogleOAuthProvider>
 }
 
 export default GoogleProvider

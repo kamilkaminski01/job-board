@@ -9,3 +9,6 @@ CSRF_TRUSTED_ORIGINS=http://localhost,http://0.0.0.0,http://127.0.0.1
 # ------------------------------------------------------------------------------
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY=661500498894-e9g8dpfm40ggk27sqire5eavm86lik5f.apps.googleusercontent.com
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET=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
+
+SOCIAL_AUTH_GITHUB_KEY=3fac93f687a04c52de98
+SOCIAL_AUTH_GITHUB_SECRET=12d492b635b1dbfa2f1c8553b620557f30939de0
