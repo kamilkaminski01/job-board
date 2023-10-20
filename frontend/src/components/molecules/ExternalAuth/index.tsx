@@ -17,7 +17,7 @@ const ExternalAuth = () => {
   }, [])
 
   const redirectGitHubAuth = () => {
-    window.location.assign(`${GITHUB_AUTH.authUrl}?client_id=${GITHUB_AUTH.clientId}`)
+    window.location.assign(`${GITHUB_AUTH.authUrl}?client_id=${GITHUB_AUTH.clientId}&scope=user`)
   }
 
   return (
