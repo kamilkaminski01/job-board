@@ -1,0 +1,18 @@
+@import 'utils/variables.scss';
+
+.settings-tile-header {
+  display: flex;
+  justify-content: space-between;
+
+  .settings-tile-header__title {
+    margin-bottom: 1.5em;
+
+    color: $carbon;
+  }
+
+  .settings-tile-header__btn {
+    padding: 0.375em 0.75em;
+
+    font-size: 0.875em;
+  }
+}

@@ -10,6 +10,8 @@ const UserProvider: React.FC<PropsWithChildren> = ({ children }) => {
 
   const [isLogged, setIsLogged] = useState(!!accessToken)
 
+  const updateUserData = () => getUserData()
+
   const login = useCallback(async () => {
     setIsLogged(true)
 
@@ -33,7 +35,7 @@ const UserProvider: React.FC<PropsWithChildren> = ({ children }) => {
   }, [])
 
   return (
-    <UserContext.Provider value={{ userData, isLogged, login, logout }}>
+    <UserContext.Provider value={{ userData, isLogged, updateUserData, login, logout }}>
       {children}
     </UserContext.Provider>
   )

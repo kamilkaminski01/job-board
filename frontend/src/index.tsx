@@ -4,13 +4,16 @@ import './index.scss'
 import App from './App'
 import { BrowserRouter } from 'react-router-dom'
 import UserProvider from './providers/user'
+import ModalsProvider from 'providers/modals'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <UserProvider>
-        <App />
+        <ModalsProvider>
+          <App />
+        </ModalsProvider>
       </UserProvider>
     </BrowserRouter>
   </React.StrictMode>

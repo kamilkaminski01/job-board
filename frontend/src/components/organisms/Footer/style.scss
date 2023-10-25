@@ -1,7 +1,7 @@
 @import 'utils/variables.scss';
 
 .footer {
-  height: 2em;
+  height: $footer-height;
 
   background-color: $primary-color;
 }

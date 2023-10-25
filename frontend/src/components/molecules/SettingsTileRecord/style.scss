@@ -1,0 +1,43 @@
+@import 'utils/variables.scss';
+
+.settings-tile-record {
+  display: grid;
+  grid-template-columns: 13.5em 1fr auto;
+
+  .settings-tile-record__label {
+    color: $devil;
+  }
+
+  .settings-tile-record__value {
+    display: flex;
+    flex-direction: column;
+
+    color: $carbon;
+  }
+
+  .settings-tile-record__value--bold {
+    font-weight: 700;
+  }
+
+  .settings-tile-record__value--second {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  .settings-tile-record__value--password {
+    letter-spacing: 0.1em;
+    font-size: 1.2em;
+  }
+
+  .settings-tile-record__btn {
+    color: $dark-sea;
+
+    user-select: none;
+
+    cursor: pointer;
+  }
+
+  & + .settings-tile-record {
+    margin-top: 1em;
+  }
+}

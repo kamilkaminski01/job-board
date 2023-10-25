@@ -1,0 +1,25 @@
+@import 'utils/variables.scss';
+
+.settings-page-menu {
+  position: sticky;
+
+  top: $scroll-padding-top;
+
+  .settings-page-menu__list {
+    list-style-type: none;
+
+    .settings-page-menu__item {
+      & + .settings-page-menu__item {
+        margin-top: 1em;
+      }
+
+      .settings-page-menu__link {
+        color: $carbon;
+
+        &:hover {
+          color: $dark-sea;
+        }
+      }
+    }
+  }
+}
