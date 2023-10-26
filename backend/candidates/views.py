@@ -6,11 +6,15 @@ from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework.serializers import ModelSerializer
 
-from .models import User
-from .serializers import UserNewPasswordSerializer, UserSerializer, UserUpdateSerializer
+from .models import Candidate
+from .serializers import (
+    CandidateNewPasswordSerializer,
+    CandidateSerializer,
+    CandidateUpdateSerializer,
+)
 
 
-class UserAPIView(
+class CandidateAPIView(
     mixins.RetrieveModelMixin,
     mixins.UpdateModelMixin,
     mixins.CreateModelMixin,
@@ -35,8 +39,8 @@ class UserAPIView(
                 status=status.HTTP_400_BAD_REQUEST,
             )
         elif "new_password" in request.data and "current_password" in request.data:
-            user = User.objects.get(id=request.user.id)
-            if not user.check_password(request.data.get("current_password")):
+            candidate = Candidate.objects.get(id=request.user.id)
+            if not candidate.check_password(request.data.get("current_password")):
                 return Response(
                     {
                         "message": "Provided password is incorrect",
@@ -48,10 +52,10 @@ class UserAPIView(
 
     def get_serializer_class(self) -> ModelSerializer:
         if self.request.method == "PATCH" and "new_password" in self.request.data:
-            return UserNewPasswordSerializer
+            return CandidateNewPasswordSerializer
         elif self.request.method in ["PUT", "PATCH"]:
-            return UserUpdateSerializer
-        return UserSerializer
+            return CandidateUpdateSerializer
+        return CandidateSerializer
 
     def get_permissions(self) -> List[BasePermission]:
         if self.request.method == "POST":
