@@ -11,7 +11,15 @@ class CandidateSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Candidate
-        fields = ["email", "password", "first_name", "last_name"]
+        fields = [
+            "email",
+            "password",
+            "first_name",
+            "last_name",
+            "description",
+            "github_url",
+            "linkedin_url",
+        ]
 
     def create(self, validated_data: Dict) -> Candidate:
         candidate = super().create(validated_data)
@@ -31,7 +39,7 @@ class CandidateUpdateSerializer(serializers.ModelSerializer):
             "email",
             "first_name",
             "last_name",
-            "image",
+            "description",
             "github_url",
             "linkedin_url",
         ]

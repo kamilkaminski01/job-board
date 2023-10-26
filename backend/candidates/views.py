@@ -63,4 +63,9 @@ class CandidateAPIView(
         return [IsAuthenticated()]
 
     def get_object(self):
-        return self.request.user
+        user = self.request.user
+        try:
+            candidate = Candidate.objects.get(id=user.id)
+        except Candidate.DoesNotExist:
+            return user
+        return candidate

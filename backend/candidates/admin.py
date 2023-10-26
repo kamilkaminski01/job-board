@@ -15,14 +15,14 @@ class CandidateAdmin(UsersAdmin):
     inlines = [ImageInline]
     add_fieldsets = UsersAdmin.change_fields_in_add_fieldsets(
         additional_general_fields=[
-            "bio",
+            "description",
             "github_url",
             "linkedin_url",
         ],
     )
     fieldsets = UsersAdmin.change_fields_in_fieldsets(
         additional_general_fields=[
-            "bio",
+            "description",
             "github_url",
             "linkedin_url",
         ],

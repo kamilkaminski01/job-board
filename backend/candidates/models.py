@@ -11,7 +11,7 @@ def _upload_image_to_images(instance, filename: str) -> str:
 
 
 class Candidate(User):
-    bio = models.CharField(max_length=300, null=True, blank=True)
+    description = models.TextField(max_length=300, null=True, blank=True)
     github_url = models.URLField(max_length=150, null=True, blank=True)
     linkedin_url = models.URLField(max_length=150, null=True, blank=True)
 
