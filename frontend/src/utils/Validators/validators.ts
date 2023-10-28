@@ -22,6 +22,14 @@ export const valid = {
     value: /^\D*$/,
     message: 'This field can not contain digits'
   },
+  githubPattern: {
+    value: /^(https:\/\/)?(www\.)?github\.com\/[a-zA-Z0-9-]+$/,
+    message: 'Incorrect GitHub profile address'
+  },
+  linkedinPattern: {
+    value: /^(https:\/\/)?(www\.)?linkedin\.com\/in\/[a-zA-Z0-9-]+$/,
+    message: 'Incorrect LinkedIn profile address'
+  },
   differentPasswordsMessage: 'Passwords are different',
   minLength: (length: number) => {
     return {

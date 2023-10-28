@@ -22,11 +22,21 @@
             "is_superuser": false,
             "is_staff": false,
             "is_active": true,
-            "first_name": "Basic",
+            "first_name": "Candidate",
             "last_name": "User",
-            "email": "basic@user.com",
+            "email": "candidate@candidate.com",
             "groups": [],
             "user_permissions": []
         }
+    },
+    {
+      "model": "candidates.candidate",
+      "pk": 2,
+      "fields": {
+        "user_ptr": 2,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "github_url": "https://github.com/",
+        "linkedin_url": "https://www.linkedin.com/"
+      }
     }
 ]

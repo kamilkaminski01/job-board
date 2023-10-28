@@ -1,1 +1,1 @@
-export type TModalActions = 'Add' | 'Update' | 'Change'
+export type TModalActions = 'Add' | 'Update'

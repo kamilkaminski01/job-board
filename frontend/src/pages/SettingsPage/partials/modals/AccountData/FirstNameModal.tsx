@@ -2,12 +2,11 @@ import Input from 'components/molecules/Input'
 import Modal from 'components/organisms/Modal'
 import useUser from 'hooks/useUser'
 import { useModals } from 'providers/modals/context'
-import { FieldValues, useForm } from 'react-hook-form'
+import { FieldValues, FormProvider, useForm } from 'react-hook-form'
 import { handleApiResponse } from 'utils/handleApiResponse'
 import { valid } from 'utils/Validators/validators'
 import { validSchemas } from 'utils/Validators/validatorsSchemas'
 import { AccountDataModalProps } from './_interface'
-import Form from 'components/atoms/Form'
 
 const FirstNameModal = ({ action, defaultValue }: AccountDataModalProps) => {
   const methods = useForm()
@@ -26,14 +25,16 @@ const FirstNameModal = ({ action, defaultValue }: AccountDataModalProps) => {
 
   return (
     <Modal title={`${action} first name`} buttonText={action} formID={formID}>
-      <Form formID={formID} className="modal__form" onSubmit={onSubmit}>
-        <Input
-          name="firstName"
-          placeholder="First name"
-          defaultValue={defaultValue}
-          validators={{ required: valid.required, ...validSchemas.name }}
-        />
-      </Form>
+      <FormProvider {...methods}>
+        <form id={formID} className="modal__form" onSubmit={methods.handleSubmit(onSubmit)}>
+          <Input
+            name="firstName"
+            placeholder="First name"
+            defaultValue={defaultValue}
+            validators={{ required: valid.required, ...validSchemas.name }}
+          />
+        </form>
+      </FormProvider>
     </Modal>
   )
 }

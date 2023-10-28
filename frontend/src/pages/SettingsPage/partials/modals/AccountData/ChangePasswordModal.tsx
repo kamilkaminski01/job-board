@@ -13,7 +13,7 @@ const ChangePasswordModal = () => {
   const { closeModal } = useModals()
   const { updateUser } = useUser()
 
-  const action: TModalActions = 'Change'
+  const action: TModalActions = 'Update'
   const formID = 'changePasswordForm'
   const newPassword = methods.watch('newPassword')
 

@@ -11,8 +11,6 @@ const DescriptionData = ({ className }: DescriptionDataProps) => {
   const { userData } = useContext(UserContext)
   const { openModal } = useModals()
 
-  console.log(userData)
-
   return (
     <Tile id="description-data" className={className} shadow="light">
       <SettingsTileHeader title="Description settings" />

@@ -52,7 +52,7 @@ const AccountData = () => {
         label="Password"
         value="*******"
         valueType="password"
-        button={{ text: 'Change', onClick: () => openModal(<ChangePasswordModal />) }}
+        button={{ text: 'Update', onClick: () => openModal(<ChangePasswordModal />) }}
       />
     </Tile>
   )

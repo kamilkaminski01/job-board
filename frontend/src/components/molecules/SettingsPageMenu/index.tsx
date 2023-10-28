@@ -15,6 +15,11 @@ const SettingsPageMenu = () => {
             Description settings
           </a>
         </li>
+        <li className="settings-page-menu__item">
+          <a className="settings-page-menu__link" href="#social-data">
+            Social profiles settings
+          </a>
+        </li>
       </ul>
     </Tile>
   )

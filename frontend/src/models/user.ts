@@ -4,5 +4,5 @@ export interface IUser {
   email: string
   description?: string
   githubUrl?: string
-  linkedinUrl: string
+  linkedinUrl?: string
 }

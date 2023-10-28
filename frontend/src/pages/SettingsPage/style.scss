@@ -11,7 +11,8 @@
 
   background-color: $alabaster;
 
-  .settings-page__description-data {
+  .settings-page__description-data,
+  .settings-page__social-data{
     grid-column: 2;
   }
 }

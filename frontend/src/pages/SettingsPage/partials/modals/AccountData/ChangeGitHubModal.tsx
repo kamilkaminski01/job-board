@@ -7,30 +7,30 @@ import { FieldValues, FormProvider, useForm } from 'react-hook-form'
 import { useModals } from 'providers/modals/context'
 import useUser from 'hooks/useUser'
 
-const ChangeDescriptionModal = ({ action, defaultValue }: AccountDataModalProps) => {
+const ChangeGitHubModal = ({ action, defaultValue }: AccountDataModalProps) => {
   const methods = useForm()
   const { closeModal } = useModals()
   const { updateUser } = useUser()
 
-  const formID = 'descriptionForm'
+  const formID = 'githubForm'
 
   const onSubmit = async (formValues: FieldValues) => {
-    const { description } = formValues
+    const { githubUrl } = formValues
 
-    const response = await updateUser({ description })
+    const response = await updateUser({ githubUrl })
 
     handleApiResponse(response, closeModal, methods.setError)
   }
 
   return (
-    <Modal title={`${action} your description`} buttonText={action} formID={formID}>
+    <Modal title={`${action} your GitHub profile`} buttonText={action} formID={formID}>
       <FormProvider {...methods}>
         <form id={formID} className="modal__form" onSubmit={methods.handleSubmit(onSubmit)}>
           <Input
-            name="description"
-            placeholder="Description"
+            name="githubUrl"
+            placeholder="GitHub profile"
             defaultValue={defaultValue}
-            validators={{ maxLength: valid.maxLength(300) }}
+            validators={{ pattern: valid.githubPattern }}
           />
         </form>
       </FormProvider>
@@ -38,4 +38,4 @@ const ChangeDescriptionModal = ({ action, defaultValue }: AccountDataModalProps)
   )
 }
 
-export default ChangeDescriptionModal
+export default ChangeGitHubModal
