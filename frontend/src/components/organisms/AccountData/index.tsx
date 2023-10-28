@@ -16,7 +16,6 @@ const AccountData = () => {
     <Tile id="account-data" shadow="light">
       <SettingsTileHeader title="Account settings" />
       <SettingsTileRecord
-        className="tile__record"
         label="First name"
         value={userData.firstName}
         button={
@@ -33,7 +32,6 @@ const AccountData = () => {
         }
       />
       <SettingsTileRecord
-        className="tile__record"
         label="Last name"
         value={userData.lastName}
         button={
@@ -51,7 +49,6 @@ const AccountData = () => {
       />
       <SettingsTileRecord className="tile__record" label="Email" value={userData.email} />
       <SettingsTileRecord
-        className="tile__record"
         label="Password"
         value="*******"
         valueType="password"

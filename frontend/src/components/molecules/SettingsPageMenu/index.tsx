@@ -10,6 +10,11 @@ const SettingsPageMenu = () => {
             Account settings
           </a>
         </li>
+        <li className="settings-page-menu__item">
+          <a className="settings-page-menu__link" href="#description-data">
+            Description settings
+          </a>
+        </li>
       </ul>
     </Tile>
   )
