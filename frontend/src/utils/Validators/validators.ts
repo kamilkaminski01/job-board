@@ -42,5 +42,16 @@ export const valid = {
       value: length,
       message: `The maximum number of character for this field is: ${length}`
     }
+  },
+  imageFileFormat: {
+    validate: (file: any) => {
+      if (file && file[0]) {
+        const allowedFormats = ['image/jpeg', 'image/jpg', 'image/png']
+        if (allowedFormats.includes(file[0].type)) {
+          return true
+        }
+      }
+      return 'Please select a JPEG, JPG, or PNG file.'
+    }
   }
 }

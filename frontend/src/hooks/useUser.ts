@@ -24,9 +24,16 @@ const useUser = () => {
   }, [])
 
   const updateUser = useCallback(
-    async (data: IUpdateUser): Promise<IServerResponse> => {
+    async (
+      data: IUpdateUser | FormData,
+      updateImage: boolean = false
+    ): Promise<IServerResponse> => {
       try {
-        await axiosDefault.patch(ENDPOINTS.user, data)
+        if (updateImage) {
+          await axiosDefault.patch(ENDPOINTS.userImage, data)
+        } else {
+          await axiosDefault.patch(ENDPOINTS.user, data)
+        }
 
         updateUserData()
 

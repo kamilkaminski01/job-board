@@ -1,26 +1,25 @@
 import Tile from 'components/atoms/Tile'
 import './style.scss'
+import { useContext } from 'react'
+import { UserContext } from 'providers/user/context'
 
 const SettingsPageMenu = () => {
+  const { userData } = useContext(UserContext)
+
   return (
     <Tile className="settings-page-menu" shadow="light">
-      <ul className="settings-page-menu__list">
-        <li className="settings-page-menu__item">
-          <a className="settings-page-menu__link" href="#account-data">
-            Account settings
-          </a>
-        </li>
-        <li className="settings-page-menu__item">
-          <a className="settings-page-menu__link" href="#description-data">
-            Description settings
-          </a>
-        </li>
-        <li className="settings-page-menu__item">
-          <a className="settings-page-menu__link" href="#social-data">
-            Social profiles settings
-          </a>
-        </li>
-      </ul>
+      <div className="settings-page-menu__profile">
+        {userData.image !== null ? (
+          <>
+            <img src={userData.image} className="settings-page-menu__image" />
+            <span>
+              {userData.firstName} {userData.lastName}
+            </span>
+          </>
+        ) : (
+          <></>
+        )}
+      </div>
     </Tile>
   )
 }

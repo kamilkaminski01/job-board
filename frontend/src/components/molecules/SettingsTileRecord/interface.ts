@@ -1,7 +1,7 @@
 export interface SettingsTileRecordProps {
   label: string
   value: string
-  valueType?: 'password'
+  valueType?: 'password' | 'image'
   secondValue?: string
   className?: string
   button?: {

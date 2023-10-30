@@ -12,7 +12,8 @@
   background-color: $alabaster;
 
   .settings-page__description-data,
-  .settings-page__social-data{
+  .settings-page__social-data,
+  .settings-page__profile-image-data,{
     grid-column: 2;
   }
 }

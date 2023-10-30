@@ -13,6 +13,8 @@ const SettingsTileRecord = ({
   const renderValue = () => {
     if (!value) {
       return <span>-</span>
+    } else if (value && valueType === 'image') {
+      return <img src={value} />
     } else {
       return <span>{value}</span>
     }
@@ -24,7 +26,8 @@ const SettingsTileRecord = ({
       <div
         className={classNames('settings-tile-record__value', {
           'settings-tile-record__value--bold': secondValue,
-          'settings-tile-record__value--password': valueType === 'password'
+          'settings-tile-record__value--password': valueType === 'password',
+          'settings-tile-record__value--image': valueType === 'image'
         })}>
         {renderValue()}
       </div>

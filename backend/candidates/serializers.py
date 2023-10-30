@@ -1,13 +1,30 @@
-from typing import Dict
+from typing import Dict, Optional
 
 from django.contrib.auth import password_validation
+from django.core.exceptions import ObjectDoesNotExist
 from rest_framework import serializers
 
-from .models import Candidate
+from .models import Candidate, Image
+
+
+class ImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Image
+        fields = ["image"]
+
+    def update(self, instance: Candidate, validated_data: Dict):
+        if image_data := validated_data.get("image"):
+            try:
+                instance.image.image = image_data
+                instance.image.save()
+            except ObjectDoesNotExist:
+                Image.objects.create(candidate=instance, image=image_data)
+        return instance.image
 
 
 class CandidateSerializer(serializers.ModelSerializer):
     password = serializers.CharField(style={"input_type": "password"}, write_only=True)
+    image = serializers.SerializerMethodField("get_image")
 
     class Meta:
         model = Candidate
@@ -17,6 +34,7 @@ class CandidateSerializer(serializers.ModelSerializer):
             "first_name",
             "last_name",
             "description",
+            "image",
             "github_url",
             "linkedin_url",
         ]
@@ -30,6 +48,17 @@ class CandidateSerializer(serializers.ModelSerializer):
     def validate_password(self, data: str) -> str:
         password_validation.validate_password(data, self.instance)
         return data
+
+    def get_image(self, instance: Candidate) -> Optional[str]:  # type: ignore
+        context = self.context["request"]
+        if not Candidate.objects.filter(id=context.user.id).exists():
+            return None
+
+        try:
+            if image := instance.image:
+                return context.build_absolute_uri(image.image.url)
+        except ObjectDoesNotExist:
+            return context.build_absolute_uri("/static/img/profile-image.png")
 
 
 class CandidateUpdateSerializer(serializers.ModelSerializer):
