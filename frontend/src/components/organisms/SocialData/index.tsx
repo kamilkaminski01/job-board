@@ -15,48 +15,40 @@ const SocialData = ({ className }: SocialDataProps) => {
   return (
     <Tile id="social-data" className={className} shadow="light">
       <SettingsTileHeader title="Social profiles settings" />
-      {userData.githubUrl !== null && userData.linkedinUrl !== null ? (
-        <>
-          <SettingsTileRecord
-            label="GitHub"
-            value={userData.githubUrl || ''}
-            button={
-              !userData.githubUrl
-                ? {
-                    text: 'Add',
-                    onClick: () => openModal(<ChangeGitHubModal action="Add" />)
-                  }
-                : {
-                    text: 'Update',
-                    onClick: () =>
-                      openModal(
-                        <ChangeGitHubModal action="Update" defaultValue={userData.githubUrl} />
-                      )
-                  }
-            }
-          />
-          <SettingsTileRecord
-            label="LinkedIn"
-            value={userData.linkedinUrl || ''}
-            button={
-              !userData.linkedinUrl
-                ? {
-                    text: 'Add',
-                    onClick: () => openModal(<ChangeLinkedInModal action="Add" />)
-                  }
-                : {
-                    text: 'Update',
-                    onClick: () =>
-                      openModal(
-                        <ChangeLinkedInModal action="Update" defaultValue={userData.linkedinUrl} />
-                      )
-                  }
-            }
-          />
-        </>
-      ) : (
-        <></>
-      )}
+      <SettingsTileRecord
+        label="GitHub"
+        value={userData.githubUrl || ''}
+        button={
+          !userData.githubUrl
+            ? {
+                text: 'Add',
+                onClick: () => openModal(<ChangeGitHubModal action="Add" />)
+              }
+            : {
+                text: 'Update',
+                onClick: () =>
+                  openModal(<ChangeGitHubModal action="Update" defaultValue={userData.githubUrl} />)
+              }
+        }
+      />
+      <SettingsTileRecord
+        label="LinkedIn"
+        value={userData.linkedinUrl || ''}
+        button={
+          !userData.linkedinUrl
+            ? {
+                text: 'Add',
+                onClick: () => openModal(<ChangeLinkedInModal action="Add" />)
+              }
+            : {
+                text: 'Update',
+                onClick: () =>
+                  openModal(
+                    <ChangeLinkedInModal action="Update" defaultValue={userData.linkedinUrl} />
+                  )
+              }
+        }
+      />
     </Tile>
   )
 }

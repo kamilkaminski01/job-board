@@ -14,8 +14,5 @@ def create_social_auth_candidate(backend, user, response, *args, **kwargs):
         email=email,
         first_name=first_name,
         last_name=last_name,
-        description="",
-        github_url="",
-        linkedin_url="",
     )
     return {"user": candidate}

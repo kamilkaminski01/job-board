@@ -14,28 +14,24 @@ const DescriptionData = ({ className }: DescriptionDataProps) => {
   return (
     <Tile id="description-data" className={className} shadow="light">
       <SettingsTileHeader title="Description settings" />
-      {userData.description !== null ? (
-        <SettingsTileRecord
-          label="Description"
-          value={userData.description || ''}
-          button={
-            !userData.description
-              ? {
-                  text: 'Add',
-                  onClick: () => openModal(<ChangeDescriptionModal action="Add" />)
-                }
-              : {
-                  text: 'Update',
-                  onClick: () =>
-                    openModal(
-                      <ChangeDescriptionModal action="Update" defaultValue={userData.description} />
-                    )
-                }
-          }
-        />
-      ) : (
-        <></>
-      )}
+      <SettingsTileRecord
+        label="Description"
+        value={userData.description || ''}
+        button={
+          !userData.description
+            ? {
+                text: 'Add',
+                onClick: () => openModal(<ChangeDescriptionModal action="Add" />)
+              }
+            : {
+                text: 'Update',
+                onClick: () =>
+                  openModal(
+                    <ChangeDescriptionModal action="Update" defaultValue={userData.description} />
+                  )
+              }
+        }
+      />
     </Tile>
   )
 }

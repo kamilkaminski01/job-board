@@ -19,6 +19,7 @@ from .serializers import (
 class CandidateAPIView(
     mixins.RetrieveModelMixin,
     mixins.UpdateModelMixin,
+    mixins.DestroyModelMixin,
     mixins.CreateModelMixin,
     generics.GenericAPIView,
 ):
@@ -51,6 +52,9 @@ class CandidateAPIView(
                     status=status.HTTP_403_FORBIDDEN,
                 )
         return self.partial_update(request, *args, **kwargs)
+
+    def delete(self, request: Request, *args, **kwargs) -> Response:
+        return self.destroy(request, *args, **kwargs)
 
     def get_serializer_class(self) -> ModelSerializer:
         if self.request.method == "PATCH" and "new_password" in self.request.data:

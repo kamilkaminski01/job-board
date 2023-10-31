@@ -14,20 +14,16 @@ const ProfileImageData = ({ className }: ProfileImageDataProps) => {
   return (
     <Tile id="profile-image-data" className={className} shadow="light">
       <SettingsTileHeader title="Profile image settings" />
-      {userData.image !== null ? (
-        <SettingsTileRecord
-          label="Profile image"
-          value={userData.image}
-          valueType="image"
-          button={{
-            text: 'Update',
-            onClick: () =>
-              openModal(<ChangeProfileImageModal action="Update" defaultValue={userData.image} />)
-          }}
-        />
-      ) : (
-        <></>
-      )}
+      <SettingsTileRecord
+        label="Profile image"
+        value={userData.image}
+        valueType="image"
+        button={{
+          text: 'Update',
+          onClick: () =>
+            openModal(<ChangeProfileImageModal action="Update" defaultValue={userData.image} />)
+        }}
+      />
     </Tile>
   )
 }

@@ -4,11 +4,13 @@ import { IUser } from 'models/user'
 import { UserContext } from 'providers/user/context'
 import { useCallback, useContext, useState } from 'react'
 import axiosDefault from 'setup/axios/defaultInstance'
-import { ENDPOINTS } from 'utils/consts'
+import { ENDPOINTS, PATHS } from 'utils/consts'
 import { parseApiErrors } from 'utils/parseApiErrors'
+import { useNavigate } from 'react-router-dom'
 
 const useUser = () => {
-  const { updateUserData } = useContext(UserContext)
+  const { updateUserData, logout } = useContext(UserContext)
+  const navigate = useNavigate()
   const [userData, setUserData] = useState({} as IUser)
 
   const getUserData = useCallback(async (): Promise<IServerResponse> => {
@@ -45,7 +47,20 @@ const useUser = () => {
     [updateUserData]
   )
 
-  return { userData, getUserData, updateUser }
+  const deleteUser = useCallback(async (): Promise<IServerResponse> => {
+    try {
+      await axiosDefault.delete(ENDPOINTS.user)
+
+      logout()
+      navigate(PATHS.login)
+
+      return { succeed: true }
+    } catch (error) {
+      return parseApiErrors(error)
+    }
+  }, [logout, navigate])
+
+  return { userData, getUserData, updateUser, deleteUser }
 }
 
 export default useUser
