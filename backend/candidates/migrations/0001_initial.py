@@ -4,8 +4,8 @@ import django.db.models.deletion
 from django.conf import settings
 from django.db import migrations, models
 
+import backend.utils
 import candidates.models
-import candidates.utils
 import users.models
 
 
@@ -65,8 +65,8 @@ class Migration(migrations.Migration):
                 (
                     "image",
                     models.FileField(
-                        upload_to=candidates.models._upload_image_to_images,
-                        validators=[candidates.utils.validate_file_extension],
+                        upload_to=candidates.models._upload_images,
+                        validators=[backend.utils.validate_file_extension],
                         verbose_name="image",
                     ),
                 ),

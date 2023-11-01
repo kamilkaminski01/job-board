@@ -7,12 +7,10 @@ from rest_framework.response import Response
 from rest_framework.serializers import ModelSerializer
 
 from .models import Candidate
-from .permissions import IsCandidate
 from .serializers import (
     CandidateNewPasswordSerializer,
     CandidateSerializer,
     CandidateUpdateSerializer,
-    ImageSerializer,
 )
 
 
@@ -75,21 +73,3 @@ class CandidateAPIView(
         except Candidate.DoesNotExist:
             return user
         return candidate
-
-
-class ImageAPIView(
-    generics.GenericAPIView,
-    mixins.UpdateModelMixin,
-):
-    permission_classes = [IsAuthenticated, IsCandidate]
-    serializer_class = ImageSerializer
-
-    def put(self, request: Request, *args, **kwargs) -> Response:
-        return self.update(request, *args, **kwargs)
-
-    def patch(self, request: Request, *args, **kwargs) -> Response:
-        return self.partial_update(request, *args, **kwargs)
-
-    def get_object(self):
-        user = self.request.user
-        return Candidate.objects.get(id=user.id)

@@ -5,6 +5,7 @@ from typing import IO
 
 import requests  # type: ignore
 from django.core.exceptions import ValidationError
+from django.core.files.storage import default_storage
 from django.db.models.fields.files import FieldFile
 
 
@@ -27,12 +28,12 @@ def validate_file_extension(value):
 
 
 def does_file_exist(file: FieldFile) -> bool:
-    if file.url.startswith("/media"):
-        try:
-            open(file.url)
-        except FileNotFoundError:
-            return False
+    if not file:
+        return False
+
+    file_url = file.url
+    if file_url.startswith("/media"):
+        return default_storage.exists(file_url)  # type: ignore
     else:
-        if requests.head(file.url).status_code != 200:
-            return False
-    return True
+        response = requests.head(file_url)
+        return response.status_code == 200

@@ -19,7 +19,7 @@ const ChangeProfileImage = ({ action }: AccountDataModalProps) => {
     const { image } = formValues
     formData.append('image', image[0])
 
-    const response = await updateUser(formData, true)
+    const response = await updateUser(formData)
 
     handleApiResponse(response, closeModal, methods.setError)
   }

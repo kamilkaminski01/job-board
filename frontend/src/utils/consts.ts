@@ -5,7 +5,6 @@ export const API_URL =
 
 export const ENDPOINTS = {
   user: 'user/',
-  userImage: 'user/image/',
 
   getToken: 'token/',
   refreshToken: 'token/refresh/',
