@@ -3,7 +3,6 @@ from typing import List, Optional
 
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from django.contrib.auth.models import Group
 from django.http import HttpRequest
 
 from .models import User
@@ -139,4 +138,3 @@ class UsersAdmin(UserAdmin):
 
 
 admin.site.register(User, UsersAdmin)
-admin.site.unregister(Group)

@@ -4,7 +4,7 @@ from backend.utils import hash_file, validate_file_extension
 from users.models import User
 
 
-def _upload_images(instance, filename: str) -> str:
+def _upload_images(instance: "Candidate", filename: str) -> str:
     hashed_file = hash_file(instance.image.open())
     return f"images/{hashed_file}/{filename}"
 
@@ -30,7 +30,10 @@ class Candidate(User):
         verbose_name="github url",
     )
     linkedin_url = models.URLField(
-        max_length=150, null=True, blank=True, verbose_name="linkedin url"
+        max_length=150,
+        null=True,
+        blank=True,
+        verbose_name="linkedin url",
     )
 
     def __str__(self):
