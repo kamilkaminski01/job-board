@@ -1,6 +1,18 @@
 from django import forms
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
+from django.db import models
 from django.forms import ClearableFileInput
+
+
+class TimeStampMixin(models.Model):
+    """Mixin for models that require fields with time of creation and time of
+    update."""
+
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="created at")
+    updated_at = models.DateTimeField(auto_now=True, verbose_name="updated at")
+
+    class Meta:
+        abstract = True
 
 
 class ImageFormMixin(forms.ModelForm):

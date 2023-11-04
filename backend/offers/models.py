@@ -1,28 +1,29 @@
 from django.db import models
 
+from backend.mixins import TimeStampMixin
 from companies.models import Company
 
 
-class Offer(models.Model):
+class Offer(TimeStampMixin):
     class CurrencyChoices(models.TextChoices):
         PLN = ("PLN", "PLN")
         USD = ("USD", "USD")
         EUR = ("EUR", "EUR")
 
     class ExperienceChoices(models.TextChoices):
-        JUNIOR = "junior"
-        MID = "mid"
-        SENIOR = "senior"
+        JUNIOR = "Junior"
+        MID = "Mid"
+        SENIOR = "Senior"
 
     class EmploymentType(models.TextChoices):
         B2B = "B2B"
-        PERMANENT = "permanent"
-        INTERNSHIP = "internship"
+        PERMANENT = "Permanent"
+        INTERNSHIP = "Internship"
 
     class WorkType(models.TextChoices):
-        FULL_TIME = "full_time"
-        PART_TIME = "part_time"
-        FREELANCE = "freelance"
+        FULL_TIME = "Full time"
+        PART_TIME = "Part time"
+        FREELANCE = "Freelance"
 
     company = models.ForeignKey(
         Company,
@@ -82,11 +83,11 @@ class Offer(models.Model):
 
 class TechStack(models.Model):
     class AdvancementType(models.TextChoices):
-        NICE_TO_HAVE = "nice_to_have"
-        JUNIOR = "junior"
-        REGULAR = "regular"
-        ADVANCED = "advanced"
-        MASTER = "master"
+        NICE_TO_HAVE = "Nice to have"
+        JUNIOR = "Junior"
+        REGULAR = "Regular"
+        ADVANCED = "Advanced"
+        MASTER = "Master"
 
     title = models.CharField(
         max_length=40,

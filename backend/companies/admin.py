@@ -30,8 +30,6 @@ class CompanyOffersAdmin(admin.TabularInline):
 
 
 class CompanyAdmin(UsersAdmin):
-    inlines = [CompanyOffersAdmin]
-    form = CompanyAdminForm
     add_fieldsets = UsersAdmin.change_fields_in_add_fieldsets(
         additional_general_fields=["name", "description", "image"],
         excessive_general_fields=["first_name", "last_name"],
@@ -42,12 +40,15 @@ class CompanyAdmin(UsersAdmin):
         excessive_general_fields=["first_name", "last_name"],
         excessive_advanced_fields=["is_staff"],
     )
+    inlines = [CompanyOffersAdmin]
+    form = CompanyAdminForm
     list_display = [
         "image_preview",
         "name",
         "email",
     ]
     list_display_links = ["name"]
+    search_fields = ["name", "email"]
 
     def image_preview(self, obj: Company) -> str:
         if not does_file_exist(obj.image):

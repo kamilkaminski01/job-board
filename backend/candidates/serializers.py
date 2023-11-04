@@ -33,7 +33,7 @@ class CandidateSerializer(serializers.ModelSerializer):
         password_validation.validate_password(data, self.instance)
         return data
 
-    def get_image(self, instance: Candidate) -> Optional[str]:  # type: ignore
+    def get_image(self, instance: Candidate) -> Optional[str]:
         context = self.context["request"]
         if not Candidate.objects.filter(id=context.user.id).exists():
             return None

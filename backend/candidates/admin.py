@@ -9,7 +9,6 @@ from .models import Candidate
 
 
 class CandidateAdmin(UsersAdmin):
-    form = CandidateAdminForm
     add_fieldsets = UsersAdmin.change_fields_in_add_fieldsets(
         additional_general_fields=[
             "image",
@@ -26,6 +25,7 @@ class CandidateAdmin(UsersAdmin):
             "linkedin_url",
         ],
     )
+    form = CandidateAdminForm
     list_display = [
         "image_preview",
         "email",
@@ -33,6 +33,7 @@ class CandidateAdmin(UsersAdmin):
         "last_name",
     ]
     list_display_links = ["email"]
+    search_fields = ["email", "first_name", "last_name"]
 
     def image_preview(self, obj: Candidate) -> str:
         if not does_file_exist(obj.image):
