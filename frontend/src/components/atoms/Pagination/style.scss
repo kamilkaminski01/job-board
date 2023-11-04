@@ -1,0 +1,44 @@
+@import 'utils/variables.scss';
+
+$active-hover: $dark-sea;
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 0.5em;
+  padding: 1.5em;
+
+  color: $devil;
+
+  border-top: 1px solid $moon;
+
+  list-style-type: none;
+  user-select: none;
+
+  .pagination__page-item {
+    font-weight: 700;
+
+    &:hover {
+      color: $active-hover;
+    }
+  }
+
+  .pagination__page-item--active {
+    color: $active-hover;
+  }
+
+  .pagination__label {
+    position: relative;
+    top: 0.15em;
+
+    &:hover {
+      color: $active-hover;
+    }
+  }
+
+  .pagination__label--disabled {
+    display: none;
+  }
+}

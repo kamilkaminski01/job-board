@@ -2,9 +2,8 @@
 
 .home-page {
   flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  font-size: 3em;
+  .home-page__pagination {
+    margin-top: auto;
+  }
 }

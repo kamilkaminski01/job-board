@@ -5,6 +5,7 @@ export const API_URL =
 
 export const ENDPOINTS = {
   user: 'user/',
+  offers: 'offers/',
 
   getToken: 'token/',
   refreshToken: 'token/refresh/',
@@ -17,6 +18,10 @@ export const PATHS = {
   register: '/register',
   profile: '/profile',
   settings: '/settings'
+}
+
+export const RECORDS_PER_PAGE = {
+  offers: 10
 }
 
 export const LOCAL_STORAGE = {
