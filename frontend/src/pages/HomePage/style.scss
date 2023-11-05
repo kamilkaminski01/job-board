@@ -1,7 +1,11 @@
 @import 'utils/variables.scss';
 
 .home-page {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  min-height: calc(100vh - ($navbar-height + $footer-height));
+  padding: 0 4em;
 
   .home-page__pagination {
     margin-top: auto;

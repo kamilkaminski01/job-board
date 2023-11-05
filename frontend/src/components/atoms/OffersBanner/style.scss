@@ -1,0 +1,28 @@
+@import 'utils/variables.scss';
+
+.offers-banner {
+  padding: 1.5em 5em;
+
+  background: linear-gradient(90deg, #45a58a 0%, #5bcaac 100%);
+  border-radius: 0.5em;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .offers-banner__title {
+    font-size: 1.75em;
+    color: $snow;
+  }
+
+  .offers-banner__list {
+    list-style-type: none;
+
+    display: flex;
+    align-items: center;
+
+    .offers-banner__list-item:not(:last-child) {
+      margin-right: 3em;
+    }
+  }
+}
