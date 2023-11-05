@@ -1,13 +1,13 @@
-@import 'utils/variables.scss';
+@import 'utils/variables';
 
-.home-page {
+.offers-content {
   display: flex;
   flex-direction: column;
 
   min-height: calc(100vh - ($navbar-height + $footer-height));
   padding: 0 4em;
 
-  .home-page__pagination {
+  .offers-content__pagination {
     margin-top: auto;
   }
 }

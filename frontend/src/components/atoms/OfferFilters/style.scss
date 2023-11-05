@@ -1,0 +1,86 @@
+@import 'utils/variables.scss';
+
+.offer-filters {
+  display: flex;
+
+  .offer-filters__item:first-child {
+    margin-right: 3em;
+  }
+
+  .offer-filters__item:nth-child(2) {
+    min-width: 18.375em;
+  }
+
+  .offer-filters__item:last-child {
+    margin-left: auto;
+  }
+
+  .offer-filters__item {
+    .offer-filters__item-title {
+      font-size: 1em;
+      font-weight: 400;
+      color: $pigeon;
+    }
+
+    .offer-filters__count {
+      font-size: 1em;
+      font-weight: 700;
+      color: $carbon;
+      text-align: right;
+    }
+  }
+
+  .offer-filters__select {
+    width: calc(100% + 1.5em);
+    border: none;
+
+    font-size: 1em;
+    font-weight: 700;
+    font-family: inherit;
+
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.99996 10.6661C7.91222 10.6666 7.82525 10.6498 7.74402 10.6167C7.6628 10.5835 7.58892 10.5346 7.52663 10.4728L3.52663 6.47281C3.40109 6.34727 3.33057 6.17701 3.33057 5.99947C3.33057 5.82194 3.40109 5.65168 3.52663 5.52614C3.65216 5.4006 3.82243 5.33008 3.99996 5.33008C4.1775 5.33008 4.34776 5.4006 4.47329 5.52614L7.99996 9.05947L11.5266 5.53281C11.6542 5.42359 11.8182 5.36652 11.986 5.373C12.1538 5.37948 12.3129 5.44903 12.4317 5.56776C12.5504 5.68649 12.62 5.84565 12.6264 6.01344C12.6329 6.18122 12.5758 6.34527 12.4666 6.47281L8.46663 10.4728C8.34245 10.596 8.17485 10.6654 7.99996 10.6661Z' fill='%23333333'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 0.1875em;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  .offer-filters__slider {
+    display: flex;
+    align-items: center;
+
+    .offer-filters__slider-values {
+      font-size: 1em;
+      font-weight: 700;
+      color: $carbon;
+      width: 6.37em;
+
+      &:last-child {
+        text-align: right;
+      }
+    }
+
+    .offer-filters__range-track {
+      position: relative;
+      height: 0.3em;
+      width: 100%;
+      border-radius: 1em;
+      background-color: $moon;
+    }
+
+    .offer-filters__range-thumb {
+      width: 0.75em;
+      height: 0.75em;
+      border-radius: 50%;
+      background-color: $dark-sea;
+      top: 0;
+
+      &:focus-visible {
+        outline: none;
+        background-color: $lazur;
+      }
+    }
+  }
+}
