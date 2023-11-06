@@ -1,0 +1,46 @@
+.offer-card-list {
+  display: grid;
+  gap: 1.25em;
+  width: 50%;
+
+  margin-bottom: 2.5em;
+
+  .offer-card-list__item {
+    display: flex;
+    padding: 1em 2em;
+  }
+
+  .offer-card-list__item--skeleton {
+    border-radius: 0.5em;
+    box-shadow: 0 0 0.3em 0.3em rgba(0, 0, 0, 0.05);
+
+    .offer-card-list-skeleton__details {
+      margin-left: auto;
+
+      .offer-card-list-skeleton__label:not(:last-child) {
+        margin-right: 0.25em;
+      }
+
+      .offer-card-list-skeleton__labels {
+        display: flex;
+        justify-content: right;
+        margin-top: 1em;
+      }
+    }
+  }
+
+  .offer-card-list-skeleton {
+    display: flex;
+
+    .offer-card-list-skeleton__description {
+      display: flex;
+      flex-direction: column;
+      margin-left: 2em;
+      align-items: start;
+
+      .offer-card-list-skeleton__sub-description {
+        margin-top: 1em;
+      }
+    }
+  }
+}
