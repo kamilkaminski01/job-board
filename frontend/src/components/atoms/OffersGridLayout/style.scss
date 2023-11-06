@@ -1,0 +1,14 @@
+.offers-layout {
+  display: flex;
+
+  & > * {
+    flex-basis: 50%;
+  }
+
+  margin-bottom: 2.5em;
+
+  .offers-grid {
+    display: grid;
+    grid-gap: 1.25em;
+  }
+}

@@ -6,7 +6,7 @@ from .models import Offer, TechStack
 class TechStackSerializer(serializers.ModelSerializer):
     class Meta:
         model = TechStack
-        fields = ["title", "advancement"]
+        fields = ["id", "title", "advancement"]
 
 
 class OfferListSerializer(serializers.ModelSerializer):
@@ -17,6 +17,7 @@ class OfferListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Offer
         fields = [
+            "id",
             "company",
             "image",
             "title",

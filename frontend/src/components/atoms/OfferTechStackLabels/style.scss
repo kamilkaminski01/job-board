@@ -1,0 +1,21 @@
+@import 'utils/variables.scss';
+
+.offer-card-tile__tech-stacks {
+  display: flex;
+  justify-content: right;
+
+  .offer-card-tile__tech-stack:not(:last-child) {
+    margin-right: 0.3em;
+  }
+
+  .offer-card-tile__tech-stack {
+    display: flex;
+    align-items: center;
+
+    padding: 0.2em 0.5em;
+
+    font-size: 0.85em;
+    border: 1px solid $bright-gray;
+    border-radius: 1em;
+  }
+}
