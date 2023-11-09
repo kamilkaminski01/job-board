@@ -1,22 +1,32 @@
 import { OfferCardProps } from './interface'
 import OfferCardTile from 'components/atoms/OfferCardTile'
 import OfferTechStackLabels from 'components/atoms/OfferTechStackLabels'
+import useOfferDetails from 'hooks/useOfferDetails'
 
 const OfferCard = ({
+  id,
   company,
   image,
   title,
   salaryMin,
   salaryMax,
   currency,
-  techStacks
+  experience,
+  techStacks,
+  setOfferDetails
 }: OfferCardProps) => {
+  const { getData } = useOfferDetails(id, { dontFetchOnMount: true })
+
   const openOfferDetails = async () => {
-    console.log('opened details')
+    const response = await getData()
+
+    if (response.succeed && response.data) {
+      setOfferDetails(response.data)
+    }
   }
 
-  const formatSalary = (salary: number) => {
-    return salary.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
+  const formatNumber = (value: number) => {
+    return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
   }
 
   return (
@@ -31,7 +41,8 @@ const OfferCard = ({
       </div>
       <div className="offer-card-tile__extra-details">
         <div className="offer-card-tile__salary">
-          {formatSalary(salaryMin)} - {formatSalary(salaryMax)} {currency}
+          {formatNumber(salaryMin)} - {formatNumber(salaryMax)} {currency}
+          <p className="offer-card-tile__experience">{experience}</p>
         </div>
         <OfferTechStackLabels techStacks={techStacks} />
       </div>

@@ -6,6 +6,7 @@ export const API_URL =
 export const ENDPOINTS = {
   user: 'user/',
   offers: 'offers/',
+  offerDetails: 'offers/:id',
 
   getToken: 'token/',
   refreshToken: 'token/refresh/',

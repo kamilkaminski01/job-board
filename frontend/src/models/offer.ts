@@ -10,7 +10,5 @@ export interface IOffer {
   currency: string
   description: string
   experience: string
-  employmentType: string
-  workType: string
   techStacks: [ITechStack]
 }

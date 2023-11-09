@@ -5,8 +5,8 @@ import './style.scss'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 
-const OfferCardList = ({ offers, isLoading }: OfferCardListProps) => {
-  if (!isLoading)
+const OfferCardList = ({ offers, isLoading, setOfferDetails }: OfferCardListProps) => {
+  if (isLoading)
     return (
       <ul className="offer-card-list">
         {Array(10)
@@ -38,7 +38,7 @@ const OfferCardList = ({ offers, isLoading }: OfferCardListProps) => {
   return (
     <OffersGridLayout>
       {offers.map((offer) => (
-        <OfferCard key={offer.id} {...offer} />
+        <OfferCard key={offer.id} {...offer} setOfferDetails={setOfferDetails} />
       ))}
     </OffersGridLayout>
   )

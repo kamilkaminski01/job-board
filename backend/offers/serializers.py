@@ -1,3 +1,5 @@
+from typing import Optional
+
 from rest_framework import serializers
 
 from .models import Offer, TechStack
@@ -9,9 +11,9 @@ class TechStackSerializer(serializers.ModelSerializer):
         fields = ["id", "title", "advancement"]
 
 
-class OfferListSerializer(serializers.ModelSerializer):
-    company = serializers.SerializerMethodField("get_company")
-    image = serializers.SerializerMethodField("get_image")
+class BaseOfferSerializer(serializers.ModelSerializer):
+    company = serializers.SerializerMethodField()
+    image = serializers.SerializerMethodField()
     tech_stacks = TechStackSerializer(many=True)
 
     class Meta:
@@ -26,8 +28,6 @@ class OfferListSerializer(serializers.ModelSerializer):
             "currency",
             "description",
             "experience",
-            "employment_type",
-            "work_type",
             "tech_stacks",
         ]
 
@@ -39,3 +39,22 @@ class OfferListSerializer(serializers.ModelSerializer):
         if not obj.company.image:
             return context.build_absolute_uri("/static/img/img-placeholder.png")
         return context.build_absolute_uri(obj.company.image.url)
+
+
+class OfferListSerializer(BaseOfferSerializer):
+    class Meta(BaseOfferSerializer.Meta):
+        fields = BaseOfferSerializer.Meta.fields
+
+
+class OfferDetailsSerializer(BaseOfferSerializer):
+    company_description = serializers.SerializerMethodField()
+
+    class Meta(BaseOfferSerializer.Meta):
+        fields = BaseOfferSerializer.Meta.fields + [
+            "company_description",
+            "employment_type",
+            "work_type",
+        ]
+
+    def get_company_description(self, obj: Offer) -> Optional[str]:
+        return obj.company.description

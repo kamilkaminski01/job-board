@@ -1,9 +1,9 @@
 from rest_framework import filters
-from rest_framework.generics import ListAPIView
+from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework.pagination import PageNumberPagination
 
 from .models import Offer
-from .serializers import OfferListSerializer
+from .serializers import OfferDetailsSerializer, OfferListSerializer
 
 
 class OfferPagination(PageNumberPagination):
@@ -23,3 +23,8 @@ class OfferListView(ListAPIView):
         if max := self.request.query_params.get("max"):
             queryset = queryset.filter(salary_max__lte=max)
         return queryset
+
+
+class OfferDetailsView(RetrieveAPIView):
+    serializer_class = OfferDetailsSerializer
+    queryset = Offer.objects.all()

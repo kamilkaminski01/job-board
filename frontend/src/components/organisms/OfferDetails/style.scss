@@ -1,0 +1,22 @@
+@import 'utils/variables';
+
+.offers-content__offer-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1em;
+  background-color: $alabaster;
+
+  border-radius: 0.5em;
+  box-shadow: 0 0 0.2em 0.2em rgba(0, 0, 0, 0.05);
+
+  .offer-details__message {
+
+    & > svg {
+      width: 8em;
+      height: 8em;
+      color: $primary-color;
+    }
+  }
+}

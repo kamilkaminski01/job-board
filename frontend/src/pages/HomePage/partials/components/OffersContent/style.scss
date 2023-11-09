@@ -1,6 +1,6 @@
 @import 'utils/variables';
 
-.offers-content {
+.offers-layout {
   display: flex;
   flex-direction: column;
 
@@ -10,4 +10,15 @@
   .offers-content__pagination {
     margin-top: auto;
   }
+}
+
+.offers-content {
+  display: flex;
+  gap: 1em;
+
+  & > * {
+    flex-basis: 50%;
+  }
+
+  margin-bottom: 2.5em;
 }
