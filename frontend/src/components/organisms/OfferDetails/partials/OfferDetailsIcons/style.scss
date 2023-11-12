@@ -1,0 +1,31 @@
+@import 'utils/variables';
+
+.offer-details__icons {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 0.85em;
+
+  .icons__details {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+    .icons__icon {
+      display: flex;
+      align-items: center;
+      padding: 0.5em;
+      border-radius: 1.1em;
+    }
+
+    .icon__info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+
+      & > label {
+        color: $devil
+      }
+    }
+  }
+}

@@ -10,6 +10,13 @@
 
     user-select: none;
     cursor: pointer;
+
+    .nav-dropdown__user-image {
+      width: 2em;
+      height: 2em;
+      object-fit: cover;
+      border-radius: 50%;
+    }
   }
 
   .nav-dropdown__menu {

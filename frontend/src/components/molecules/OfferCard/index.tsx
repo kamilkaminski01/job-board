@@ -2,6 +2,8 @@ import { OfferCardProps } from './interface'
 import OfferCardTile from 'components/atoms/OfferCardTile'
 import OfferTechStackLabels from 'components/atoms/OfferTechStackLabels'
 import useOfferDetails from 'hooks/useOfferDetails'
+import BuildingIcon from 'assets/icons/building.png'
+import { formatNumber } from 'utils/formatNumber'
 
 const OfferCard = ({
   id,
@@ -25,17 +27,13 @@ const OfferCard = ({
     }
   }
 
-  const formatNumber = (value: number) => {
-    return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
-  }
-
   return (
     <OfferCardTile onCardClick={openOfferDetails}>
       <img src={image} className="offer-card-tile__image" alt="company image" />
       <div className="offer-card-tile__details">
         <h3 className="offer-card-tile__title">{title}</h3>
         <div className="offer-card-tile__company-items">
-          <img width="16" height="16" src="https://img.icons8.com/small/16/737373/company.png" />
+          <img src={BuildingIcon} />
           <span className="offer-card-tile__company">{company}</span>
         </div>
       </div>

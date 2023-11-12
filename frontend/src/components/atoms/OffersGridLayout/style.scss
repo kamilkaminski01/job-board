@@ -1,4 +1,5 @@
 .offers-grid {
   display: grid;
   grid-gap: 1.25em;
+  grid-template-rows: repeat(auto-fill, minmax(4.5em, 1fr));
 }

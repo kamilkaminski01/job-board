@@ -1,0 +1,57 @@
+@import 'utils/variables';
+
+.offer-details__header {
+  display: flex;
+  background-color: $primary-color;
+  color: $snow;
+
+  .header__image{
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+  }
+
+  .header__details {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 1em;
+    gap: 1.25em;
+
+    .header__title {
+      font-size: 1.5em;
+    }
+
+    .header__company {
+      display: flex;
+      align-items: center;
+
+      .header__company-name {
+        margin-left: 0.5em;
+      }
+    }
+
+    .header__salary {
+      display: flex;
+      align-items: center;
+      padding: 0.6em;
+      margin-right: auto;
+      gap: 0.75em;
+
+      border-radius: 0.85em;
+      background-color: rgba(0, 0, 0, 0.3);
+      font-size: 1em;
+
+      .header__salary-work-type{
+        margin-top: 0.4em;
+
+        font-size: 0.80em;
+        font-weight: normal;
+      }
+
+      .header__salary-icon {
+        width: 1.5em;
+        height: 1.5em;
+      }
+    }
+  }
+}

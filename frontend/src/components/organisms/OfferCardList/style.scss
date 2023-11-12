@@ -1,9 +1,7 @@
 .offer-card-list {
   display: grid;
-  gap: 1.25em;
+  grid-gap: 1.2em;
   width: 50%;
-
-  margin-bottom: 2.5em;
 
   .offer-card-list__item {
     display: flex;

@@ -1,21 +1,43 @@
 @import 'utils/variables';
 
-.offers-content__offer-details {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.offer-content__offer-details {
+  flex-grow: 1;
+  padding: 0.5em;
+  background-color: $alabaster;
 
-  padding: 1em;
+  border-radius: 0.5em;
+  box-shadow: 0 0 0.2em 0.2em rgba(0, 0, 0, 0.05);
+
+  .offer-details__items {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+}
+
+.offer-content__no-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.5em;
   background-color: $alabaster;
 
   border-radius: 0.5em;
   box-shadow: 0 0 0.2em 0.2em rgba(0, 0, 0, 0.05);
 
   .offer-details__message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+
+    font-size: 1em;
+    text-align: center;
 
     & > svg {
-      width: 8em;
-      height: 8em;
+      width: 10em;
+      height: 10em;
       color: $primary-color;
     }
   }
