@@ -1,7 +1,8 @@
 @import 'utils/variables';
 
 .offer-content__offer-details {
-  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   padding: 0.5em;
   background-color: $alabaster;
 
@@ -12,6 +13,21 @@
     display: flex;
     flex-direction: column;
     gap: 1em;
+  }
+
+  .offer-details__apply{
+    display: flex;
+    justify-content: center;
+    padding: 1em 0 0;
+    margin-top: auto;
+
+    .offer-details__apply-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.25em;
+      width: 50%;
+    }
   }
 }
 

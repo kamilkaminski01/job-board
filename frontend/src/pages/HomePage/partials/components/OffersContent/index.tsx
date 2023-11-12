@@ -3,7 +3,7 @@ import OffersHeader from 'components/molecules/OffersHeader'
 import useOffers from 'hooks/useOffers'
 import Pagination from 'components/atoms/Pagination'
 import OfferCardList from 'components/organisms/OfferCardList'
-import OfferDetails from 'components/organisms/OfferDetails/OfferDetails'
+import OfferDetails from 'components/organisms/OfferDetails'
 import { useState } from 'react'
 import { IOfferDetails } from 'models/offerDetails'
 
@@ -16,7 +16,7 @@ const OffersContent = () => {
       <OffersHeader offersCount={offersCount} />
       <div className="offers-content">
         <OfferCardList offers={offersList} {...{ isLoading }} setOfferDetails={setOfferDetails} />
-        <OfferDetails offer={offerDetails} />
+        <OfferDetails offer={offerDetails} setOfferDetails={setOfferDetails} />
       </div>
       {pageCount > 1 && (
         <Pagination

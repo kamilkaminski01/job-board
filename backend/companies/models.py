@@ -15,9 +15,7 @@ class Company(User):
         verbose_name="name",
     )
     description = models.TextField(
-        max_length=200,
-        null=True,
-        blank=True,
+        max_length=300,
         verbose_name="description",
     )
     image = models.FileField(

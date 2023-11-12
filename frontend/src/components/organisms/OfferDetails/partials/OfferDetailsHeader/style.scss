@@ -1,9 +1,21 @@
 @import 'utils/variables';
 
 .offer-details__header {
+  position: relative;
   display: flex;
-  background-color: $primary-color;
+  align-items: center;
+  background-color: $primary-color !important;
   color: $snow;
+
+  .header__close-button {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    box-shadow: 0 8px 8px 0 #0000000d;
+
+    background-color: transparent;
+    border: none;
+  }
 
   .header__image{
     width: 10em;

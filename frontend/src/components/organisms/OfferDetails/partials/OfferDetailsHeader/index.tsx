@@ -4,6 +4,8 @@ import { OfferDetailsHeaderProps } from './interface'
 import BuildingIconWhite from 'assets/icons/building-white.png'
 import { BiWallet } from 'react-icons/bi'
 import { formatNumber } from 'utils/formatNumber'
+import CloseIcon from 'assets/icons/close-icon.svg'
+import { IOfferDetails } from 'models/offerDetails'
 
 const OfferDetailsHeader = ({
   image,
@@ -12,8 +14,13 @@ const OfferDetailsHeader = ({
   salaryMin,
   salaryMax,
   currency,
-  workType
+  workType,
+  setOfferDetails
 }: OfferDetailsHeaderProps) => {
+  const closeOfferDetails = () => {
+    setOfferDetails({} as IOfferDetails)
+  }
+
   return (
     <Tile shadow="light" className="offer-details__header">
       <img src={image} className="header__image" />
@@ -31,6 +38,9 @@ const OfferDetailsHeader = ({
           </div>
         </div>
       </div>
+      <button className="header__close-button" onClick={closeOfferDetails}>
+        <img src={CloseIcon} alt="Close icon" />
+      </button>
     </Tile>
   )
 }

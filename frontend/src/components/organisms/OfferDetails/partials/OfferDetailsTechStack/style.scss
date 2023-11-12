@@ -1,0 +1,44 @@
+@import 'utils/variables';
+
+.offer-details__tech-stack-title {
+  margin-bottom: 1em;
+}
+
+.offer-details__tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+
+  .tech-stack__details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    width: calc(33.33% - 1.5em);
+
+    .tech-stack__title {
+      font-weight: 500;
+    }
+
+    .tech-stack__list{
+      display: flex;
+      gap: 0.5em;
+      list-style-type: none;
+
+      .tech-stack__level-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $pigeon;
+      }
+
+      .tech-stack__dot-colored {
+        background-color: $primary-color;
+      }
+    }
+
+    .tech-stack__advancement {
+      font-size: 0.85em;
+      color: $devil
+    }
+  }
+}
