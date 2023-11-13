@@ -42,6 +42,7 @@ class UsersAdmin(UserAdmin):
                 "fields": [
                     "is_staff",
                     "is_active",
+                    "groups",
                     "date_joined",
                     "last_login",
                 ],
@@ -69,6 +70,7 @@ class UsersAdmin(UserAdmin):
                 "fields": [
                     "is_staff",
                     "is_active",
+                    "groups",
                     "date_joined",
                     "last_login",
                 ],

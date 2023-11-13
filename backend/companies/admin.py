@@ -1,4 +1,6 @@
 from django.contrib import admin
+from django.db.models import QuerySet
+from django.http import HttpRequest
 from django.utils.html import format_html
 
 from backend.utils import does_file_exist
@@ -9,7 +11,7 @@ from .forms import CompanyAdminForm
 from .models import Company
 
 
-class CompanyOffersAdmin(admin.TabularInline):
+class CompanyOffersAdminInline(admin.TabularInline):
     model = Offer
     show_change_link = True
 
@@ -40,7 +42,7 @@ class CompanyAdmin(UsersAdmin):
         excessive_general_fields=["first_name", "last_name"],
         excessive_advanced_fields=["is_staff"],
     )
-    inlines = [CompanyOffersAdmin]
+    inlines = [CompanyOffersAdminInline]
     form = CompanyAdminForm
     list_display = [
         "image_preview",
@@ -56,6 +58,17 @@ class CompanyAdmin(UsersAdmin):
         return format_html(
             '<img src="{url}" width=50px height=50px/>',
             url=obj.image.url,
+        )
+
+    def get_queryset(self, request: HttpRequest) -> QuerySet[Company]:
+        queryset = super().get_queryset(request)
+        if request.user.is_superuser:
+            return queryset
+        return queryset.filter(id=request.user.id)
+
+    def has_change_permission(self, request: HttpRequest, obj=None) -> bool:
+        return request.user.is_superuser or (
+            obj is not None and obj.id == request.user.id
         )
 
 
