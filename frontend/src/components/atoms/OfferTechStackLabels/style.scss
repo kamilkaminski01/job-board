@@ -3,6 +3,7 @@
 .offer-card-tile__tech-stacks {
   display: flex;
   justify-content: right;
+  white-space: nowrap;
 
   .offer-card-tile__tech-stack:not(:last-child) {
     margin-right: 0.3em;
