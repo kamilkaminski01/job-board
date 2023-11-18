@@ -1,4 +1,5 @@
 from django.db import models
+from tinymce.models import HTMLField
 
 from backend.mixins import TimeStampMixin
 from companies.models import Company
@@ -47,8 +48,7 @@ class Offer(TimeStampMixin):
         default=CurrencyChoices.PLN,
         verbose_name="currency",
     )
-    description = models.TextField(
-        max_length=4000,
+    description = HTMLField(
         null=True,
         blank=True,
         verbose_name="description",
