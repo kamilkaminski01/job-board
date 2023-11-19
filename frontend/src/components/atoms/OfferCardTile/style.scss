@@ -24,7 +24,10 @@
   }
 
   .offer-card-tile__details {
+    display: flex;
+    flex-direction: column;
     min-width: 0;
+    gap: 0.3em;
 
     text-align: left;
     margin: 0 1.5em;
@@ -56,6 +59,7 @@
     .offer-card-tile__salary {
       display: flex;
       justify-content: right;
+      align-items: flex-end;
       margin: 0.3em 0 0.3em 0.3em;
 
       font-size: 1.2em;
