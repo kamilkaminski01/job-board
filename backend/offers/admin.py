@@ -1,6 +1,9 @@
+from typing import Optional
+
 from django.contrib import admin
 from django.db.models import QuerySet
-from django.http import HttpRequest
+
+from companies.models import Company
 
 from .forms import OfferForm
 from .models import Offer, TechStack
@@ -35,23 +38,26 @@ class OfferAdmin(admin.ModelAdmin):
     ordering = ["-created_at"]
     search_fields = ["title", "company__name"]
 
-    def get_form(self, request: HttpRequest, obj=None, change=False, **kwargs):
+    def get_form(self, request, obj=None, change=False, **kwargs):
         form = super().get_form(request, obj, **kwargs)
         if not request.user.is_superuser:
-            form.base_fields["company"].initial = request.user.company  # type: ignore
+            company = Company.objects.get(id=request.user.id)
+            form.base_fields["company"].initial = company
             form.base_fields["company"].widget.attrs["disabled"] = True
         return form
 
-    def get_queryset(self, request: HttpRequest) -> QuerySet[Offer]:
+    def get_queryset(self, request) -> QuerySet[Offer]:
         queryset = super().get_queryset(request)
         if not request.user.is_superuser:
-            queryset = queryset.filter(company=request.user.company)  # type: ignore
+            company = Company.objects.get(id=request.user.id)
+            queryset = queryset.filter(company=company)
         return queryset
 
-    def has_change_permission(self, request: HttpRequest, obj=None) -> bool:
-        return request.user.is_superuser or (
-            obj is not None and obj.company == request.user.company  # type: ignore
-        )
+    def has_change_permission(self, request, obj: Optional[Offer] = None) -> bool:
+        if not request.user.is_superuser:
+            company = Company.objects.get(id=request.user.id)
+            return obj is not None and obj.company == company
+        return True
 
     def candidates_count(self, obj: Offer) -> int:
         return obj.candidates.count()

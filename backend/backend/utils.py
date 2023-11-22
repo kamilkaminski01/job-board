@@ -3,7 +3,7 @@ from functools import partial
 from pathlib import Path
 from typing import IO
 
-import requests  # type: ignore
+import requests
 from django.core.exceptions import ValidationError
 from django.core.files.storage import default_storage
 from django.db.models.fields.files import FieldFile
@@ -33,7 +33,7 @@ def does_file_exist(file: FieldFile) -> bool:
 
     file_url = file.url
     if file_url.startswith("/media"):
-        return default_storage.exists(file_url)  # type: ignore
+        return default_storage.exists(file_url)
     else:
         response = requests.head(file_url)
         return response.status_code == 200

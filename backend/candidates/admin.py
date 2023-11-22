@@ -1,8 +1,11 @@
+from typing import Optional
+
 from django.contrib import admin
-from django.http import HttpRequest
+from django.db.models import QuerySet
 from django.utils.html import format_html
 
 from backend.utils import does_file_exist
+from companies.models import Company
 from users.admin import UsersAdmin
 
 from .forms import CandidateAdminForm
@@ -44,11 +47,13 @@ class CandidateAdmin(UsersAdmin):
             url=obj.image.url,
         )
 
-    def get_queryset(self, request: HttpRequest, obj=None):
+    def get_queryset(
+        self, request, obj: Optional[Candidate] = None
+    ) -> QuerySet[Candidate]:
         queryset = super().get_queryset(request)
         if not request.user.is_superuser:
-            # flake8: noqa
-            queryset = queryset.filter(offers__company=request.user.company)  # type: ignore
+            company = Company.objects.get(id=request.user.id)
+            queryset = queryset.filter(offers__company=company)
         return queryset
 
 
