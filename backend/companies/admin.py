@@ -14,18 +14,24 @@ from .models import Company
 class CompanyOffersAdminInline(admin.TabularInline):
     model = Offer
     show_change_link = True
-
-    def get_readonly_fields(self, request, obj=None):
-        return (
-            "title",
-            "salary_min",
-            "salary_max",
-            "currency",
-            "description",
-            "work_type",
-            "employment_type",
-            "experience",
-        )
+    fields = [
+        "title",
+        "salary_min",
+        "salary_max",
+        "currency",
+        "work_type",
+        "employment_type",
+        "experience",
+    ]
+    readonly_fields = [
+        "title",
+        "salary_min",
+        "salary_max",
+        "currency",
+        "work_type",
+        "employment_type",
+        "experience",
+    ]
 
     def has_add_permission(self, request, obj=None):
         return False
@@ -48,6 +54,7 @@ class CompanyAdmin(UsersAdmin):
         "image_preview",
         "name",
         "email",
+        "offers_count",
     ]
     list_display_links = ["name"]
     search_fields = ["name", "email"]
@@ -60,11 +67,14 @@ class CompanyAdmin(UsersAdmin):
             url=obj.image.url,
         )
 
+    def offers_count(self, obj: Company) -> int:
+        return obj.offers.count()
+
     def get_queryset(self, request: HttpRequest) -> QuerySet[Company]:
         queryset = super().get_queryset(request)
-        if request.user.is_superuser:
-            return queryset
-        return queryset.filter(id=request.user.id)
+        if not request.user.is_superuser:
+            queryset = queryset.filter(id=request.user.id)
+        return queryset
 
     def has_change_permission(self, request: HttpRequest, obj=None) -> bool:
         return request.user.is_superuser or (

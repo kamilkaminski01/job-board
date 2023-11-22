@@ -2,6 +2,7 @@ from django.db import models
 from tinymce.models import HTMLField
 
 from backend.mixins import TimeStampMixin
+from candidates.models import Candidate
 from companies.models import Company
 
 
@@ -71,6 +72,11 @@ class Offer(TimeStampMixin):
         null=True,
         blank=True,
         verbose_name="work type",
+    )
+    candidates = models.ManyToManyField(
+        Candidate,
+        verbose_name="candidates",
+        related_name="offers",
     )
 
     def __str__(self):

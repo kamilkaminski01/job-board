@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.http import HttpRequest
 from django.utils.html import format_html
 
 from backend.utils import does_file_exist
@@ -42,6 +43,13 @@ class CandidateAdmin(UsersAdmin):
             '<img src="{url}" width=50px height=50px/>',
             url=obj.image.url,
         )
+
+    def get_queryset(self, request: HttpRequest, obj=None):
+        queryset = super().get_queryset(request)
+        if not request.user.is_superuser:
+            # flake8: noqa
+            queryset = queryset.filter(offers__company=request.user.company)  # type: ignore
+        return queryset
 
 
 admin.site.register(Candidate, CandidateAdmin)

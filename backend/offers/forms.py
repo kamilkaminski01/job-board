@@ -6,7 +6,7 @@ from offers.models import Offer
 class OfferForm(forms.ModelForm):
     class Meta:
         model = Offer
-        fields = "__all__"
+        exclude = ["candidates"]
 
     def clean(self):
         cleaned_data = super().clean()
