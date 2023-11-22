@@ -14,3 +14,4 @@ mypy==1.4.1
 psycopg2-binary==2.9.6
 rest-social-auth==8.1.0
 sqlparse==0.4.4
+types-requests==2.31.0.10

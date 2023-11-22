@@ -33,7 +33,7 @@ def does_file_exist(file: FieldFile) -> bool:
 
     file_url = file.url
     if file_url.startswith("/media"):
-        return default_storage.exists(file_url)
+        return default_storage.exists(file_url)  # type: ignore
     else:
         response = requests.head(file_url)
         return response.status_code == 200
