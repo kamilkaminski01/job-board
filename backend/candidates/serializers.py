@@ -35,11 +35,10 @@ class CandidateSerializer(serializers.ModelSerializer):
 
     def get_image(self, instance: Candidate) -> Optional[str]:
         context = self.context["request"]
-        if not Candidate.objects.filter(id=context.user.id).exists():
-            return None
-        if image := instance.image:
-            return context.build_absolute_uri(image.url)
-        return context.build_absolute_uri("/static/img/profile-image.png")
+        if Candidate.objects.filter(id=context.user.id).exists():
+            if image := instance.image:
+                return context.build_absolute_uri(image.url)
+        return None
 
 
 class CandidateUpdateSerializer(serializers.ModelSerializer):

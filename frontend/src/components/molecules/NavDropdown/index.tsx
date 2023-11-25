@@ -24,7 +24,11 @@ const NavDropdown = () => {
   return (
     <div className="nav-dropdown">
       <div className="nav-dropdown__header" onClick={handleToggle}>
-        <img src={userData.image} className="nav-dropdown__user-image" />
+        {userData.image ? (
+          <img src={userData.image} className="nav-dropdown__user-image" />
+        ) : (
+          <div className="nav-dropdown__user-image"></div>
+        )}
         <span>{userData.firstName || 'Profile'}</span>
         {isOpen ? <FiChevronUp /> : <FiChevronDown />}
       </div>

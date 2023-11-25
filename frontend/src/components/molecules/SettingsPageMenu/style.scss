@@ -19,6 +19,15 @@
 
       margin-bottom: 1em;
       border-radius: 50%;
+      background-image: url("../../../assets/images/img-placeholder1.png");
+      background-size: contain;
+    }
+
+    .settings-page-menu__logout {
+      font-size: 0.85em;
+      color: $error-color;
+      cursor: pointer;
+      margin-top: 0.85em;
     }
   }
 }

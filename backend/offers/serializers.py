@@ -34,10 +34,10 @@ class BaseOfferSerializer(serializers.ModelSerializer):
     def get_company(self, obj: Offer) -> str:
         return obj.company.name
 
-    def get_image(self, obj: Offer) -> str:
+    def get_image(self, obj: Offer) -> Optional[str]:
         context = self.context["request"]
         if not obj.company.image:
-            return context.build_absolute_uri("/static/img/img-placeholder.png")
+            return None
         return context.build_absolute_uri(obj.company.image.url)
 
 

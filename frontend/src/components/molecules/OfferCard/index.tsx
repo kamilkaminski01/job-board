@@ -29,7 +29,11 @@ const OfferCard = ({
 
   return (
     <OfferCardTile onCardClick={openOfferDetails}>
-      <img src={image} className="offer-card-tile__image" alt="company image" />
+      {image ? (
+        <img src={image} className="offer-card-tile__image" />
+      ) : (
+        <div className="offer-card-tile__image"></div>
+      )}
       <div className="offer-card-tile__details">
         <h3 className="offer-card-tile__title">{title}</h3>
         <div className="offer-card-tile__company-items">

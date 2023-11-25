@@ -23,7 +23,11 @@ const OfferDetailsHeader = ({
 
   return (
     <Tile shadow="light" className="offer-details__header">
-      <img src={image} className="header__image" />
+      {image ? (
+        <img src={image} className="header__image" />
+      ) : (
+        <div className="header__image"></div>
+      )}
       <div className="header__details">
         <h1 className="header__title">{title}</h1>
         <div className="header__company">
