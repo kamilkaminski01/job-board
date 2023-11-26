@@ -73,11 +73,6 @@ class Offer(TimeStampMixin):
         blank=True,
         verbose_name="work type",
     )
-    candidates = models.ManyToManyField(
-        Candidate,
-        verbose_name="candidates",
-        related_name="offers",
-    )
 
     def __str__(self):
         return self.title
@@ -119,3 +114,28 @@ class TechStack(models.Model):
     class Meta:
         verbose_name = "Tech stack"
         verbose_name_plural = "Tech stacks"
+
+
+class OfferApplicationHistory(models.Model):
+    candidate = models.ForeignKey(
+        Candidate,
+        on_delete=models.CASCADE,
+        related_name="candidate_application_histories",
+        verbose_name="candidate",
+    )
+    offer = models.ForeignKey(
+        Offer,
+        on_delete=models.CASCADE,
+        related_name="offer_application_history",
+        verbose_name="offer",
+    )
+    application_date = models.DateTimeField(
+        auto_now_add=True, verbose_name="application date"
+    )
+
+    def __str__(self):
+        return f"{self.candidate}: {self.offer}"
+
+    class Meta:
+        verbose_name = "Offer application history"
+        verbose_name_plural = "Offer application histories"

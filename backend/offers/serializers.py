@@ -2,7 +2,7 @@ from typing import Optional
 
 from rest_framework import serializers
 
-from .models import Offer, TechStack
+from .models import Offer, OfferApplicationHistory, TechStack
 
 
 class TechStackSerializer(serializers.ModelSerializer):
@@ -58,3 +58,9 @@ class OfferDetailsSerializer(BaseOfferSerializer):
 
     def get_company_description(self, obj: Offer) -> Optional[str]:
         return obj.company.description
+
+
+class OfferApplicationHistorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = OfferApplicationHistory
+        fields = ["offer"]

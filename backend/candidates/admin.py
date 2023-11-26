@@ -6,6 +6,7 @@ from django.utils.html import format_html
 
 from backend.utils import does_file_exist
 from companies.models import Company
+from offers.models import Offer, OfferApplicationHistory
 from users.admin import UsersAdmin
 
 from .forms import CandidateAdminForm
@@ -53,7 +54,11 @@ class CandidateAdmin(UsersAdmin):
         queryset = super().get_queryset(request)
         if not request.user.is_superuser:
             company = Company.objects.get(id=request.user.id)
-            queryset = queryset.filter(offers__company=company)
+            offers = Offer.objects.filter(company=company)
+            candidate_ids = OfferApplicationHistory.objects.filter(
+                offer__in=offers
+            ).values_list("candidate_id", flat=True)
+            queryset = queryset.filter(id__in=candidate_ids)
         return queryset
 
 

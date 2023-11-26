@@ -1,9 +1,16 @@
 from rest_framework import filters
-from rest_framework.generics import ListAPIView, RetrieveAPIView
+from rest_framework.generics import CreateAPIView, ListAPIView, RetrieveAPIView
 from rest_framework.pagination import PageNumberPagination
+from rest_framework.permissions import IsAuthenticated
 
-from .models import Offer
-from .serializers import OfferDetailsSerializer, OfferListSerializer
+from candidates.models import Candidate
+
+from .models import Offer, OfferApplicationHistory
+from .serializers import (
+    OfferApplicationHistorySerializer,
+    OfferDetailsSerializer,
+    OfferListSerializer,
+)
 
 
 class OfferPagination(PageNumberPagination):
@@ -28,3 +35,16 @@ class OfferListView(ListAPIView):
 class OfferDetailsView(RetrieveAPIView):
     serializer_class = OfferDetailsSerializer
     queryset = Offer.objects.all()
+
+
+class OfferApplicationHistoryView(CreateAPIView):
+    permission_classes = [IsAuthenticated]
+    serializer_class = OfferApplicationHistorySerializer
+    queryset = OfferApplicationHistory.objects.all()
+
+    def post(self, request, *args, **kwargs):
+        return self.create(request, *args, **kwargs)
+
+    def perform_create(self, serializer: OfferApplicationHistorySerializer) -> None:
+        candidate = Candidate.objects.get(id=self.request.user.id)
+        serializer.save(candidate=candidate)

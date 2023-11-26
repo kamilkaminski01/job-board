@@ -1,12 +1,13 @@
-from typing import Optional
+from typing import List, Optional
 
 from django.contrib import admin
 from django.db.models import QuerySet
+from django.http import HttpRequest
 
 from companies.models import Company
 
 from .forms import OfferForm
-from .models import Offer, TechStack
+from .models import Offer, OfferApplicationHistory, TechStack
 
 
 class TechStackAdminInline(admin.TabularInline):
@@ -14,10 +15,8 @@ class TechStackAdminInline(admin.TabularInline):
     extra = 0
 
 
-class CandidatesInline(admin.TabularInline):
-    model = Offer.candidates.through
-    verbose_name = "Candidates"
-    verbose_name_plural = "Candidates"
+class OfferApplicationHistoryInline(admin.TabularInline):
+    model = OfferApplicationHistory
 
     def has_add_permission(self, request, obj=None):
         return False
@@ -27,12 +26,12 @@ class CandidatesInline(admin.TabularInline):
 
 
 class OfferAdmin(admin.ModelAdmin):
-    inlines = [TechStackAdminInline, CandidatesInline]
+    inlines = [TechStackAdminInline, OfferApplicationHistoryInline]
     form = OfferForm
     list_display = [
         "title",
         "company",
-        "candidates_count",
+        "candidates_applied",
         "created_at",
     ]
     ordering = ["-created_at"]
@@ -59,10 +58,32 @@ class OfferAdmin(admin.ModelAdmin):
             return obj is not None and obj.company == company
         return True
 
-    def candidates_count(self, obj: Offer) -> int:
-        return obj.candidates.count()
+    def candidates_applied(self, obj: Offer) -> int:
+        return obj.offer_application_history.count()
 
-    candidates_count.short_description = "Candidates applied"  # type: ignore
+    candidates_applied.short_description = "Candidates applied"  # type: ignore
+
+
+class OfferApplicationHistoryAdmin(admin.ModelAdmin):
+    list_display = ["__str__", "application_date"]
+
+    def get_readonly_fields(
+        self, request: HttpRequest, obj: Optional[OfferApplicationHistory] = None
+    ) -> List:
+        if obj is None:
+            return []
+        else:
+            return ["candidate", "offer"]
+
+    def get_queryset(
+        self, request, obj: Optional[OfferApplicationHistory] = None
+    ) -> QuerySet[OfferApplicationHistory]:
+        queryset = super().get_queryset(request)
+        if not request.user.is_superuser:
+            company = Company.objects.get(id=request.user.id)
+            queryset = queryset.filter(offer__company=company)
+        return queryset
 
 
 admin.site.register(Offer, OfferAdmin)
+admin.site.register(OfferApplicationHistory, OfferApplicationHistoryAdmin)
