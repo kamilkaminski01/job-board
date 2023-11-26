@@ -7,6 +7,7 @@ export const ENDPOINTS = {
   user: 'user/',
   offers: 'offers/',
   offerDetails: 'offers/:id',
+  applyOffer: 'offers/apply/',
 
   getToken: 'token/',
   refreshToken: 'token/refresh/',

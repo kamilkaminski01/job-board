@@ -10,6 +10,7 @@ import RegisterPage from './pages/RegisterPage'
 import SharedLayout from './components/atoms/SharedLayout'
 import ProfilePage from './pages/ProfilePage'
 import SettingsPage from './pages/SettingsPage'
+import AlertContainer from 'components/atoms/AlertContainer'
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           </Route>
         </Route>
       </Routes>
+      <AlertContainer />
     </div>
   )
 }
