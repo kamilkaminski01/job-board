@@ -3,7 +3,7 @@
 .settings-page {
   display: grid;
   grid-template-columns: 15em 1fr;
-  grid-template-rows: repeat(4, min-content);
+  grid-template-rows: repeat(5, min-content);
   gap: 1.5em;
 
   min-height: calc(100vh - ($navbar-height + $footer-height));
