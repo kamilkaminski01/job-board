@@ -1,4 +1,3 @@
-import React from 'react'
 import './App.scss'
 import { Route, Routes } from 'react-router-dom'
 import { PATHS } from './utils/consts'

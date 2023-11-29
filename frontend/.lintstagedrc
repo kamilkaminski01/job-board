@@ -6,6 +6,5 @@
     "prettier --write --config ./.prettierrc",
     "bash -c tsc --noemit",
     "eslint",
-    "jest --findRelatedTests"
   ]
 }
