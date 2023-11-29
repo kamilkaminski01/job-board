@@ -11,6 +11,8 @@ The server side application is written in the `Django` framework.
 
 User interface is written in `TypeScript` using the `React` framework.
 
+Frontend building tool is handled by [Vite](https://vitejs.dev/)
+
 The project is maintained in a containerized environment with [Docker](https://www.docker.com/)
 
 ## Running from sources
