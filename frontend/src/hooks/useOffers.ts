@@ -2,10 +2,11 @@ import { IApiPaginatedListResponse } from 'models/responses/apiPaginatedListResp
 import { IOffer } from 'models/offer'
 import useData from './useData'
 import { ENDPOINTS, RECORDS_PER_PAGE } from 'utils/consts'
-import { useOfferFiltersContext } from 'providers/offerFilters/context'
+import { OfferFiltersContext } from 'providers/offerFilters/context'
+import { useContext } from 'react'
 
 const useOffers = () => {
-  const { params } = useOfferFiltersContext()
+  const { params } = useContext(OfferFiltersContext)
 
   const {
     data,

@@ -1,14 +1,14 @@
 import { OfferFiltersProps, OfferOrder } from './interface'
 import './style.scss'
-import React, { useState } from 'react'
-import { useOfferFiltersContext } from 'providers/offerFilters/context'
+import React, { useContext, useState } from 'react'
+import { OfferFiltersContext } from 'providers/offerFilters/context'
 import { Range, getTrackBackground } from 'react-range'
 
 const minRange = 0
 const maxRange = 100000
 
 const OfferFilters = ({ offersCount }: OfferFiltersProps) => {
-  const { salaryRange, setSalaryRange, setSortType, sortType } = useOfferFiltersContext()
+  const { salaryRange, setSalaryRange, setSortType, sortType } = useContext(OfferFiltersContext)
   const [value, setValue] = useState(salaryRange)
 
   const [startValue, endValue] = value
