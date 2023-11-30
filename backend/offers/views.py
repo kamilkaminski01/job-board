@@ -14,7 +14,7 @@ from .serializers import (
 
 
 class OfferPagination(PageNumberPagination):
-    page_size = 10
+    page_size = 20
 
 
 class OfferListView(ListAPIView):

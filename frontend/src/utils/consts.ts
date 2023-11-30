@@ -23,7 +23,7 @@ export const PATHS = {
 }
 
 export const RECORDS_PER_PAGE = {
-  offers: 10
+  offers: 20
 }
 
 export const LOCAL_STORAGE = {

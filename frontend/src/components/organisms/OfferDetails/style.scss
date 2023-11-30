@@ -1,6 +1,8 @@
 .offer-content__offer-details {
-  display: flex;
-  flex-direction: column;
+  position: sticky;
+  top: $scroll-padding-top;
+
+  height: fit-content;
   padding: 0.5em;
   background-color: $alabaster;
 
@@ -17,7 +19,6 @@
     display: flex;
     justify-content: center;
     padding: 1em 0 0;
-    margin-top: auto;
 
     .offer-details__apply-btn {
       display: flex;

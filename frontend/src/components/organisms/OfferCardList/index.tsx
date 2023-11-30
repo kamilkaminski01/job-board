@@ -9,7 +9,7 @@ const OfferCardList = ({ offers, isLoading, setOfferDetails }: OfferCardListProp
   if (isLoading)
     return (
       <ul className="offer-card-list">
-        {Array(10)
+        {Array(20)
           .fill(null)
           .map((_, index) => (
             <li className="offer-card-list__item offer-card-list__item--skeleton" key={index}>

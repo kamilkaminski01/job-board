@@ -13,7 +13,8 @@ const useOffers = () => {
     getData: getOffers,
     ...rest
   } = useData<IApiPaginatedListResponse<IOffer>>(`${ENDPOINTS.offers}?${params}`, {
-    recordsPerPage: RECORDS_PER_PAGE.offers
+    recordsPerPage: RECORDS_PER_PAGE.offers,
+    delayResponse: 500
   })
 
   const { count: offersCount, results: offersList = [] } = data || {}

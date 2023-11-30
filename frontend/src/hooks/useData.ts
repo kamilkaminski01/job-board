@@ -7,6 +7,7 @@ interface useDataOptions<T, R, C> {
   dontFetchOnMount?: true
   dataLocation?: 'items' | 'results'
   recordsPerPage?: number
+  delayResponse?: number
   transformRequestData?: (data: C | Partial<T>) => any
   transformResponseData?: (data: any) => R
 }
@@ -22,7 +23,7 @@ const useData = <T, R = T, C = T>(
 
   const getData = useCallback(
     async (page?: number): Promise<IServerResponse<R>> => {
-      const { dataLocation, recordsPerPage, transformResponseData } = options || {}
+      const { dataLocation, recordsPerPage, transformResponseData, delayResponse } = options || {}
 
       try {
         setIsLoading(true)
@@ -44,10 +45,20 @@ const useData = <T, R = T, C = T>(
 
         return parseApiErrors(error)
       } finally {
-        setIsLoading(false)
+        delayResponse
+          ? setTimeout(() => {
+              setIsLoading(false)
+            }, delayResponse)
+          : setIsLoading(false)
       }
     }, // eslint-disable-next-line react-hooks/exhaustive-deps
-    [endpoint, options?.dataLocation, options?.transformResponseData, options?.recordsPerPage]
+    [
+      endpoint,
+      options?.dataLocation,
+      options?.transformResponseData,
+      options?.recordsPerPage,
+      options?.delayResponse
+    ]
   )
 
   const createData = useCallback(

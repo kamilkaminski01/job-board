@@ -9,6 +9,7 @@ const Pagination = ({ className, pageCount, apiRequest }: PaginationProps) => {
     const page = data.selected + 1
 
     apiRequest(page)
+    document.documentElement.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
   }
 
   return (

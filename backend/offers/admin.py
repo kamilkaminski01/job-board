@@ -41,8 +41,8 @@ class OfferAdmin(admin.ModelAdmin):
         form = super().get_form(request, obj, **kwargs)
         if not request.user.is_superuser:
             company = Company.objects.get(id=request.user.id)
+            form.base_fields["company"].queryset = Company.objects.filter(id=company.id)
             form.base_fields["company"].initial = company
-            form.base_fields["company"].widget.attrs["disabled"] = True
         return form
 
     def get_queryset(self, request) -> QuerySet[Offer]:
