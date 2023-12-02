@@ -47,6 +47,7 @@
     "sass": "^1.69.5",
     "typescript": "^5.2.2",
     "vite": "^5.0.0",
-    "vite-tsconfig-paths": "^4.2.1"
+    "vite-tsconfig-paths": "^4.2.1",
+    "vite-plugin-checker": "^0.6.2"
   }
 }
