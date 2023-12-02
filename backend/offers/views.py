@@ -1,3 +1,4 @@
+from django.db.models import QuerySet
 from rest_framework import filters
 from rest_framework.generics import CreateAPIView, ListAPIView, RetrieveAPIView
 from rest_framework.pagination import PageNumberPagination
@@ -7,7 +8,8 @@ from candidates.models import Candidate
 
 from .models import Offer, OfferApplicationHistory
 from .serializers import (
-    OfferApplicationHistorySerializer,
+    OfferApplicationHistoryCreateSerializer,
+    OfferApplicationHistoryListSerializer,
     OfferDetailsSerializer,
     OfferListSerializer,
 )
@@ -37,14 +39,29 @@ class OfferDetailsView(RetrieveAPIView):
     queryset = Offer.objects.all()
 
 
-class OfferApplicationHistoryView(CreateAPIView):
+class OfferApplicationHistoryCreateView(CreateAPIView):
     permission_classes = [IsAuthenticated]
-    serializer_class = OfferApplicationHistorySerializer
+    serializer_class = OfferApplicationHistoryCreateSerializer
     queryset = OfferApplicationHistory.objects.all()
 
     def post(self, request, *args, **kwargs):
         return self.create(request, *args, **kwargs)
 
-    def perform_create(self, serializer: OfferApplicationHistorySerializer) -> None:
+    def perform_create(
+        self, serializer: OfferApplicationHistoryCreateSerializer
+    ) -> None:
         candidate = Candidate.objects.get(id=self.request.user.id)
         serializer.save(candidate=candidate)
+
+
+class OfferApplicationHistoryListView(ListAPIView):
+    permission_classes = [IsAuthenticated]
+    pagination_class = OfferPagination
+    serializer_class = OfferApplicationHistoryListSerializer
+
+    def get_queryset(self) -> QuerySet[OfferApplicationHistory]:
+        candidate = Candidate.objects.get(pk=self.request.user.id)
+        queryset = OfferApplicationHistory.objects.filter(candidate=candidate).order_by(
+            "-application_date"
+        )
+        return queryset

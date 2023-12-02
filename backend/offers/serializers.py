@@ -60,7 +60,15 @@ class OfferDetailsSerializer(BaseOfferSerializer):
         return obj.company.description
 
 
-class OfferApplicationHistorySerializer(serializers.ModelSerializer):
+class OfferApplicationHistoryCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = OfferApplicationHistory
         fields = ["offer"]
+
+
+class OfferApplicationHistoryListSerializer(serializers.ModelSerializer):
+    offer = OfferListSerializer(many=False, read_only=True)
+
+    class Meta:
+        model = OfferApplicationHistory
+        fields = ["id", "application_date", "offer"]
