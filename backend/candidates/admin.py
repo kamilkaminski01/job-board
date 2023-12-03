@@ -36,6 +36,7 @@ class CandidateAdmin(UsersAdmin):
         "email",
         "first_name",
         "last_name",
+        "applied_offers",
     ]
     list_display_links = ["email"]
     search_fields = ["email", "first_name", "last_name"]
@@ -60,6 +61,9 @@ class CandidateAdmin(UsersAdmin):
             ).values_list("candidate_id", flat=True)
             queryset = queryset.filter(id__in=candidate_ids)
         return queryset
+
+    def applied_offers(self, obj: Candidate) -> int:
+        return obj.candidate_application_histories.count()
 
 
 admin.site.register(Candidate, CandidateAdmin)

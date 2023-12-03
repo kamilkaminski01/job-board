@@ -1,9 +1,10 @@
 import './style.scss'
 import { OfferCardTileProps } from './interface'
+import classNames from 'classnames'
 
-const OfferCardTile = ({ children, onCardClick }: OfferCardTileProps) => {
+const OfferCardTile = ({ className, children, onCardClick }: OfferCardTileProps) => {
   return (
-    <button className="offer-card-tile" onClick={onCardClick}>
+    <button className={classNames('offer-card-tile', className)} onClick={onCardClick}>
       {children}
     </button>
   )

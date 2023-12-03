@@ -1,0 +1,25 @@
+.content-switcher-button {
+  position: relative;
+
+  font-size: 1.25em;
+  font-weight: 700;
+  font-family: inherit;
+  color: $carbon;
+  background-color: transparent;
+
+  border: none;
+}
+
+.content-switcher-button--active {
+  color: $dark-sea;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -0.75em;
+    left: 0;
+    width: 0.8em;
+    height: 2px;
+    background-color: $dark-sea;
+  }
+}

@@ -1,0 +1,18 @@
+.offers-applied-list--no-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2.5em;
+
+  background-color: white;
+  box-shadow: 0 0 64px 1px #0f224314;
+  border-radius: 0.5em;
+
+  .offers-applied__subtitle {
+    margin-top: 0.5em;
+
+    color: $devil;
+  }
+}

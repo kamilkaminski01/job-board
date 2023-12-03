@@ -8,6 +8,7 @@ export const ENDPOINTS = {
   offers: 'offers/',
   offerDetails: 'offers/:id',
   applyOffer: 'offers/apply/',
+  offerApplicationHistory: 'user/offer-application-history/',
 
   getToken: 'token/',
   refreshToken: 'token/refresh/',
@@ -23,7 +24,8 @@ export const PATHS = {
 }
 
 export const RECORDS_PER_PAGE = {
-  offers: 20
+  offers: 20,
+  offersApplied: 20
 }
 
 export const LOCAL_STORAGE = {
