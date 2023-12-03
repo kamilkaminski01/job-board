@@ -1,8 +1,9 @@
 from django.db.models import QuerySet
-from rest_framework import filters
+from rest_framework import filters, status
 from rest_framework.generics import CreateAPIView, ListAPIView, RetrieveAPIView
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
 
 from candidates.models import Candidate
 
@@ -44,7 +45,21 @@ class OfferApplicationHistoryCreateView(CreateAPIView):
     serializer_class = OfferApplicationHistoryCreateSerializer
     queryset = OfferApplicationHistory.objects.all()
 
-    def post(self, request, *args, **kwargs):
+    def post(self, request, *args, **kwargs) -> Response:
+        candidate = Candidate.objects.get(id=self.request.user.id)
+        offer_id = self.request.data.get("offer")
+        applied_offer = Offer.objects.get(id=offer_id)
+        application_exists = OfferApplicationHistory.objects.filter(
+            candidate=candidate, offer=applied_offer
+        ).exists()
+        if application_exists:
+            return Response(
+                {
+                    "code": "application_exists",
+                    "message": "You have already applied for this offer",
+                },
+                status=status.HTTP_400_BAD_REQUEST,
+            )
         return self.create(request, *args, **kwargs)
 
     def perform_create(

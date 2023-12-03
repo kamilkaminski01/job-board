@@ -22,9 +22,10 @@ const OfferDetails = ({ offer, setOfferDetails }: OfferDetailsProps) => {
     const body: IApplyOffer = { offer: offer.id }
 
     const response = await applyOffer(body, { preventDataRefreshAfterRequest: true })
-
     if (response.succeed) {
       toast.success(`You have successfully applied for ${offer.title}`)
+    } else {
+      toast.error(response.errorMessage)
     }
   }
 
