@@ -12,6 +12,9 @@
     font-size: 1.75em;
     font-weight: 500;
     color: $snow;
+
+    margin-right: 2em;
+    white-space: nowrap;
   }
 
   .offers-banner__list {
@@ -22,6 +25,23 @@
 
     .offers-banner__list-item:not(:last-child) {
       margin-right: 3em;
+    }
+  }
+
+  @include for-desktop {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    .offers-banner__title {
+      margin: unset;
+    }
+
+    .offers-banner__list-item {
+      & > img {
+        height: 3em;
+        width: 3em;
+      }
     }
   }
 }

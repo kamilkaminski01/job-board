@@ -8,16 +8,22 @@
   .offers-content__pagination {
     margin-top: auto;
   }
-}
 
-.offers-content {
-  display: flex;
-  gap: 1em;
-  flex-grow: 1;
+  .offers-content {
+    display: flex;
+    gap: 1em;
+    flex-grow: 1;
 
-  & > * {
-    flex-basis: 50%;
+    & > * {
+      flex-basis: 50%;
+    }
+
+    margin-bottom: 2.5em;
+
+    @include for-desktop {
+      & > * {
+        flex-basis: 100%;
+      }
+    }
   }
-
-  margin-bottom: 2.5em;
 }
