@@ -46,7 +46,16 @@ class OfferApplicationHistoryCreateView(CreateAPIView):
     queryset = OfferApplicationHistory.objects.all()
 
     def post(self, request, *args, **kwargs) -> Response:
-        candidate = Candidate.objects.get(id=self.request.user.id)
+        try:
+            candidate = Candidate.objects.get(id=self.request.user.id)
+        except Candidate.DoesNotExist:
+            return Response(
+                {
+                    "code": "candidate_not_found",
+                    "message": "You need to be a candidate to apply",
+                },
+                status=status.HTTP_400_BAD_REQUEST,
+            )
         offer_id = self.request.data.get("offer")
         applied_offer = Offer.objects.get(id=offer_id)
         application_exists = OfferApplicationHistory.objects.filter(
@@ -75,7 +84,10 @@ class OfferApplicationHistoryListView(ListAPIView):
     serializer_class = OfferApplicationHistoryListSerializer
 
     def get_queryset(self) -> QuerySet[OfferApplicationHistory]:
-        candidate = Candidate.objects.get(pk=self.request.user.id)
+        try:
+            candidate = Candidate.objects.get(pk=self.request.user.id)
+        except Candidate.DoesNotExist:
+            return OfferApplicationHistory.objects.none()
         queryset = OfferApplicationHistory.objects.filter(candidate=candidate).order_by(
             "-application_date"
         )
