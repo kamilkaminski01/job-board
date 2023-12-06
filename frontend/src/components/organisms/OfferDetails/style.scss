@@ -3,6 +3,8 @@
   top: $scroll-padding-top;
 
   height: fit-content;
+  max-height: 85vh;
+  overflow-y: auto;
   padding: 0.5em;
   background-color: $alabaster;
 
