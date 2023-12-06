@@ -46,7 +46,8 @@ Docker images:
 
 ```bash
 make clear
-docker compose up --build --force-recreate
+make build
+make run
 ```
 
 If `make` is not supported, the associated Docker Compose commands can be
@@ -64,7 +65,7 @@ docker compose up
 
 All backend code is formatted and verified by the `black`, `flake8`,
 `mypy` and `isort` tools. Their configurations can be found in the
-[.setup.cfg](backend/setup.cfg) file. Additionally, `pre-commit` [checks](.pre-commit-config.yaml)
+[setup.cfg](backend/setup.cfg) file. Additionally, `pre-commit` [checks](.pre-commit-config.yaml)
 are performed in order to verify whitespaces, credentials, etc.
 
 Custom functions and methods use **type hints** to improve IDE code
