@@ -1,6 +1,7 @@
 asgiref==3.7.2
 black==23.3.0
 Django==4.2.6
+django-colorfield==0.11.0
 django-cors-headers==4.1.0
 django-stubs==4.2.1
 django-tinymce==3.6.0
