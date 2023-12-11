@@ -1,4 +1,4 @@
-import { IApplyOffer } from 'models/IApplyOffer'
+import { IApplyOffer } from 'models/applyOffer'
 import { ENDPOINTS } from 'utils/consts'
 import useData from 'hooks/useData'
 

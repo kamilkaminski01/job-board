@@ -9,7 +9,7 @@ import OfferDetailsDescription from 'components/organisms/OfferDetails/partials/
 import Button from 'components/atoms/Button'
 import { TbSend } from 'react-icons/tb'
 import useApplyOffer from 'hooks/useApplyOffer'
-import { IApplyOffer } from 'models/IApplyOffer'
+import { IApplyOffer } from 'models/applyOffer'
 import { useContext } from 'react'
 import { UserContext } from 'providers/user/context'
 import { toast } from 'react-toastify'
