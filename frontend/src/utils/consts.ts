@@ -12,7 +12,9 @@ export const ENDPOINTS = {
 
   getToken: 'token/',
   refreshToken: 'token/refresh/',
-  externalAuth: 'login/social/jwt-pair-user/'
+  externalAuth: 'login/social/jwt-pair-user/',
+
+  customizationColors: 'customization/colors'
 }
 
 export const PATHS = {
