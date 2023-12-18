@@ -1,25 +1,21 @@
-.content-switcher-button {
+.content-switcher-wrapper {
   position: relative;
 
-  font-size: 1.25em;
-  font-weight: 700;
-  font-family: inherit;
-  color: $carbon;
-  background-color: transparent;
+  .content-switcher__button {
+    font-size: 1.25em;
+    font-weight: 700;
+    font-family: inherit;
+    color: $carbon;
+    background-color: transparent;
 
-  border: none;
-}
+    border: none;
+  }
 
-.content-switcher-button--active {
-  color: $dark-sea;
-
-  &::before {
-    content: '';
+  .content-switcher__line {
     position: absolute;
     bottom: -0.75em;
     left: 0;
     width: 0.8em;
     height: 2px;
-    background-color: $dark-sea;
   }
 }

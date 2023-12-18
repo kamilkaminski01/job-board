@@ -13,9 +13,11 @@ import { IApplyOffer } from 'models/applyOffer'
 import { useContext } from 'react'
 import { UserContext } from 'providers/user/context'
 import { toast } from 'react-toastify'
+import { ThemeContext } from 'providers/theme/context.ts'
 
 const OfferDetails = ({ offer, setOfferDetails }: OfferDetailsProps) => {
   const { isLogged } = useContext(UserContext)
+  const { themeColors } = useContext(ThemeContext)
   const { applyOffer } = useApplyOffer()
 
   const handleApply = async () => {
@@ -34,7 +36,7 @@ const OfferDetails = ({ offer, setOfferDetails }: OfferDetailsProps) => {
       {offer.id === undefined ? (
         <div className="offer-content__no-details">
           <div className="offer-details__message">
-            <BsCodeSlash />
+            <BsCodeSlash color={themeColors.primaryColor} />
             Choose an offer for more details...
           </div>
         </div>

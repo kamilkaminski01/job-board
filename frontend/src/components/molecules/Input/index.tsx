@@ -3,6 +3,8 @@ import ErrorMessage from 'components/atoms/ErrorMessage'
 import { useFormContext } from 'react-hook-form'
 import { InputProps } from './interface'
 import './style.scss'
+import { useContext, useState } from 'react'
+import { ThemeContext } from 'providers/theme/context.ts'
 
 const Input = ({
   name,
@@ -18,6 +20,8 @@ const Input = ({
     watch,
     formState: { errors }
   } = useFormContext()
+  const { themeColors } = useContext(ThemeContext)
+  const [focus, setFocus] = useState(false)
 
   const inputValue: string = watch(name, defaultValue)
 
@@ -34,9 +38,17 @@ const Input = ({
         autoComplete="off"
         type={type}
         defaultValue={defaultValue}
-        {...register(name, validators)}
+        onFocus={() => setFocus(true)}
+        style={{ borderColor: focus ? themeColors.primaryColor : '' }}
+        {...register(name, {
+          onBlur: () => setFocus(false),
+          ...validators
+        })}
       />
-      <label htmlFor={name} className="input-wrapper__label">
+      <label
+        htmlFor={name}
+        className="input-wrapper__label"
+        style={{ color: focus ? themeColors.primaryColor : '' }}>
         {placeholder}
       </label>
       {!hideErrors && errors[name] && (

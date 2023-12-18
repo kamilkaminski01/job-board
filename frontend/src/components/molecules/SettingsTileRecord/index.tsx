@@ -1,6 +1,8 @@
 import classNames from 'classnames'
 import { SettingsTileRecordProps } from './interface'
 import './style.scss'
+import { useContext } from 'react'
+import { ThemeContext } from 'providers/theme/context.ts'
 
 const SettingsTileRecord = ({
   label,
@@ -10,6 +12,8 @@ const SettingsTileRecord = ({
   button,
   className
 }: SettingsTileRecordProps) => {
+  const { themeColors } = useContext(ThemeContext)
+
   const renderValue = () => {
     if (!value) {
       return <span>-</span>
@@ -39,7 +43,10 @@ const SettingsTileRecord = ({
       )}
 
       {button && (
-        <span className="settings-tile-record__btn" onClick={button.onClick}>
+        <span
+          className="settings-tile-record__btn"
+          onClick={button.onClick}
+          style={{ color: themeColors.primaryColor }}>
           {button.text}
         </span>
       )}

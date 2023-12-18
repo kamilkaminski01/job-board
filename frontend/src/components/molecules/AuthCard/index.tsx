@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import Button from 'components/atoms/Button'
 import './style.scss'
 import ExternalAuth from 'components/molecules/ExternalAuth'
+import { useContext } from 'react'
+import { ThemeContext } from 'providers/theme/context.ts'
 
 const AuthCard = ({
   children,
@@ -12,6 +14,8 @@ const AuthCard = ({
   externalAuth,
   submitButton
 }: AuthCardProps) => {
+  const { themeColors } = useContext(ThemeContext)
+
   return (
     <div className="auth-card">
       <div className="auth-card__header">
@@ -20,7 +24,7 @@ const AuthCard = ({
         {switchBox && (
           <div className="auth-card__switch">
             <p className="switch__text">{switchBox.text}</p>
-            <Link className="switch__link" to={switchBox.link}>
+            <Link to={switchBox.link} style={{ color: themeColors.primaryColor }}>
               {switchBox.linkText}
             </Link>
           </div>

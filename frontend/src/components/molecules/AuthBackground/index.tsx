@@ -1,10 +1,14 @@
 import './style.scss'
+import { useContext } from 'react'
+import { ThemeContext } from 'providers/theme/context.ts'
 
 const AuthBackground = () => {
+  const { themeColors } = useContext(ThemeContext)
+
   return (
     <div className="auth-bg">
       <img src="https://picsum.photos/1280/1020" className="auth-bg__image" />
-      <div className="auth-bg__image-mask" />
+      <div className="auth-bg__image-mask" style={{ backgroundColor: themeColors.primaryColor }} />
     </div>
   )
 }

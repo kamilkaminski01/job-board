@@ -2,8 +2,12 @@ import './style.scss'
 import Tile from 'components/atoms/Tile'
 import { OfferDetailsTechStackProps } from './interface'
 import classNames from 'classnames'
+import { useContext } from 'react'
+import { ThemeContext } from 'providers/theme/context.ts'
 
 const OfferDetailsTechStack = ({ techStacks }: OfferDetailsTechStackProps) => {
+  const { themeColors } = useContext(ThemeContext)
+
   const getAdvancement = (advancement: string) => {
     const advancementLevel = (advancement: string): number => {
       switch (advancement) {
@@ -25,9 +29,10 @@ const OfferDetailsTechStack = ({ techStacks }: OfferDetailsTechStackProps) => {
     return Array.from({ length: 5 }, (_, index) => (
       <li
         key={index}
-        className={classNames('tech-stack__level-dot', {
-          'tech-stack__dot-colored': index < advancementLevel(advancement)
-        })}></li>
+        className={classNames('tech-stack__level-dot')}
+        style={{
+          backgroundColor: index < advancementLevel(advancement) ? themeColors.primaryColor : ''
+        }}></li>
     ))
   }
 

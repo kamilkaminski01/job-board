@@ -1,7 +1,11 @@
 import './style.scss'
+import { useContext } from 'react'
+import { ThemeContext } from 'providers/theme/context.ts'
 
 const Footer = () => {
-  return <div className="footer" />
+  const { themeColors } = useContext(ThemeContext)
+
+  return <div className="footer" style={{ backgroundColor: themeColors.primaryColor }} />
 }
 
 export default Footer

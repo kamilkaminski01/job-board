@@ -3,6 +3,7 @@ import './style.scss'
 import React, { useContext, useState } from 'react'
 import { OfferFiltersContext } from 'providers/offerFilters/context'
 import { Range, getTrackBackground } from 'react-range'
+import { ThemeContext } from 'providers/theme/context.ts'
 
 const minRange = 0
 const maxRange = 100000
@@ -10,6 +11,7 @@ const maxRange = 100000
 const OfferFilters = ({ offersCount }: OfferFiltersProps) => {
   const { salaryRange, setSalaryRange, setSortType, sortType } = useContext(OfferFiltersContext)
   const [value, setValue] = useState(salaryRange)
+  const { themeColors } = useContext(ThemeContext)
 
   const [startValue, endValue] = value
 
@@ -50,7 +52,7 @@ const OfferFilters = ({ offersCount }: OfferFiltersProps) => {
                 style={{
                   background: getTrackBackground({
                     values: value,
-                    colors: ['#d8d8d8', '#5bcaac', '#d8d8d8'],
+                    colors: ['#d8d8d8', themeColors.primaryColor, '#d8d8d8'],
                     min: minRange,
                     max: maxRange
                   })
@@ -58,7 +60,16 @@ const OfferFilters = ({ offersCount }: OfferFiltersProps) => {
                 {children}
               </div>
             )}
-            renderThumb={({ props }) => <div {...props} className="offer-filters__range-thumb" />}
+            renderThumb={({ props }) => (
+              <div
+                {...props}
+                className="offer-filters__range-thumb"
+                style={{
+                  ...props.style,
+                  backgroundColor: themeColors.primaryColor
+                }}
+              />
+            )}
           />
           <span className="offer-filters__slider-values">{endValue}</span>
         </div>

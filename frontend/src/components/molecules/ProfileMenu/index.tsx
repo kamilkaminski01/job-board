@@ -8,10 +8,12 @@ import { PATHS } from 'utils/consts'
 import { CgProfile } from 'react-icons/cg'
 import { GiSettingsKnobs } from 'react-icons/gi'
 import { MdOutlinePowerSettingsNew } from 'react-icons/md'
+import { ThemeContext } from 'providers/theme/context.ts'
 
 const ProfileMenu = () => {
   const { userData } = useContext(UserContext)
   const { logout } = useAuth()
+  const { themeColors } = useContext(ThemeContext)
 
   return (
     <Tile className="profile-menu" shadow="light">
@@ -30,7 +32,7 @@ const ProfileMenu = () => {
           <CgProfile />
           <NavLink
             to={PATHS.profile}
-            className={({ isActive }) => (isActive ? 'profile-menu__active-link' : '')}>
+            style={({ isActive }) => ({ color: isActive ? themeColors.primaryColor : '' })}>
             Profile
           </NavLink>
         </span>
@@ -38,7 +40,7 @@ const ProfileMenu = () => {
           <GiSettingsKnobs />
           <NavLink
             to={PATHS.settings}
-            className={({ isActive }) => (isActive ? 'profile-menu__active-link' : '')}>
+            style={({ isActive }) => ({ color: isActive ? themeColors.primaryColor : '' })}>
             Settings
           </NavLink>
         </span>
