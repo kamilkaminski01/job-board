@@ -43,5 +43,36 @@ services:
       - ./frontend:/app
       - /app/node_modules
 
+  redis:
+    image: redis:7.0.2-alpine
+    ports:
+      - "6379:6379"
+
+  worker:
+    build:
+      context: backend
+      dockerfile: local.Dockerfile
+    command: python manage.py rqworker default --with-scheduler
+    volumes:
+      - ./backend:/app
+    env_file:
+      - .envs/.django
+      - .envs/.postgres
+    depends_on:
+      - redis
+
+  worker-dashboard:
+    build:
+      context: backend
+      dockerfile: dashboard.Dockerfile
+    ports:
+      - "9181:9181"
+    depends_on:
+      - worker
+      - redis
+    environment:
+      - RQ_DASHBOARD_REDIS_URL=redis://redis:6379
+
+
 volumes:
   postgres_data:

@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django_rq",
     "tinymce",
     "colorfield",
     "customization",
@@ -81,6 +82,16 @@ DATABASES = {
         "PASSWORD": env("POSTGRES_PASSWORD", "postgres"),
     }
 }
+
+RQ_QUEUES = {
+    "default": {
+        "HOST": os.getenv("REDIS_HOST", "localhost"),
+        "PORT": int(os.getenv("REDIS_PORT", "6379")),
+        "DB": int(os.getenv("REDIS_DB", "0")),
+    }
+}
+
+RQ_RETRIES_COUNT = 5
 
 AUTH_PASSWORD_VALIDATORS = [
     {
