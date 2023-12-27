@@ -15,6 +15,17 @@ Frontend building tool is handled by [Vite](https://vitejs.dev/)
 
 The project is maintained in a containerized environment with [Docker](https://www.docker.com/)
 
+Time-consuming tasks such as sending emails are
+handled by an asynchronous worker. Currently, [`rq`](https://python-rq.org/)
+is used to perform asynchronous operations.
+
+- You can verify the running task statuses by using the RQ dashboard
+  at [localhost:9181](http://localhost:9181). The dashboard should refresh
+  automatically, displaying all pending tasks.
+
+For more information, refer to the [RQ website](https://python-rq.org/)
+or [`django-rq` documentation](https://github.com/rq/django-rq).
+
 ## Running from sources
 
 ### Docker Compose setup
@@ -62,6 +73,8 @@ docker compose up
 ```
 
 ## Code quality standards
+
+### Backend
 
 All backend code is formatted and verified by the `black`, `flake8`,
 `mypy` and `isort` tools. Their configurations can be found in the
