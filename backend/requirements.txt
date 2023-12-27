@@ -1,5 +1,6 @@
 asgiref==3.7.2
 black==23.3.0
+boto3==1.34.7
 Django==4.2.6
 django-colorfield==0.11.0
 django-cors-headers==4.1.0

@@ -1,20 +1,31 @@
+import logging
 from datetime import datetime
+from html import unescape
 from textwrap import shorten
 from typing import Optional
 
 from django.contrib import admin
 from django.contrib.admin import display
-from django.db.models import F, QuerySet
+from django.db.models import Count, F, QuerySet
 from django.http import HttpRequest
 from django.utils.html import strip_tags
 from django.utils.timezone import localtime
+from django_rq import get_connection
+from django_rq.jobs import Job
+from rq.exceptions import NoSuchJobError
 
 from candidates.models import Candidate
 from companies.models import Company
+from tasks.emails import schedule_communicational_email_task
 from users.models import User
 
 from .forms import CommunicationForm
 from .models import Message
+from .utils import add_err_msg_at_change_when_task_in_progress
+
+rq_connection = get_connection()
+
+logger = logging.getLogger(__name__)
 
 
 class CommunicationAdmin(admin.ModelAdmin):
@@ -95,13 +106,43 @@ class CommunicationAdmin(admin.ModelAdmin):
         else:
             return "All recipients are deleted"
 
+    def get_queryset(self, request: HttpRequest) -> QuerySet[Message]:
+        queryset = super(CommunicationAdmin, self).get_queryset(request)
+        return queryset.annotate(
+            recipients_amount=Count("company", distinct=True)
+            + Count("candidate", distinct=True)
+        )
+
     def save_model(
         self, request: HttpRequest, obj: Message, form: CommunicationForm, change: bool
     ) -> None:
+        if change and not obj.tasks_start_time:
+            try:
+                job = Job.fetch(obj.rq_task_id, connection=rq_connection)
+                if not job.is_started:
+                    job.delete()
+                    obj.rq_task_id = ""
+                else:
+                    add_err_msg_at_change_when_task_in_progress(request)
+                    return
+            except NoSuchJobError as exc:
+                logger.error("Tried to remove non existing job %s", exc)
+                pass
+
+        # rich text formatting works fine, but when user uses raw html it automatically
+        # escapes it
+        obj.content = unescape(obj.content)
         if obj.send_at is None:
             obj.send_at = localtime()
 
         obj.sender: User = request.user  # type: ignore
+        obj.save()
+
+        job_id = schedule_communicational_email_task(
+            send_at=obj.send_at, message_id=obj.pk
+        )
+
+        obj.rq_task_id = job_id
         obj.save()
 
 
