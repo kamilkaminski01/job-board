@@ -6,6 +6,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
 from candidates.models import Candidate
+from tasks.emails import EmailData, send_email
 
 from .models import Offer, OfferApplicationHistory
 from .serializers import (
@@ -74,7 +75,32 @@ class OfferApplicationHistoryCreateView(CreateAPIView):
     def perform_create(
         self, serializer: OfferApplicationHistoryCreateSerializer
     ) -> None:
-        candidate = Candidate.objects.get(id=self.request.user.id)
+        candidate_id = self.request.user.id
+        offer_id = self.request.data.get("offer")
+        candidate = Candidate.objects.get(id=candidate_id)
+        offer = Offer.objects.get(id=offer_id)
+        company_email_data = EmailData(
+            subject=f"Job Board - a candidate applied for {offer.title}",
+            send_from="kamilkaminski39@gmail.com",
+            send_to=[offer.company.email],
+            plain_msg=f"<h4>{candidate.first_name} {candidate.last_name}"
+            f"applied for your offer - {offer.title}</h4>"
+            f"You can find more information in the admin panel",
+            html_msg=f"<h4>{candidate.first_name} {candidate.last_name}"
+            f"applied for your offer - {offer.title}</h4>"
+            f"You can find more information in the admin panel",
+        )
+        candidate_email_data = EmailData(
+            subject=f"Job Board - you applied for {offer.title}",
+            send_from="kamilkaminski39@gmail.com",
+            send_to=[candidate.email],
+            plain_msg=f"<h4>You've just applied for {offer.title}</h4>"
+            f"We wish you luck!",
+            html_msg=f"<h4>You've just applied for {offer.title}</h4>"
+            f"We wish you luck!",
+        )
+        send_email.delay(company_email_data)
+        send_email.delay(candidate_email_data)
         serializer.save(candidate=candidate)
 
 
