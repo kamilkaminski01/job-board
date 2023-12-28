@@ -146,8 +146,8 @@ def _run_templated_email_process(
     """Function used to run templated email process.
 
     Checks if message uses formatting then creates template calls
-    `_prepare_bulk_email_data` and `send_bulk_templated_email` after all
-    of it if changes message status
+    `_prepare_bulk_email_data` and `send_bulk_templated_email` after
+    these  methods the message status is changed
     using`_change_email_status_after_scheduling`
     """
     uses_custom_format = check_if_message_uses_custom_formatting(

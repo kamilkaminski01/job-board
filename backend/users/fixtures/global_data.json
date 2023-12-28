@@ -1,12 +1,943 @@
 [
     {
+        "model": "auth.permission",
+        "pk": 1,
+        "fields": {
+            "name": "Can add association",
+            "content_type": 1,
+            "codename": "add_association"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 2,
+        "fields": {
+            "name": "Can change association",
+            "content_type": 1,
+            "codename": "change_association"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 3,
+        "fields": {
+            "name": "Can delete association",
+            "content_type": 1,
+            "codename": "delete_association"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 4,
+        "fields": {
+            "name": "Can view association",
+            "content_type": 1,
+            "codename": "view_association"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 5,
+        "fields": {
+            "name": "Can add code",
+            "content_type": 2,
+            "codename": "add_code"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 6,
+        "fields": {
+            "name": "Can change code",
+            "content_type": 2,
+            "codename": "change_code"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 7,
+        "fields": {
+            "name": "Can delete code",
+            "content_type": 2,
+            "codename": "delete_code"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 8,
+        "fields": {
+            "name": "Can view code",
+            "content_type": 2,
+            "codename": "view_code"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 9,
+        "fields": {
+            "name": "Can add nonce",
+            "content_type": 3,
+            "codename": "add_nonce"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 10,
+        "fields": {
+            "name": "Can change nonce",
+            "content_type": 3,
+            "codename": "change_nonce"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 11,
+        "fields": {
+            "name": "Can delete nonce",
+            "content_type": 3,
+            "codename": "delete_nonce"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 12,
+        "fields": {
+            "name": "Can view nonce",
+            "content_type": 3,
+            "codename": "view_nonce"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 13,
+        "fields": {
+            "name": "Can add user social auth",
+            "content_type": 4,
+            "codename": "add_usersocialauth"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 14,
+        "fields": {
+            "name": "Can change user social auth",
+            "content_type": 4,
+            "codename": "change_usersocialauth"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 15,
+        "fields": {
+            "name": "Can delete user social auth",
+            "content_type": 4,
+            "codename": "delete_usersocialauth"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 16,
+        "fields": {
+            "name": "Can view user social auth",
+            "content_type": 4,
+            "codename": "view_usersocialauth"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 17,
+        "fields": {
+            "name": "Can add partial",
+            "content_type": 5,
+            "codename": "add_partial"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 18,
+        "fields": {
+            "name": "Can change partial",
+            "content_type": 5,
+            "codename": "change_partial"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 19,
+        "fields": {
+            "name": "Can delete partial",
+            "content_type": 5,
+            "codename": "delete_partial"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 20,
+        "fields": {
+            "name": "Can view partial",
+            "content_type": 5,
+            "codename": "view_partial"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 21,
+        "fields": {
+            "name": "Can add log entry",
+            "content_type": 6,
+            "codename": "add_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 22,
+        "fields": {
+            "name": "Can change log entry",
+            "content_type": 6,
+            "codename": "change_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 23,
+        "fields": {
+            "name": "Can delete log entry",
+            "content_type": 6,
+            "codename": "delete_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 24,
+        "fields": {
+            "name": "Can view log entry",
+            "content_type": 6,
+            "codename": "view_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 25,
+        "fields": {
+            "name": "Can add permission",
+            "content_type": 7,
+            "codename": "add_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 26,
+        "fields": {
+            "name": "Can change permission",
+            "content_type": 7,
+            "codename": "change_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 27,
+        "fields": {
+            "name": "Can delete permission",
+            "content_type": 7,
+            "codename": "delete_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 28,
+        "fields": {
+            "name": "Can view permission",
+            "content_type": 7,
+            "codename": "view_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 29,
+        "fields": {
+            "name": "Can add group",
+            "content_type": 8,
+            "codename": "add_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 30,
+        "fields": {
+            "name": "Can change group",
+            "content_type": 8,
+            "codename": "change_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 31,
+        "fields": {
+            "name": "Can delete group",
+            "content_type": 8,
+            "codename": "delete_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 32,
+        "fields": {
+            "name": "Can view group",
+            "content_type": 8,
+            "codename": "view_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 33,
+        "fields": {
+            "name": "Can add content type",
+            "content_type": 9,
+            "codename": "add_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 34,
+        "fields": {
+            "name": "Can change content type",
+            "content_type": 9,
+            "codename": "change_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 35,
+        "fields": {
+            "name": "Can delete content type",
+            "content_type": 9,
+            "codename": "delete_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 36,
+        "fields": {
+            "name": "Can view content type",
+            "content_type": 9,
+            "codename": "view_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 37,
+        "fields": {
+            "name": "Can add session",
+            "content_type": 10,
+            "codename": "add_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 38,
+        "fields": {
+            "name": "Can change session",
+            "content_type": 10,
+            "codename": "change_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 39,
+        "fields": {
+            "name": "Can delete session",
+            "content_type": 10,
+            "codename": "delete_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 40,
+        "fields": {
+            "name": "Can view session",
+            "content_type": 10,
+            "codename": "view_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 41,
+        "fields": {
+            "name": "Can add user",
+            "content_type": 11,
+            "codename": "add_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 42,
+        "fields": {
+            "name": "Can change user",
+            "content_type": 11,
+            "codename": "change_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 43,
+        "fields": {
+            "name": "Can delete user",
+            "content_type": 11,
+            "codename": "delete_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 44,
+        "fields": {
+            "name": "Can view user",
+            "content_type": 11,
+            "codename": "view_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 45,
+        "fields": {
+            "name": "Can add Candidate",
+            "content_type": 12,
+            "codename": "add_candidate"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 46,
+        "fields": {
+            "name": "Can change Candidate",
+            "content_type": 12,
+            "codename": "change_candidate"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 47,
+        "fields": {
+            "name": "Can delete Candidate",
+            "content_type": 12,
+            "codename": "delete_candidate"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 48,
+        "fields": {
+            "name": "Can view Candidate",
+            "content_type": 12,
+            "codename": "view_candidate"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 49,
+        "fields": {
+            "name": "Can add Company",
+            "content_type": 13,
+            "codename": "add_company"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 50,
+        "fields": {
+            "name": "Can change Company",
+            "content_type": 13,
+            "codename": "change_company"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 51,
+        "fields": {
+            "name": "Can delete Company",
+            "content_type": 13,
+            "codename": "delete_company"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 52,
+        "fields": {
+            "name": "Can view Company",
+            "content_type": 13,
+            "codename": "view_company"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 53,
+        "fields": {
+            "name": "Can add Offer",
+            "content_type": 14,
+            "codename": "add_offer"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 54,
+        "fields": {
+            "name": "Can change Offer",
+            "content_type": 14,
+            "codename": "change_offer"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 55,
+        "fields": {
+            "name": "Can delete Offer",
+            "content_type": 14,
+            "codename": "delete_offer"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 56,
+        "fields": {
+            "name": "Can view Offer",
+            "content_type": 14,
+            "codename": "view_offer"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 57,
+        "fields": {
+            "name": "Can add Tech stack",
+            "content_type": 15,
+            "codename": "add_techstack"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 58,
+        "fields": {
+            "name": "Can change Tech stack",
+            "content_type": 15,
+            "codename": "change_techstack"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 59,
+        "fields": {
+            "name": "Can delete Tech stack",
+            "content_type": 15,
+            "codename": "delete_techstack"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 60,
+        "fields": {
+            "name": "Can view Tech stack",
+            "content_type": 15,
+            "codename": "view_techstack"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 61,
+        "fields": {
+            "name": "Can add Offer application history",
+            "content_type": 16,
+            "codename": "add_offerapplicationhistory"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 62,
+        "fields": {
+            "name": "Can change Offer application history",
+            "content_type": 16,
+            "codename": "change_offerapplicationhistory"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 63,
+        "fields": {
+            "name": "Can delete Offer application history",
+            "content_type": 16,
+            "codename": "delete_offerapplicationhistory"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 64,
+        "fields": {
+            "name": "Can view Offer application history",
+            "content_type": 16,
+            "codename": "view_offerapplicationhistory"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 65,
+        "fields": {
+            "name": "Can add Customization",
+            "content_type": 17,
+            "codename": "add_customization"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 66,
+        "fields": {
+            "name": "Can change Customization",
+            "content_type": 17,
+            "codename": "change_customization"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 67,
+        "fields": {
+            "name": "Can delete Customization",
+            "content_type": 17,
+            "codename": "delete_customization"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 68,
+        "fields": {
+            "name": "Can view Customization",
+            "content_type": 17,
+            "codename": "view_customization"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 69,
+        "fields": {
+            "name": "Can view Tech stack",
+            "content_type": 18,
+            "codename": "view_techstack"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 70,
+        "fields": {
+            "name": "Can add Offer application history",
+            "content_type": 19,
+            "codename": "add_offerapplicationhistory"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 71,
+        "fields": {
+            "name": "Can change Offer application history",
+            "content_type": 19,
+            "codename": "change_offerapplicationhistory"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 72,
+        "fields": {
+            "name": "Can delete Offer application history",
+            "content_type": 19,
+            "codename": "delete_offerapplicationhistory"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 73,
+        "fields": {
+            "name": "Can view Offer application history",
+            "content_type": 19,
+            "codename": "view_offerapplicationhistory"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 74,
+        "fields": {
+            "name": "Access admin page",
+            "content_type": 11,
+            "codename": "view"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 75,
+        "fields": {
+            "name": "Can add Customization",
+            "content_type": 12,
+            "codename": "add_customization"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 76,
+        "fields": {
+            "name": "Can change Customization",
+            "content_type": 12,
+            "codename": "change_customization"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 77,
+        "fields": {
+            "name": "Can delete Customization",
+            "content_type": 12,
+            "codename": "delete_customization"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 78,
+        "fields": {
+            "name": "Can view Customization",
+            "content_type": 12,
+            "codename": "view_customization"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 79,
+        "fields": {
+            "name": "Can add Message",
+            "content_type": 13,
+            "codename": "add_message"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 80,
+        "fields": {
+            "name": "Can change Message",
+            "content_type": 13,
+            "codename": "change_message"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 81,
+        "fields": {
+            "name": "Can delete Message",
+            "content_type": 13,
+            "codename": "delete_message"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 82,
+        "fields": {
+            "name": "Can view Message",
+            "content_type": 13,
+            "codename": "view_message"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 83,
+        "fields": {
+            "name": "Can add user",
+            "content_type": 14,
+            "codename": "add_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 84,
+        "fields": {
+            "name": "Can change user",
+            "content_type": 14,
+            "codename": "change_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 85,
+        "fields": {
+            "name": "Can delete user",
+            "content_type": 14,
+            "codename": "delete_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 86,
+        "fields": {
+            "name": "Can view user",
+            "content_type": 14,
+            "codename": "view_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 87,
+        "fields": {
+            "name": "Can add Candidate",
+            "content_type": 15,
+            "codename": "add_candidate"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 88,
+        "fields": {
+            "name": "Can change Candidate",
+            "content_type": 15,
+            "codename": "change_candidate"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 89,
+        "fields": {
+            "name": "Can delete Candidate",
+            "content_type": 15,
+            "codename": "delete_candidate"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 90,
+        "fields": {
+            "name": "Can view Candidate",
+            "content_type": 15,
+            "codename": "view_candidate"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 91,
+        "fields": {
+            "name": "Can add Company",
+            "content_type": 16,
+            "codename": "add_company"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 92,
+        "fields": {
+            "name": "Can change Company",
+            "content_type": 16,
+            "codename": "change_company"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 93,
+        "fields": {
+            "name": "Can delete Company",
+            "content_type": 16,
+            "codename": "delete_company"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 94,
+        "fields": {
+            "name": "Can view Company",
+            "content_type": 16,
+            "codename": "view_company"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 95,
+        "fields": {
+            "name": "Can add Offer",
+            "content_type": 17,
+            "codename": "add_offer"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 96,
+        "fields": {
+            "name": "Can change Offer",
+            "content_type": 17,
+            "codename": "change_offer"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 97,
+        "fields": {
+            "name": "Can delete Offer",
+            "content_type": 17,
+            "codename": "delete_offer"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 98,
+        "fields": {
+            "name": "Can view Offer",
+            "content_type": 17,
+            "codename": "view_offer"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 99,
+        "fields": {
+            "name": "Can add Tech stack",
+            "content_type": 18,
+            "codename": "add_techstack"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 100,
+        "fields": {
+            "name": "Can change Tech stack",
+            "content_type": 18,
+            "codename": "change_techstack"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 101,
+        "fields": {
+            "name": "Can delete Tech stack",
+            "content_type": 18,
+            "codename": "delete_techstack"
+        }
+    },
+    {
+        "model": "auth.group",
+        "pk": 1,
+        "fields": {
+            "name": "Company",
+            "permissions": [
+                90,
+                92,
+                95,
+                96,
+                97,
+                98,
+                73,
+                99,
+                100,
+                101,
+                69
+            ]
+        }
+    },
+    {
         "model": "users.user",
         "pk": 1,
         "fields": {
-            "password": "pbkdf2_sha256$390000$cQgiZS63wZnG0ZkYAk3aTy$8p06fdm7ackSvfJNvHfkbrgi62Afd0nCJc85W8R3AhA=",
+            "password": "pbkdf2_sha256$600000$S9z9EwXOJAovfG6n9Lbrfo$olE09Xv/jzFtSzjsnEpS33ezF34MOzMGiobVcIbKXro=",
+            "last_login": null,
             "is_superuser": true,
             "is_staff": true,
             "is_active": true,
+            "date_joined": "2023-11-04T19:23:38.815Z",
             "first_name": "",
             "last_name": "",
             "email": "admin@admin.com",
@@ -16,27 +947,2834 @@
     },
     {
         "model": "users.user",
-        "pk": 2,
+        "pk": 3,
         "fields": {
-            "password": "pbkdf2_sha256$390000$cQgiZS63wZnG0ZkYAk3aTy$8p06fdm7ackSvfJNvHfkbrgi62Afd0nCJc85W8R3AhA=",
+            "password": "pbkdf2_sha256$600000$G5oL6JYcG10VUS8p8Z4gQf$hcVHAqE+2Q0fIXSTMmcNpyrqfpW08x756GusSyBt0xY=",
+            "last_login": null,
+            "is_superuser": false,
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2023-11-04T19:24:13.310Z",
+            "first_name": "",
+            "last_name": "",
+            "email": "microsoft@microsoft.com",
+            "groups": [
+                1
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "users.user",
+        "pk": 4,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$l1RNQ75BJ9Fy9m5x1TIgHd$SceOeLdo8EQMO62JrtPWsb7kgTKgaPW2ydoYcq4QiQ8=",
+            "last_login": null,
+            "is_superuser": false,
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2023-11-04T19:24:31.448Z",
+            "first_name": "",
+            "last_name": "",
+            "email": "apple@apple.com",
+            "groups": [
+                1
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "users.user",
+        "pk": 5,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$ANFiaosTRMkpb3AQwN8za2$tCchuN9BWLwkNGcuaz2apkLafi9F7v8vItF6CN3b+0w=",
+            "last_login": null,
+            "is_superuser": false,
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2023-11-04T19:24:50.675Z",
+            "first_name": "",
+            "last_name": "",
+            "email": "facebook@facebook.com",
+            "groups": [
+                1
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "users.user",
+        "pk": 7,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$f16nrNfSvkzcOMmkXckBvg$YMICdwfkPtvhsiDKvQLcfAOLe1zfBD6IiDZOIJZgISM=",
+            "last_login": null,
+            "is_superuser": false,
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2023-11-04T20:20:33.499Z",
+            "first_name": "",
+            "last_name": "",
+            "email": "netstation@netstation.com",
+            "groups": [
+                1
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "users.user",
+        "pk": 8,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$rFk5HwFyaXeSNgGXXLElPB$gSTrbmgNfgwdFNpS82NIEzcBim/f7CwQBaRQ620HSJE=",
+            "last_login": null,
+            "is_superuser": false,
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2023-11-04T20:21:06.189Z",
+            "first_name": "",
+            "last_name": "",
+            "email": "bluerider@software.com",
+            "groups": [
+                1
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "users.user",
+        "pk": 10,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$jDmd8ms2nMXUlaGad8BbEa$axKTJAWDf6CTmM0EYNcwF6nA0cS52jPMHH63K6XkTDY=",
+            "last_login": null,
+            "is_superuser": false,
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2023-11-04T22:46:30.056Z",
+            "first_name": "",
+            "last_name": "",
+            "email": "netflix@netflix.com",
+            "groups": [
+                1
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "users.user",
+        "pk": 11,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$STq7a0fr2P3mx5BckcGRv7$wQucGiDsYvB/bzatIJN9FqhptVjphvd4JZeD9tO/3Ac=",
+            "last_login": null,
+            "is_superuser": false,
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2023-11-05T21:14:20.663Z",
+            "first_name": "",
+            "last_name": "",
+            "email": "zeto@zeto.com",
+            "groups": [
+                1
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "users.user",
+        "pk": 12,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$vjc6eTDFFclJ59gPwodpCO$nYWfUTpILx7Oiw/kMpzu7enTgRWJlP7jfT0kCamiD/w=",
+            "last_login": null,
+            "is_superuser": false,
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2023-11-12T18:27:54.232Z",
+            "first_name": "",
+            "last_name": "",
+            "email": "google@google.com",
+            "groups": [
+                1
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "users.user",
+        "pk": 15,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$ZZyvhG6AHh1QiMa1XTOoe5$dP7BgT8bvct3Atp17CJcOsHgwdNw1vYA4BQs5PtTjOY=",
+            "last_login": null,
+            "is_superuser": false,
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2023-11-26T16:46:33.831Z",
+            "first_name": "",
+            "last_name": "",
+            "email": "mindpal@mindpal.com",
+            "groups": [
+                1
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "users.user",
+        "pk": 17,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$awKVWhtALMeiH5gVSALZpt$jyTWd59vQCWSoWJP+px/sHU71whUal1FnSVmMujlRhQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2023-11-30T20:35:19.802Z",
+            "first_name": "",
+            "last_name": "",
+            "email": "appfire@appfire.com",
+            "groups": [
+                1
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "users.user",
+        "pk": 18,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$0lqXeRZ8hDMHAEdBHGhEnV$7fs149HSNLYas/kyF0KSEydQ6mHbfxztp+mNuIQ4R5Q=",
+            "last_login": null,
+            "is_superuser": false,
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2023-11-30T20:38:47.611Z",
+            "first_name": "",
+            "last_name": "",
+            "email": "ciklum@ciklum.com",
+            "groups": [
+                1
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "users.user",
+        "pk": 19,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$nMQfYiwRAKsgMydStaGfEe$xQ9rm9S3xjKwbpyLjUjsaiGy6y8I/iVVyqHsfcW6phA=",
+            "last_login": null,
+            "is_superuser": false,
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2023-11-30T20:43:38.023Z",
+            "first_name": "",
+            "last_name": "",
+            "email": "centra@centra.com",
+            "groups": [
+                1
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "users.user",
+        "pk": 20,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$rKlsPOznSWHypff3K5liD7$wyC5BEXx3KjkUYb8lkznCJbPHRlWm36K4kSRnmgRgY0=",
+            "last_login": null,
             "is_superuser": false,
             "is_staff": false,
             "is_active": true,
-            "first_name": "Candidate",
-            "last_name": "User",
-            "email": "candidate@candidate.com",
+            "date_joined": "2023-12-28T11:44:11.700Z",
+            "first_name": "Kamil",
+            "last_name": "Kamiński",
+            "email": "kamil@candidate.com",
             "groups": [],
             "user_permissions": []
         }
     },
     {
-      "model": "candidates.candidate",
-      "pk": 2,
-      "fields": {
-        "user_ptr": 2,
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "github_url": "https://github.com/",
-        "linkedin_url": "https://www.linkedin.com/"
-      }
+        "model": "users.user",
+        "pk": 21,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$F00uj8ETTigZUQ4QEVwxYF$LWtLNP2elqCAp7GaBSxxEqOmnizOHYqZt1QjMX8J65Y=",
+            "last_login": null,
+            "is_superuser": false,
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-12-28T11:46:02.331Z",
+            "first_name": "Mateusz",
+            "last_name": "Kowalski",
+            "email": "mateusz@candidate.com",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "users.user",
+        "pk": 22,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$i9PJIi9f7l6JM5JSJboWaG$Ggdke/8zB+njfgxrygBZASBujVZ/GeYJx7BTmphOo2c=",
+            "last_login": null,
+            "is_superuser": false,
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-12-28T11:46:50.203Z",
+            "first_name": "Krzysztof",
+            "last_name": "Nowak",
+            "email": "krzysztof@candidate.com",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "users.user",
+        "pk": 23,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$jUP49h1NjkiLtuIZ90EGZh$OQ1q5goNKpa/N+yP8rLsUMazxg4e1TK0rvBcseub+og=",
+            "last_login": null,
+            "is_superuser": false,
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-12-28T11:47:42.154Z",
+            "first_name": "Anna",
+            "last_name": "Borowiak",
+            "email": "anna@candidate.com",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "candidates.candidate",
+        "pk": 20,
+        "fields": {
+            "image": "",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "github_url": "https://github.com/kamilkaminski01",
+            "linkedin_url": "https://www.linkedin.com/in/kamil-kaminski-0b287a22b/"
+        }
+    },
+    {
+        "model": "candidates.candidate",
+        "pk": 21,
+        "fields": {
+            "image": "",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "github_url": "https://github.com/kamilkaminski01",
+            "linkedin_url": "https://www.linkedin.com/in/kamil-kaminski-0b287a22b/"
+        }
+    },
+    {
+        "model": "candidates.candidate",
+        "pk": 22,
+        "fields": {
+            "image": "",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "github_url": "https://github.com/kamilkaminski01",
+            "linkedin_url": "https://www.linkedin.com/in/kamil-kaminski-0b287a22b/"
+        }
+    },
+    {
+        "model": "candidates.candidate",
+        "pk": 23,
+        "fields": {
+            "image": "",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "github_url": "https://github.com/kamilkaminski01",
+            "linkedin_url": "https://www.linkedin.com/in/kamil-kaminski-0b287a22b/"
+        }
+    },
+    {
+        "model": "companies.company",
+        "pk": 3,
+        "fields": {
+            "name": "Microsoft",
+            "description": "Microsoft, is a digital strategy and software engineering firm providing bespoke technology solutions that drive business change for customers the world over. We are a global family with an epic atmosphere – we love what we do!",
+            "image": ""
+        }
+    },
+    {
+        "model": "companies.company",
+        "pk": 4,
+        "fields": {
+            "name": "Apple",
+            "description": "Since launching in 2005, Apple has built a platform of trusted apps and top-selling solutions for more than 30,000 customers spanning 150 countries and all industry groups — including 55% of Fortune 500 companies.",
+            "image": ""
+        }
+    },
+    {
+        "model": "companies.company",
+        "pk": 5,
+        "fields": {
+            "name": "Facebook",
+            "description": "The global Facebook family are experts in IoT, AI, and Machine Learning applications for clients around the world. We have unparalleled in-house expertise for innovative clients in some of the fastest-growing markets in the world.",
+            "image": ""
+        }
+    },
+    {
+        "model": "companies.company",
+        "pk": 7,
+        "fields": {
+            "name": "Netstation",
+            "description": "Jesteśmy polską firmą programistyczną specjalizującą się w tworzeniu aplikacji webowych i mobilnych. Tworzymy rozwiązania dla klientów z całego świata. Na rynku działamy od 2012 roku. Dołącz już dziś",
+            "image": ""
+        }
+    },
+    {
+        "model": "companies.company",
+        "pk": 8,
+        "fields": {
+            "name": "BlueRider.Software",
+            "description": "BlueRider.Software is one of the world's leading corporations in the TSL industry with headquarter in Denmark. Air&Sea, ISS, Road, Solutions, and Services are all represented in Poland. We employ over 3000 people in Poland, and over 75 000 worldwide!",
+            "image": ""
+        }
+    },
+    {
+        "model": "companies.company",
+        "pk": 10,
+        "fields": {
+            "name": "Netflix",
+            "description": "We create products, tools, and resources to help job seekers fulfill their career potential. Our brands have empowered over three million people in 180 countries to build stronger resumes, cover letters, and CVs.",
+            "image": ""
+        }
+    },
+    {
+        "model": "companies.company",
+        "pk": 11,
+        "fields": {
+            "name": "Zeto",
+            "description": "Zeto is a global, digital first company on a mission to make the world better—one customer experience at a time. If you're a team player looking for a supportive company that is eager for big ideas.",
+            "image": ""
+        }
+    },
+    {
+        "model": "companies.company",
+        "pk": 12,
+        "fields": {
+            "name": "Google",
+            "description": "We are one of Europe’s major software providers. With our own data center, we offer solutions for accounting, HR, office management, business consulting, and much more. We have more than 8,500 employees and are headquartered in Nuremberg, Germany.",
+            "image": ""
+        }
+    },
+    {
+        "model": "companies.company",
+        "pk": 15,
+        "fields": {
+            "name": "MindPal",
+            "description": "MindPal is a unique project that emerged from the initiative of sky gate company. The challenges associated with IT recruitment became the driving force behind the creation of an extraordinary platform connecting companies with candidates.",
+            "image": ""
+        }
+    },
+    {
+        "model": "companies.company",
+        "pk": 17,
+        "fields": {
+            "name": "AppFire",
+            "description": "Since launching in 2005, Appfire has built a platform of trusted apps and top-selling solutions for more than 30,000 customers spanning 150 countries and all industry groups — including 55% of Fortune 500 companies.",
+            "image": ""
+        }
+    },
+    {
+        "model": "companies.company",
+        "pk": 18,
+        "fields": {
+            "name": "Ciklum",
+            "description": "We are a global Digital Solutions Company for both Fortune 500 and fast-growing organisations around the world. More than 4000 experts in 11 engineering hubs are creating digital platforms for a variety of industries. Let’s empower success together.",
+            "image": ""
+        }
+    },
+    {
+        "model": "companies.company",
+        "pk": 19,
+        "fields": {
+            "name": "Centra",
+            "description": "Centra is a leading headless ecommerce platform on a mission to redefine the future of digital commerce. We develop advanced tools that help fashion brands to sell to their fans all over the world.",
+            "image": ""
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 1,
+        "fields": {
+            "created_at": "2023-11-04T19:29:09.501Z",
+            "updated_at": "2023-11-18T11:31:59.869Z",
+            "company": 5,
+            "title": "Senior SQL Developer",
+            "salary_min": 2000,
+            "salary_max": 5000,
+            "currency": "USD",
+            "description": "<p>As <strong>Senior SQL Developer</strong>, you will participate in multiple areas of the software development life cycle. You will participate in various, modern projects, extending your skills in a bunch of areas.&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Among tasks you may face working with us you can find:</strong></p>\r\n<ul>\r\n<li>Migration of on-premise environment to Azure cloud</li>\r\n<li>Creating CI/CD pipelines for greenfields</li>\r\n<li>Supporting clients in terms of choosing a solution architecture</li>\r\n<li>Deploying infrastructure inside of big ecosystems</li>\r\n<li>Providing Infrastructure as a Code</li>\r\n<li>Deploying mobile applications</li>\r\n<li>Databases migration into cloud</li>\r\n<li>Working with tools such as Azure, Azure DevOps, Ansible, Terraform, Python/PowerShell/Bash, Docker and Kubernetes, SonarQube.&nbsp;</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<p><strong>Requirements:</strong></p>\r\n<ul>\r\n<li>Azure Cloud</li>\r\n<li>Ansible or Terraform or ARM templates</li>\r\n<li>Docker &amp; Kubernetes</li>\r\n<li>Python or PowerShell or Bash</li>\r\n<li>Azure DevOps or GitHub Actions</li>\r\n<li>Git</li>\r\n<li>English (B2)</li>\r\n</ul>",
+            "experience": "Senior",
+            "employment_type": "B2B",
+            "work_type": "Full time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 2,
+        "fields": {
+            "created_at": "2023-11-04T19:30:02.111Z",
+            "updated_at": "2023-11-18T11:31:06.455Z",
+            "company": 4,
+            "title": "Mid DevOps",
+            "salary_min": 10000,
+            "salary_max": 20000,
+            "currency": "EUR",
+            "description": "<p><em>Przy kontrakcie B2B oferujemy wsp&oacute;łpracę na podstawie stawki godzinowej: 100 - 140 netto/h + VAT.</em></p>\r\n<p>&nbsp;</p>\r\n<p>Jesteśmy&nbsp;<strong>Unity Group&nbsp;</strong>- jednym z największych dostawc&oacute;w IT dla e-commercu w Polsce. Od&nbsp;<strong>ponad 25 lat</strong>&nbsp;dostarczamy technologię pozwalającą na realizację transformacji cyfrowej przedsiębiorstw. Za nami już&nbsp;<strong>500 projekt&oacute;w!&nbsp;</strong>Oferujemy wsparcie w zakresie doradztwa biznesowego i technologicznego, a także tworzenia oprogramowania.&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>W związku z rosnącym zapotrzebowaniem na nasze usługi poszukujemy nowych os&oacute;b do zespołu inżynier&oacute;w odpowiedzialnych za projektowanie i wdrażanie infrastruktury chmurowej oraz budowanie praktyk DevOps w nowo uruchamianych projektach.&nbsp;</p>\r\n<p>Jeśli w kt&oacute;rymś z kryteri&oacute;w masz wątpliwości &ndash; nie wahaj się aplikować, potrafimy rozpoznać i rozwijać osoby z potencjałem!</p>",
+            "experience": "Mid",
+            "employment_type": "Permanent",
+            "work_type": "Part time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 3,
+        "fields": {
+            "created_at": "2023-11-04T20:22:16.279Z",
+            "updated_at": "2023-11-18T11:30:44.226Z",
+            "company": 8,
+            "title": "Mid/Senior Node.js Developer",
+            "salary_min": 16800,
+            "salary_max": 25500,
+            "currency": "PLN",
+            "description": "<p><strong>Industry:</strong>&nbsp;Banking &amp; Financial Services</p>\r\n<p><strong>Location:</strong>&nbsp;Wrocław or Krak&oacute;w</p>\r\n<p><strong>Work Model:</strong>&nbsp;Full-time, Hybrid work with 2-3 days per week on-site</p>\r\n<p><strong>Assignment Type:</strong>&nbsp;B2B</p>\r\n<p><strong>Start Date:</strong>&nbsp;January</p>\r\n<p><strong>Project Length:</strong>&nbsp;Long-term</p>\r\n<p><strong>Project Language:</strong>&nbsp;English/Polish</p>\r\n<p>&nbsp;</p>\r\n<p><strong>DETAILS:</strong></p>\r\n<p>The team is set in an Agile Operating Model within Management Investments Technology. This consultant will support Portfolio Management and Trading Departments.</p>\r\n<p>&nbsp;</p>\r\n<p><strong>RESPONSIBILITIES &amp; JOB DESCRIPTION:</strong></p>\r\n<ul>\r\n<li>Lead the design and development of digital products and technology services for external clients.</li>\r\n<li>Continuously enhance and innovate digital solutions to meet evolving client needs.</li>\r\n<li>Utilize a diverse set of software engineering practices to shape and deliver cutting-edge solutions.</li>\r\n<li>Contribute to architectural and design decisions to ensure technology remains at the forefront of industry standards.</li>\r\n<li>Maintain the highest standards of quality, security, and reliability in software development.</li>\r\n<li>Uphold compliance with industry regulations and standards to ensure client trust and data integrity.</li>\r\n<li>Implement both functional and non-functional requirements in software solutions.</li>\r\n<li>Strive for efficient, scalable, and high-performance systems that meet client expectations.</li>\r\n</ul>\r\n<p>&nbsp;</p>",
+            "experience": "Senior",
+            "employment_type": "Permanent",
+            "work_type": "Full time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 4,
+        "fields": {
+            "created_at": "2023-11-04T20:23:56.665Z",
+            "updated_at": "2023-11-18T11:30:06.600Z",
+            "company": 7,
+            "title": "Tech Lead Software Engineering",
+            "salary_min": 15000,
+            "salary_max": 15500,
+            "currency": "PLN",
+            "description": "<p>Aura is on a mission to create a safer internet.&nbsp;In a world where our lives are increasingly online, Aura's category-defining suite of intelligent digital safety products help millions of customers protect themselves against digital threats, and that number is growing rapidly.&nbsp;Aura is in an exciting phase of hyper-growth, and our team of close to 700 people worldwide is guided by a leadership slate that's successfully grown startups into multi-billion dollar organizations.</p>\r\n<p>&nbsp;</p>\r\n<p>Come join us for the ride!</p>\r\n<p>&nbsp;</p>\r\n<p><strong>About the Role:</strong></p>\r\n<p>We are looking for a Lead Data Engineer to help us continue improving the architecture, enhancing, and maintaining the Data Platform.</p>",
+            "experience": "Senior",
+            "employment_type": "Internship",
+            "work_type": "Freelance"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 5,
+        "fields": {
+            "created_at": "2023-11-04T20:28:03.718Z",
+            "updated_at": "2023-11-18T11:29:34.682Z",
+            "company": 3,
+            "title": "Java / Backend Software Developer",
+            "salary_min": 16000,
+            "salary_max": 25320,
+            "currency": "PLN",
+            "description": "<p>Sporty's sites are some of the most popular on the internet, consistently staying in Alexa's list of top websites for the countries they operate in</p>\r\n<p>&nbsp;</p>\r\n<p>As a BI Analyst at Sporty, you&rsquo;ll be mining through petabytes of data to provide key insights that drive core business decisions. You&rsquo;ll create dashboards that are used on a daily basis by product managers, traders, and executives, as well as provide in-depth reports on various areas of the business with complete freedom on your methodology.</p>\r\n<p>&nbsp;</p>\r\n<p>Furthermore, our analysts play a key role in ensuring the stability of our reporting infrastructure. They are vital in maintaining our ability to deliver accurate and consistent reporting to the various stakeholders.&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Our Stack:</strong></p>\r\n<ul>\r\n<li>MySQL</li>\r\n<li>Python</li>\r\n<li>AirFlow</li>\r\n<li>AWS</li>\r\n<li>Metabase</li>\r\n<li>Redshift</li>\r\n<li>Linux</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<p><strong>Responsibilities:</strong></p>\r\n<ul>\r\n<li>Set up and execute extract, transformation and load (ETL) functions to build a data pipeline</li>\r\n<li>Extraction and analysis of large data sets from MySQL</li>\r\n<li>Performance tuning for current and newly added queries to the databases, ensuring the database resources are fully utilized</li>\r\n<li>Delivering clear analysis and reporting of core business metrics to shareholders</li>\r\n<li>Creation and management of reports and dashboards</li>\r\n<li>Data management</li>\r\n<li>Enhance and optimize existing reporting processes</li>\r\n<li>Ad hoc analysis and reporting to clients and shareholders</li>\r\n<li>Aid in reconfiguring existing architecture and database structure to address our shareholder's evolving needs</li>\r\n<li>Daily maintenance and monitoring of all BI related databases and dashboards, including proficient handling of emergencies</li>\r\n<li>Providing actionable insight to drive growth of core products</li>\r\n</ul>",
+            "experience": "Mid",
+            "employment_type": "Permanent",
+            "work_type": "Full time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 6,
+        "fields": {
+            "created_at": "2023-11-04T20:29:17.659Z",
+            "updated_at": "2023-11-18T11:29:09.344Z",
+            "company": 7,
+            "title": "Lead Cloud Security Engineer",
+            "salary_min": 32000,
+            "salary_max": 39000,
+            "currency": "PLN",
+            "description": "<p><strong>Kim jesteśmy</strong></p>\r\n<p>&nbsp;</p>\r\n<p>Jesteśmy globalną firmą doradczą w ponad 40 krajach, kt&oacute;rej pracownicy sprawiają, że jesteśmy tymi, kim jesteśmy. Kearney - to osoby o r&oacute;żnych pasjach i mocnych stronach, kt&oacute;re czerpią tyle samo radości z wykonywanej pracy, co ze wsp&oacute;łpracy z naszymi klientami.</p>\r\n<p>Przez lata pielęgnowaliśmy kulturę, w kt&oacute;rej jednoczą nas wsp&oacute;lne wartości - pasja, solidarność, hojność, ciekawość i odwaga - a te ożywają w pracy, kt&oacute;rą wykonujemy. Jesteśmy dumni z tego, że jesteśmy indywidualni i otwarci oraz tworzymy miejsce, w kt&oacute;rym każdy może w pełni zaangażować się w pracę.</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Szukamy os&oacute;b dostępnych na pełen etat.&nbsp;</strong></p>\r\n<p><strong>Pracujemy w trybie hybrydowym, 2-3 dni z naszego warszawskiego biura.</strong></p>\r\n<p><strong>&nbsp;</strong></p>\r\n<p><strong>Kogo szukamy:</strong></p>\r\n<p>&nbsp;</p>\r\n<p>Do rosnącego zespołu DCoE (Digital Centre of Excellence) w Warszawie szukamy specjalist&oacute;w analityki z doświadczeniem w Python i modelowaniu statystycznym.&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>Typowe zadania projektowe dla roli Data Scientist obejmują manipulację danymi, transformacje, tworzenie i ocenę modeli data science, przygotowywanie rozwiązań PoC dla klient&oacute;w oraz pokazywanie, w jaki spos&oacute;b mogą tworzyć wartość z danych. Będziesz r&oacute;wnież przedstawiać wygenerowane wnioski nietechnicznym członkom zespołu projektowego lub bezpośrednio klientowi.&nbsp;</p>",
+            "experience": "Senior",
+            "employment_type": "B2B",
+            "work_type": "Freelance"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 7,
+        "fields": {
+            "created_at": "2023-11-04T20:30:06.996Z",
+            "updated_at": "2023-11-18T11:28:34.240Z",
+            "company": 8,
+            "title": "Data Analyst",
+            "salary_min": 9530,
+            "salary_max": 10500,
+            "currency": "EUR",
+            "description": "<p><strong>Join the cutting-edge IT Hub and embrace the global digital transformation!</strong></p>\r\n<p>&nbsp;</p>\r\n<p><em>Warsaw-based opportunity with the possibility to work partly remotely (1 day per week in the Client's Office)!</em></p>\r\n<p>&nbsp;</p>\r\n<p>As a&nbsp;<strong>Senior SQL Developer,</strong>&nbsp;you will work for our Client - The EU's leading bank and key player on the international banking scene, operating in 72 countries. You will join a brand new, state-of-the-art, technology and development Hub created to bring together the strongest players in the IT market. As a member of the Investment Reporting and Performance IT team, you will participate in processes related to architecture change, and transformation in terms of security and technical debt.&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Your main responsibilities: act as a best-class SQL Developer!</strong></p>\r\n<ul>\r\n<li>SQL/Autosys/Unix shell development</li>\r\n<li>Drafting of technical specifications based on the Project Initiation Document</li>\r\n<li>Management of IT application dependencies</li>\r\n<li>Participation in testing strategy and performing tests</li>\r\n<li>Ensuring compliance with internal procedures and quality standards</li>\r\n<li>Continuous contact and report with the project leader</li>\r\n<li>Development of documentation</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<p><strong>You&rsquo;re ideal for the role if you have:</strong></p>\r\n<ul>\r\n<li>Minimum 5 years of experience in a similar role</li>\r\n<li>Knowledge and past experience with: SQL, Autosys, Unix shell, JIRA, ALM Quality Center, or Octane</li>\r\n<li>Ability to grasp the IRP business (performance, Solvency 2, attribution)</li>\r\n<li>Ability to work in a team</li>\r\n<li>Excellent communication skills</li>\r\n<li>Fluent English &amp; Polish</li>\r\n</ul>",
+            "experience": "Junior",
+            "employment_type": "Permanent",
+            "work_type": "Freelance"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 8,
+        "fields": {
+            "created_at": "2023-11-04T20:31:09.147Z",
+            "updated_at": "2023-11-18T11:28:01.429Z",
+            "company": 4,
+            "title": "Cloud Developer with AWS",
+            "salary_min": 6000,
+            "salary_max": 18000,
+            "currency": "USD",
+            "description": "<p><strong>Creating IT infrastructure for complex banking systems</strong></p>\r\n<p>&nbsp;</p>\r\n<p>Warsaw-based opportunity with a possibility to work 90% remotely</p>\r\n<p>&nbsp;</p>\r\n<p>As a&nbsp;<strong>Full-stack Python Developer,</strong>&nbsp;you will be working with a team of highly skilled and experienced engineers for our Client, an innovation leader among Polish financial institutions, providing a full range of modern financial services for individuals and companies. By joining the team, you will be part of the entire process of preparing the environment for application developers. Your work will have a real impact on the final efficiency of the systems.</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Your main responsibilities:</strong>&nbsp;preparing and developing infrastructure for banking applications</p>\r\n<ul>\r\n<li>Software designing and implementing Python and Django technologies</li>\r\n<li>Participation in developing concepts and planning new modules and functionalities&nbsp;</li>\r\n<li>Optimizing the operation of existing systems (e.g. by improving code efficiency) Improving implemented solutions in terms of efficiency and technology&nbsp;</li>\r\n<li>Verifying software quality</li>\r\n<li>Designing changes in IT systems</li>\r\n<li>Active participating in internal software tests, creating and updating technical and functional documentation</li>\r\n<li>Preparing the acceptance of software and participating in the commissioning of systems for operation testing IT solutions</li>\r\n</ul>",
+            "experience": "Junior",
+            "employment_type": "B2B",
+            "work_type": "Part time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 9,
+        "fields": {
+            "created_at": "2023-11-04T20:32:30.946Z",
+            "updated_at": "2023-11-18T11:27:15.738Z",
+            "company": 5,
+            "title": "Business System Specialist",
+            "salary_min": 28000,
+            "salary_max": 35000,
+            "currency": "PLN",
+            "description": "<p>Projekt wymaga obecności w biurze klienta (centrum Warszawy) raz w tygodniu.</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Umiejętności wymagane:</strong></p>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<li>Bardzo dobrą znajomość Java Spring / Spring Boot</li>\r\n<li>Biegłość w Angular2+ (najlepiej wersja bieżąca)</li>\r\n<li>Znajomość relacyjnych baz danych, z naciskiem na bazę PostgreSQL</li>\r\n<li>Znajomość Kafka / Avro</li>\r\n<li>Pisanie czytelnego i czystego kodu / code review</li>\r\n<li>Samodzielność / Krytyczne myślenie</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<p><strong>Umiejętności dodatkowe:</strong></p>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<li>Git</li>\r\n<li>Maven lub Gradle</li>\r\n<li>Docker, Kubernetes</li>\r\n<li>Mile widziana znajomość technologii legacy takich jak EJB lub Struts</li>\r\n<li>Quarkus</li>\r\n<li>JIRA</li>\r\n</ul>",
+            "experience": "Mid",
+            "employment_type": "Permanent",
+            "work_type": "Freelance"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 10,
+        "fields": {
+            "created_at": "2023-11-04T20:33:54.030Z",
+            "updated_at": "2023-11-18T11:54:25.874Z",
+            "company": 3,
+            "title": "Full-stack Engineer (React oriented)",
+            "salary_min": 31200,
+            "salary_max": 44570,
+            "currency": "PLN",
+            "description": "<p>Are you looking for an interesting project and are fed up with multi-stage recruitment processes that last for months and are conducted by non-technical people, and are you looking for a place to spread your wings?</p>\r\n<p>&nbsp;</p>\r\n<p>If you answered - YES</p>\r\n<p>&nbsp;</p>\r\n<p>Microsoft is the perfect solution for you.</p>\r\n<p>&nbsp;</p>\r\n<p>Apply to Microsoft! We have only two stages of recruitment:</p>\r\n<ol>\r\n<li>Meeting with our CTO, who will ask you about all technical issues important for your position. (you get feedback immediately!)</li>\r\n<li>Meeting with the manager of the team you would join. Then your questions will be the most important, because we want to make your decision as easy as possible.</li>\r\n</ol>\r\n<p>&nbsp;</p>\r\n<p>And that's it. Simple, isn't it?</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Your main tasks:</strong></p>\r\n<ul>\r\n<li>Building CI/CD processes</li>\r\n<li>Ensuring high scalability and reliability of systems</li>\r\n<li>Keeping systems safe and up to date</li>\r\n<li>Ensuring the security of the cloud platform</li>\r\n<li>Collaboration with a team of engineers and sharing knowledge</li>\r\n<li>Requirements:</li>\r\n<li>Experience in designing/maintaining AWS cloud-based solutions</li>\r\n<li>Experience with Multi-Region Architectures</li>\r\n<li>Working knowledge of Docker/Kubernetes in a production environment</li>\r\n<li>Experience in building CI/CD processes</li>\r\n<li>Strong scripting skills</li>\r\n<li>Fluent knowledge of Polish and intermediate knowledge of English</li>\r\n</ul>",
+            "experience": "Junior",
+            "employment_type": "Permanent",
+            "work_type": "Part time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 11,
+        "fields": {
+            "created_at": "2023-11-04T20:35:13.965Z",
+            "updated_at": "2023-11-18T11:26:11.258Z",
+            "company": 5,
+            "title": "Junior .NET Developer",
+            "salary_min": 17000,
+            "salary_max": 21000,
+            "currency": "USD",
+            "description": "<p><strong>Are you looking for a reliable job where you can use your IT expertise in innovative and impactful projects?</strong></p>\r\n<p><strong>Join our projects transforming healthcare with digital solutions.</strong></p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<h3><strong>What does it take to be successful during the recruitment process&nbsp;</strong></h3>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<li><strong>at</strong>&nbsp;least&nbsp;<strong>3 years</strong>&nbsp;of experience (ideally, with the newest versions of Angular, but that's not crucial)</li>\r\n<li>Good grasp of&nbsp;<strong>Angular and TypeScript</strong>&nbsp;- internals, pros and cons, caveats, tricks</li>\r\n<li>Good understanding of&nbsp;<strong>Angular's ecosystem</strong>&nbsp;(libraries, tools, common solutions)</li>\r\n<li><strong>Very good understanding</strong>&nbsp;of HTML, CSS, and supporting tools and frameworks (SCSS, Bootstrap, Material Design, Responsive Web Design, etc.)</li>\r\n<li><strong>A reasonable understanding&nbsp;</strong>of front-end development in general and a willingness to remain up-to-date with the latest trends and skills</li>\r\n<li>At least an intermediate understanding of web application UI/UX guidelines, attention to detail</li>\r\n<li>Ability to write and maintain&nbsp;<strong>technical documentation</strong>&nbsp;(both externally, wiki docs, and internally as development readme and supporting comment files)</li>\r\n<li>Ability to work with lean methodologies (agile, scrum, etc.)</li>\r\n<li>Professional&nbsp;<strong>fluency in English and Polish</strong>&nbsp;(at least B2, ideally C1)</li>\r\n</ul>",
+            "experience": "Junior",
+            "employment_type": "Permanent",
+            "work_type": "Full time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 12,
+        "fields": {
+            "created_at": "2023-11-04T22:41:23.445Z",
+            "updated_at": "2023-11-18T11:25:32.681Z",
+            "company": 4,
+            "title": "Senior Application Security Engineer",
+            "salary_min": 12000,
+            "salary_max": 18000,
+            "currency": "EUR",
+            "description": "<h3>Location</h3>\r\n<p>Remote Poland</p>\r\n<p>&nbsp;</p>\r\n<h2>Project&nbsp;Description</h2>\r\n<p>Project team is comprised of highly skilled and experienced professionals located in globally. The team produces high quality software and services for the Private Markets sector of the Finance Industry.</p>\r\n<p>It is a highly technical position and will require proven experience of developing Single Page Applications (SPAs) and Backend Services, using .NET and C#. As the application will be deployed straight through into production using CI/CD principles it is essential that you are comfortable and knowledgeable developing within such a framework. We are looking for individuals that can work in an agile manner and are passionate about technology.</p>\r\n<p>This position is to join a team working on a SASS offering. Together with the rest of the team you will be producing high quality software that conforms to the functional and non-functional business requirements.</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<h2>Responsibilities</h2>\r\n<ul>\r\n<li>Collaborating with other members of the team to help meet team goals</li>\r\n<li>Participating in Scrum ceremonies and activities, including backlog grooming, sprint planning, estimation and sprint reviews</li>\r\n<li>Maintain and update your knowledge of the technology landscape</li>\r\n<li>Responsible for the quality and timely delivery of your tasks</li>\r\n<li>Help the team drive innovation and adoption of best practices</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<h2>Skills</h2>\r\n<p>&nbsp;</p>\r\n<p><strong>Must have</strong></p>\r\n<ul>\r\n<li>8+ years of development experience building enterprise software</li>\r\n<li>.Net/.Net Core C# 5+ years</li>\r\n<li>Good practical knowledge with Microservices.</li>\r\n<li>Expert on data management technologies (RMDBS or NoSQL)</li>\r\n<li>Strong understanding of quality and testing automation</li>\r\n<li>Understanding of service-based and serverless architectures and the challenges they can present</li>\r\n<li>Ability to deliver products in a dynamic, fast-paced environment</li>\r\n</ul>\r\n<p>&nbsp;</p>",
+            "experience": "Mid",
+            "employment_type": "Internship",
+            "work_type": "Freelance"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 13,
+        "fields": {
+            "created_at": "2023-11-04T22:42:53.358Z",
+            "updated_at": "2023-11-18T11:24:51.427Z",
+            "company": 8,
+            "title": "Senior Data Engineer",
+            "salary_min": 22000,
+            "salary_max": 32000,
+            "currency": "PLN",
+            "description": "<p>Leasing Polski Sp. z o.o., firma o ugruntowanej i stabilnej pozycji na rynku, posiadająca wieloletnie doświadczenie w zakresie leasingu środk&oacute;w transportu, w związku z dalszym rozwojem poszukuje kandydat&oacute;w na stanowisko:</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Młodszy specjalista ds. system&oacute;w informatycznych</strong></p>\r\n<p>Miejsce pracy: Gdańsk</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Tw&oacute;j zakres obowiązk&oacute;w</strong></p>\r\n<ul>\r\n<li>Aktywne wsparcie użytkownik&oacute;w w zakresie obsługi system&oacute;w informatycznych (help desk)</li>\r\n<li>Administrowanie kontami użytkownik&oacute;w</li>\r\n<li>Tworzenie modeli kalkulacji i modeli finansowania</li>\r\n<li>Tworzenie raport&oacute;w systemowych</li>\r\n<li>Udział w działaniach rozwojowych, a także testowanie i wdrażanie nowych funkcjonalności</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<p><strong>Nasze wymagania</strong></p>\r\n<ul>\r\n<li>Wykształcenie wyższe (preferowane kierunki: informatyka, matematyka)</li>\r\n<li>Bardzo dobra znajomość MS Office, w szczeg&oacute;lności MS Excel</li>\r\n<li>Zaangażowanie i wytrwałość przy realizacji powierzonych zadań</li>\r\n<li>Sumienność i dokładność</li>\r\n<li>Umiejętności analityczne</li>\r\n<li>Umiejętność pracy w zespole</li>\r\n<li>Chęć nauki i rozwoju</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<p><strong>Mile widziane</strong></p>\r\n<ul>\r\n<li>Umiejętność tworzenia raport&oacute;w w Crystal Reports</li>\r\n<li>Umiejętność tworzenia raport&oacute;w Rave</li>\r\n<li>Znajomość programu Leo Leasing&nbsp;</li>\r\n<li>Znajomość baz danych Oracle</li>\r\n<li>Umiejętność tworzenia zapytań SQL</li>\r\n<li>Mile widziane doświadczenie na podobnym stanowisku.</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<p><strong>To oferujemy</strong></p>\r\n<ul>\r\n<li>Umowę o pracę&nbsp;</li>\r\n<li>Niezbędne narzędzia pracy</li>\r\n<li>Benefity pracownicze</li>\r\n<li>Zdobycie nowych informatycznych umiejętności</li>\r\n<li>Poznanie system&oacute;w do obsługi leasingu</li>\r\n<li>Możliwości rozwoju</li>\r\n<li>Przyjazną atmosferę pracy</li>\r\n</ul>",
+            "experience": "Junior",
+            "employment_type": "Permanent",
+            "work_type": "Full time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 14,
+        "fields": {
+            "created_at": "2023-11-04T22:44:12.132Z",
+            "updated_at": "2023-11-18T11:24:13.377Z",
+            "company": 5,
+            "title": "Quality Assurance",
+            "salary_min": 4000,
+            "salary_max": 7000,
+            "currency": "PLN",
+            "description": "<p>Osoba zatrudniona na tym stanowisku będzie włączona w projekt, kt&oacute;ry jest elementem cyfrowej transformacji branży energetycznej w Polsce. Udział w tym przedsięwzięciu polega na dostarczeniu sp&oacute;łkom energetycznym rozwiązania, pozwalającego na ich integrację z centralnym systemem.</p>\r\n<h3>&nbsp;</h3>\r\n<h3><strong>Tw&oacute;j zakres obowiązk&oacute;w</strong></h3>\r\n<ul>\r\n<li>Zadania z obszaru utrzymania i rozwoju w projektach integracyjnych</li>\r\n<li>Utrzymanie: monitorowanie poprawności działania rozwiązań, poprawy błęd&oacute;w, realizacja zgłoszeń od klienta</li>\r\n<li>Rozw&oacute;j: modyfikacja istniejących usług, tworzenie nowych usług zgodnie z wymaganiami, tworzenie/aktualizacja dokumentacji, planowanie/realizacja test&oacute;w wydajnościowych</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<h3><strong>Nasze wymagania</strong></h3>\r\n<ul>\r\n<li>Znajomość soap, xpath, xquery, xslt, wsdl, xsd, xml/json</li>\r\n<li>Znajomość soapUI, REST</li>\r\n<li>Minimum 5 lat doświadczenia w pracy z ww technologiami oraz w pracy z klientem</li>\r\n<li>Znajomość zagadnień dotyczących integracji, architektury SOA</li>\r\n<li>Podstawowa znajomość system&oacute;w operacyjnych klasy UNIX</li>\r\n<li>Doświadczenie w projektach integracyjnych</li>\r\n<li>Samodzielność w działaniu</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<p><strong>Mile widziane</strong></p>\r\n<ul>\r\n<li>Znajomość PL/SQL, SQL</li>\r\n<li>Znajomość JAVA</li>\r\n<li>Znajomość PYTHON</li>\r\n<li>Znajomość narzędzi Oracle Service Bus, BPEL</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<p><strong>Podział czasu pracy:</strong></p>\r\n<p>praca z biura: 50%</p>\r\n<p>praca zdalna: 50%</p>\r\n<p>&nbsp;</p>\r\n<h3><strong>Tak pracujemy</strong></h3>\r\n<ul>\r\n<li>u klienta</li>\r\n<li>masz wpływ na produkt</li>\r\n<li>koncentrujesz się na rozwoju produktu</li>\r\n<li>scrum</li>\r\n</ul>",
+            "experience": "Mid",
+            "employment_type": "B2B",
+            "work_type": "Part time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 15,
+        "fields": {
+            "created_at": "2023-11-04T22:45:37.563Z",
+            "updated_at": "2023-11-18T11:23:20.071Z",
+            "company": 3,
+            "title": "Junior/Mid Consultant Data Integration",
+            "salary_min": 6000,
+            "salary_max": 11500,
+            "currency": "PLN",
+            "description": "<p><strong>Klient:</strong>&nbsp;międzynarodowa firma, kt&oacute;ra jest kompleksowym partnerem w zakresie usług związanych z danymi. Zatrudnia ponad tysiąc ekspert&oacute;w m.in. z dziedziny analizy danych, BI, big data, data science &amp; AI oraz digital commerce. Ma oddziały w Polsce, Szwajcarii, Filipinach, Singapurze, Indiach i Meksyku. Ich klientami są m.in. P&amp;G, Nestle, Sony, Henkel. Są wielokrotnie nagradzani za wybitne innowacje i rozwiązania technologiczne.&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Poszukujemy doświadczonego&nbsp;Managera projektu e-commerce, kt&oacute;ry dołączy do zespołu Digital Commerce.&nbsp;</strong></p>\r\n<p>&nbsp;</p>\r\n<p><strong>Zesp&oacute;ł projektowy:</strong>&nbsp;6-7 os&oacute;b, kt&oacute;ry składa się zazwyczaj z&nbsp;Backend dev, Frontend dev, czasem Fullstack, QA, Architekt, PM, Analityk, UX/UI. Szukamy osoby do długoterminowej wsp&oacute;łpracy, więc w perspektywie wsp&oacute;łpraca przy r&oacute;żnych projektach dla r&oacute;żnych klient&oacute;w. W pierwszej kolejności do zaopiekowania są projekty małe i średnie. Projekty to dostarczanie rozwiązań eCommerce'owych, gł&oacute;wnie w Magento, a także w Shopware. Projekty są&nbsp;<strong>agilowe</strong>, ale og&oacute;lnie prowadzą też&nbsp;<strong>waterfallowe</strong>, dlatego poszukujemy osoby, kt&oacute;ra ma spore doświadczenie w tym temacie.&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Gł&oacute;wne technologie:</strong>&nbsp;Magento, Shopware, PHP, JS, React. Jira do trackowania.&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Godziny pracy:</strong>&nbsp;czas rozpoczęcia pracy 7-10,&nbsp;<strong>można pracować w pełni zdalnie</strong>&nbsp;lub&nbsp;z biura (Warszawa).&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Preferowana gotowość do podjęcia nowej pracy:</strong>&nbsp;grudzień 2023</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Proces rekrutacji:</strong></p>\r\n<p>- pierwszy etap: wstępna rozmowa z rekruterem (godzina)</p>\r\n<p>- drugi etap: rozmowa techniczno-managerska z przyszłym przełożonym (Delivery Leader) i z Project Managerem</p>\r\n<p>- rekrutacja w języku polskim oraz angielskim</p>\r\n<p>&nbsp;</p>",
+            "experience": "Mid",
+            "employment_type": "Permanent",
+            "work_type": "Freelance"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 16,
+        "fields": {
+            "created_at": "2023-11-04T22:48:27.650Z",
+            "updated_at": "2023-11-18T11:21:20.841Z",
+            "company": 10,
+            "title": "Software Quality Engineer",
+            "salary_min": 8000,
+            "salary_max": 12000,
+            "currency": "EUR",
+            "description": "<p>With 900+ employees in Poland supporting over 45 clients, we leverage our holistic portfolio of capabilities in consulting, design, engineering, operations, and emerging technologies to help clients realize their boldest ambitions and build future-ready, sustainable businesses. It is the freedom provided to every individual at Wipro to learn, grow and create a career path that makes us an organization of opportunities beyond boundaries. Beyond boundaries of region, age, gender, ability and routine. We invite you to be a part of this experience!</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Location and Work Mode:</strong>&nbsp;Remote,&nbsp;Poland</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Type of Employment:&nbsp;</strong>We offer full time Contract of Employment (UoP) or B2B Employment</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Working Hours</strong>: 9-17</p>\r\n<p><strong>&nbsp;</strong></p>\r\n<p><strong>Roles and Responsibilities</strong></p>\r\n<p>&nbsp;</p>\r\n<p>The Major Incident Manager is responsible for the entire Major Incident Management Process within an engagement. The Major Incident Manager is expected to provide resolution to all the Major incidents within the SLAs agreed and provide overall status of the Major incident resolution process periodically.</p>",
+            "experience": "Mid",
+            "employment_type": "Internship",
+            "work_type": "Full time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 17,
+        "fields": {
+            "created_at": "2023-11-04T22:49:20.592Z",
+            "updated_at": "2023-11-18T11:19:28.007Z",
+            "company": 3,
+            "title": "Unity Developer",
+            "salary_min": 13000,
+            "salary_max": 17000,
+            "currency": "USD",
+            "description": "<p><strong>🌍 Hello World!</strong></p>\r\n<p>&nbsp;</p>\r\n<p>We are The Codest - International Tech Software Company with tech hubs in Poland delivering global IT solutions and projects.&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>Our core values lie in the \"Customers and People First\" approach that prioritises the needs of our customers and collaborative environment for our employees, enabling us to deliver exceptional products and services.</p>\r\n<p>&nbsp;</p>\r\n<p>Our expertise centers on web development, cloud engineering &amp; DevOps and quality assurance (QA). Our mission became clear after many years of software development, as we want to specialise in scaling tech teams for clients and partners.</p>\r\n<p>&nbsp;</p>\r\n<p>But our journey does not end here - we want to continue our growth. If you're goal-driven and looking for new opportunities, join our team! We assure you of an enriching and collaborative environment, fostering your growth at every step.</p>\r\n<p>&nbsp;</p>\r\n<p><a href=\"https://emojipedia.org/world-map/\" target=\"_blank\" rel=\"nofollow noreferrer noopener\">🗺️</a>&nbsp;<strong>Project &amp; Client:</strong></p>\r\n<p>&nbsp;</p>\r\n<p>In this position&nbsp;you will have an opportunity to contribute to a banking app for one of the leading financial groups in Japan.&nbsp;The product is a cross asset post-trade execution platform handling trade matching and settlement for our asset management clients. It does this via integrations to third party platforms which offer bespoke services. The platform is built to handle large volumes of trade data in an Straight Through Processing manner. It tracks the lifecycle of the trade, including state management and provides a Trade Blotter where the user can monitor this and act accordingly. It also provides position report, and pricing of positions. This project is well-developed, new features are being made but the core of the product is already established.</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Estimated project&nbsp;onboarding date:&nbsp;</strong>At the end of&nbsp;November/beginning of December.</p>",
+            "experience": "Senior",
+            "employment_type": "Permanent",
+            "work_type": "Full time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 18,
+        "fields": {
+            "created_at": "2023-11-04T22:50:45.940Z",
+            "updated_at": "2023-11-18T11:18:31.537Z",
+            "company": 10,
+            "title": "AWS DevOps Engineer",
+            "salary_min": 12100,
+            "salary_max": 18200,
+            "currency": "PLN",
+            "description": "<p><strong>We&rsquo;re looking for Senior AWS DevOps Engineer to join one of our remote projects.</strong></p>\r\n<p>&nbsp;</p>\r\n<p>Sunscrapers is an elite Python development company that helps clients set up dedicated development teams in Poland, made of the most talented, experienced and motivated software engineers.</p>\r\n<p>Since 2010, we&rsquo;ve been working with ambitious US and European scaleups, SMBs and enterprises on delivering digital products and extending in-house development teams.</p>\r\n<p>&nbsp;</p>\r\n<p>We&rsquo;ve earned our reputation by combining passion for technology, highest quality standards and our unique &lsquo;Product-Developer Fit&rsquo; hiring process.</p>\r\n<p>&nbsp;</p>\r\n<p><strong>The Project:</strong></p>\r\n<p>The client himself is an American private equity and investment management fund and has been listed on the Forbes 500 list for years. They employ over 3k employees worldwide. For over 5 years we have been supporting them in the area of Data Pipeline, infrastructure and Data Engineering team as well as in web development (Django / React).</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Your responsibilities will include:</strong></p>\r\n<ul>\r\n<li>Cooperation with the softwarehouse from Warsaw, that delivers IT solutions for the venture capital &amp; private equity fund.</li>\r\n<li>Main tasks: The main task will be to support the Data Engineering and Data Scientist departments in designing and implementing changes that will improve work in an environment where the decision-making process is based on data.</li>\r\n<li>Design and implementation CI/CD.</li>\r\n<li>Cloud management - Infrastructure as a code (AWS).</li>\r\n<li>Automation, security, setting tools for self-service.</li>\r\n<li>Creating and managing solutions to serve the data engineering team that works on financial products within the real estate industry.</li>\r\n<li>Proactively supporting the team in DevOps, Cloud, and Security issues, proposing own solutions.</li>\r\n</ul>",
+            "experience": "Senior",
+            "employment_type": "Permanent",
+            "work_type": "Full time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 19,
+        "fields": {
+            "created_at": "2023-11-04T22:52:03.122Z",
+            "updated_at": "2023-11-26T13:36:50.758Z",
+            "company": 5,
+            "title": "Mid Python Engineer",
+            "salary_min": 16800,
+            "salary_max": 23000,
+            "currency": "PLN",
+            "description": "<p><strong>What we do</strong>:</p>\r\n<p>At Facebook, we are dedicated to helping the world's leading companies build stronger businesses &mdash; helping them go from doing digital to being digital.</p>\r\n<p>With the capacity to support various clients, we offer a world of opportunities for both professionals and graduates.&nbsp;</p>\r\n<p>You can expect five-star training, a chance to realize your career goals, and a range of benefits. Be Cognizant!</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p><strong>About the role:</strong></p>\r\n<p>Reverse engineering and Malware analysis of Android applications tools like JADX, Frida, Burpsuite etc.</p>\r\n<p>Perform deep dive code reviews for the apps. Provide the detailed technical report showing the summary, findings and evidences.</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Your accountabilities:</strong></p>\r\n<ul>\r\n<li>Reverse engineering and Malware analysis of Android applications</li>\r\n<li>Perform deep dive code reviews for the apps.&nbsp;</li>\r\n<li>Provide the detailed technical report showing the summary, findings and evidences.&nbsp;</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<p><strong>Skills &amp; Experience:</strong></p>\r\n<ul>\r\n<li>Relevant experience with Android</li>\r\n<li>Android code understanding&nbsp;</li>\r\n<li>Graduate degree in Computer Science, Cyber Security&nbsp;</li>\r\n<li>Excellent command of English</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<p><strong>What we offer:&nbsp;</strong></p>\r\n<ul>\r\n<li>Opportunity to be part of a global organization focused on development,</li>\r\n<li>Open-minded and multinational environment,</li>\r\n<li>Training &amp; development opportunities,</li>\r\n<li>Professional development and clear career path,</li>\r\n<li>Employee referral program in place,</li>\r\n<li>Extensive benefits package: Multisport Card, Lux Med medical healthcare including dental care, life insurance, cafeteria benefits.</li>\r\n</ul>",
+            "experience": "Senior",
+            "employment_type": "B2B",
+            "work_type": "Part time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 20,
+        "fields": {
+            "created_at": "2023-11-04T22:53:13.355Z",
+            "updated_at": "2023-11-18T11:15:59.134Z",
+            "company": 7,
+            "title": "Scrum Master",
+            "salary_min": 10000,
+            "salary_max": 18000,
+            "currency": "EUR",
+            "description": "<p>Poszukujemy <strong>Scrum Mastera</strong>&nbsp;dla naszego Partnera - jednej z najdynamiczniej rozwijających się firm informatycznych w Polsce, kt&oacute;ra świadczy usługi tworzenia i utrzymania oprogramowania, aż po automatyzację proces&oacute;w biznesowych dla kluczowych firm z sektora finansowego, telekomunikacyjnego i technologicznego.</p>\r\n<p>&nbsp;</p>\r\n<h2><strong>Na początek konkrety:​</strong></h2>\r\n<ul>\r\n<li>Możliwa forma wsp&oacute;łpracy: UoP lub B2B</li>\r\n<li>Stawka: 12 500 - 22 500 zł brutto UoP lub 70 - 160 zł/h B2B w zależności od doświadczenia</li>\r\n<li>Tryb pracy: 100% zdalnie</li>\r\n<li>Wymiar pracy: 1FTE</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<h2><strong>Tw&oacute;j zakres obowiązk&oacute;w</strong></h2>\r\n<ul>\r\n<li>Projektowanie aplikacji, dob&oacute;r narzędzi i bibliotek</li>\r\n<li>Tworzenie aplikacji na platformę Android</li>\r\n<li>Zapewnienie wysokiej jakości kodu i utrzymanie konwencji poprzez uruchamianie test&oacute;w jednostkowych i pull request&oacute;w</li>\r\n<li>Prowadzenie dokumentacji stworzonych projekt&oacute;w i wprowadzonych zmian</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<h2><strong>Nasze wymagania</strong></h2>\r\n<ul>\r\n<li>Minimum 3 lata doświadczenia komercyjnego w Android SDK (Java)</li>\r\n<li>Dobra znajomość ekosystemu Android SDK</li>\r\n<li>Znajomość systemu kontroli wersji GI</li>\r\n<li>Znajomość języka angielskiego na poziomie min. B2</li>\r\n<li>Znajomość języka polskiego na poziomie min. C1</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<h3><strong>Mile widziane</strong></h3>\r\n<ul>\r\n<li>Znajomość SQL,</li>\r\n<li>Znajomość technologii komunikacyjnych: REST, TCP</li>\r\n<li>Znajomość technologii: Kotlin, C#, .NET, WCF, Microsoft SQL Server, JavaScript</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<p>Tak organizujemy naszą pracę</p>\r\n<ul>\r\n<li>u klienta</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<p>Takie dajemy możliwości rozwoju</p>\r\n<ul>\r\n<li>wymiana wiedzy technicznej w firmie</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<h2><strong>Etapy rekrutacji:</strong></h2>\r\n<ol>\r\n<li>Wstępna rozmowa tel. z naszym przedstawicielem - ok. 20 min</li>\r\n<li>Opcjonalna zdalna rozmowa HR z przedstawicielem Klienta</li>\r\n<li>Zdalna rozmowa techniczna z osobami z zespołu Klienta (1h)</li>\r\n</ol>",
+            "experience": "Senior",
+            "employment_type": "Internship",
+            "work_type": "Full time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 21,
+        "fields": {
+            "created_at": "2023-11-04T22:54:18.504Z",
+            "updated_at": "2023-11-18T11:15:19.338Z",
+            "company": 8,
+            "title": "DevOps Engineer",
+            "salary_min": 27000,
+            "salary_max": 45000,
+            "currency": "PLN",
+            "description": "<p><strong>Twoja rola</strong></p>\r\n<p>&nbsp;</p>\r\n<p>Praca nad i &ldquo;prowadzenie&rdquo; jednego z naszych flagowych produkt&oacute;w.&nbsp;<strong>Szukamy Product Ownera z doświadczeniem przy projektach e-commerce oraz IT &ndash; to przede wszystkim.</strong>&nbsp;Osoba w tej roli będzie spoiwem między wizją produktu, a pracą programist&oacute;w, wymaganiami sprzedawc&oacute;w oraz feedbackiem z BOKu i Marketingu.&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Zakres obowiązk&oacute;w:</strong></p>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<li>Identyfikowanie potrzeb w zakresie rozwoju produkt&oacute;w i przekładanie ich na zadania dla zespoł&oacute;w produktowych</li>\r\n<li>Zbudowanie i wdrażanie wizji rozwoju produktu/usługi</li>\r\n<li>Nadz&oacute;r nad rozwojem/modyfikacjami przypisanego systemu</li>\r\n<li>Zarządzanie i porządkowanie element&oacute;w Backlogu Produktu</li>\r\n<li>Zbieranie i analiza wymagań funkcjonalnych zgłaszanych zar&oacute;wno przez kluczowe osoby w firmie, jak r&oacute;wnież na podstawie dostarczonych danych</li>\r\n<li>Stały monitoring konkurencji i analiza rynku</li>\r\n<li>Wsp&oacute;łpraca z innymi działami firmy m.in. z Zespołem Produktowym, Marketing, Sprzedaż</li>\r\n<li>Wsp&oacute;łpraca z ambitnymi ludźmi, kt&oacute;rym r&oacute;wnież zależy na rozwoju produktu, a dodatkowo znają się na swojej robocie (zesp&oacute;ł programist&oacute;w, Tester QA, Designer)</li>\r\n</ul>",
+            "experience": "Junior",
+            "employment_type": "B2B",
+            "work_type": "Freelance"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 22,
+        "fields": {
+            "created_at": "2023-11-05T21:16:30.217Z",
+            "updated_at": "2023-11-26T13:36:43.293Z",
+            "company": 11,
+            "title": "PHP Developer Junior",
+            "salary_min": 1050,
+            "salary_max": 10000,
+            "currency": "PLN",
+            "description": "<p><strong>Twoje zadania:</strong></p>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<li>Testowanie aplikacji internetowej w&nbsp;<strong>nowej</strong>&nbsp;jak i starej odsłonie.</li>\r\n<li><strong>Projektowanie&nbsp;</strong>oraz implementacja test&oacute;w automatycznych.</li>\r\n<li>Tworzenie i wykonywanie kompleksowych plan&oacute;w testowych dla&nbsp;<strong>całego systemu</strong></li>\r\n<li>Wykonywanie test&oacute;w funkcyjnych, regresyjnych oraz wydajnościowych&nbsp;</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<p><strong>Jakie technologie na Ciebie czekają:</strong></p>\r\n<p>Java, REST/Postman/SoapUI, MQTT, Spinnaker, Kubernetes, Canary deployment (green blue), Apache Solr, Docker swarm, MongoDB, Solar i GraphQL.</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Nasza oferta:</strong></p>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<li><strong>Umowa:</strong>&nbsp;umowa o pracę bądź kontrakt B2B&nbsp;</li>\r\n<li>Praca w pełni&nbsp;<strong>zdalna</strong></li>\r\n<li><strong>Kultura innowacyjności:</strong>&nbsp;będziesz opracowywać nowe rozwiązania oraz eksperymentować&nbsp;technologiami&nbsp;</li>\r\n<li><strong>Realny wpływ:&nbsp;</strong>&nbsp;twoja praca wspomoże nasz sukces&nbsp;</li>\r\n<li><strong>Pakiet benefit&oacute;w:</strong>&nbsp;opieka medyczna, karta sportowa&nbsp;</li>\r\n</ul>",
+            "experience": "Senior",
+            "employment_type": "Internship",
+            "work_type": "Part time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 23,
+        "fields": {
+            "created_at": "2023-11-12T18:30:14.916Z",
+            "updated_at": "2023-11-18T11:11:09.970Z",
+            "company": 12,
+            "title": "GO Lang Developer",
+            "salary_min": 25000,
+            "salary_max": 30000,
+            "currency": "EUR",
+            "description": "<h3><strong>We are the Polish branch of the Google.</strong></h3>\r\n<p>&nbsp;</p>\r\n<p><strong>Dostarczamy najwyższej jakości usługi:</strong></p>\r\n<p>&bull; rozwoju oprogramowania,</p>\r\n<p>&bull; projektowania oraz wdrażania infrastruktury informatycznej,</p>\r\n<p>&bull; utrzymania system&oacute;w informatycznych.</p>\r\n<p>&nbsp;</p>\r\n<p>Google działa na polskim rynku od 2014 roku. Naszym core businessem jest rekrutacja konsultant&oacute;w IT. Dostarczamy usługi specjalist&oacute;w IT, kt&oacute;rzy wspierają zesp&oacute;ł klienta długoterminowo lub na czas realizacji danego projektu. W zależności od projektu oferujemy zatrudnienie bezpośrednio u Klienta lub umowę typu body-leasing.</p>\r\n<p>&nbsp;</p>\r\n<p><strong>W Google wierzymy, że trzon firmy tworzą nasi pracownicy. </strong>Wysoka jakość usług i sukces naszych klient&oacute;w zależy od nich. Nasz zesp&oacute;ł to grupa zgranych ludzi reprezentująca najwyższe standardy etyki biznesu. Wierzymy w długotrwałe relacje z klientami, kt&oacute;re budujemy dzięki dostarczaniu usług najwyższej jakości. Naszym kluczem do sukcesu są proste procesy, brak komplikacji i automatyzacja.</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+            "experience": "Senior",
+            "employment_type": "B2B",
+            "work_type": "Full time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 24,
+        "fields": {
+            "created_at": "2023-11-12T18:31:33.622Z",
+            "updated_at": "2023-11-18T11:13:32.062Z",
+            "company": 12,
+            "title": "Solution Architect (Data & Analytics)",
+            "salary_min": 24000,
+            "salary_max": 40000,
+            "currency": "PLN",
+            "description": "<p><strong>The opportunity:</strong></p>\r\n<p>&nbsp;</p>\r\n<p>We are looking for a Senior Full Stack developer who is ready to take his career to the next level.</p>\r\n<p>As a Senior Full Stack developer you will play a major role in the team, responsible for the design and implementation of our products. You&rsquo;ll be working closely with the AI, web, and mobile teams using a variety of technologies: React, NodeJS, Python, Django, MongoDB, and WebRTC among others.</p>\r\n<p>&nbsp;</p>\r\n<p>🌍 Warszawa, Wsp&oacute;lna 35</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Responsibilities:</strong></p>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<li>Serve as a technical domain expert on full stack development.</li>\r\n<li>Establish design principles with the broader development team.</li>\r\n<li>Hands-on web development of production-ready applications at scale.</li>\r\n<li>Design and implement efficient and well-engineered solutions.</li>\r\n<li>Work closely with data science, product, QA and infrastructure teams</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<p><strong>Requirements:</strong></p>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<li>BSc. or equivalent in Computer Science</li>\r\n<li>5+ years of experience of full stack development</li>\r\n<li>3+ years of development experience with NodeJS - mandatory.</li>\r\n<li>3+ years of development experience with Angular</li>\r\n<li>2+ years of development experience with React - mandatory.</li>\r\n<li>Written and verbal communication skills in English</li>\r\n</ul>",
+            "experience": "Senior",
+            "employment_type": "Internship",
+            "work_type": "Part time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 25,
+        "fields": {
+            "created_at": "2023-11-26T16:48:13.317Z",
+            "updated_at": "2023-11-26T16:48:13.317Z",
+            "company": 15,
+            "title": "Mid Python Developer",
+            "salary_min": 8000,
+            "salary_max": 16000,
+            "currency": "PLN",
+            "description": "<p>🔥 We are looking for&nbsp;<strong>Mid Python Developer</strong></p>\r\n<p>&nbsp;</p>\r\n<p>🟪&nbsp;<strong>What we require:</strong></p>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<li>hunger for knowledge, enthusiasm and passion for programming,</li>\r\n<li>knowledge of Django, Django Rest Framework, Docker, Docker-compose, relational databases (e.g. PostgreSQL), Git + GitFlow, Flask, Redis, Celery, postgresql,</li>\r\n<li>nice to have: Kubernetes, graphql, AWS / Google cloud as well as Agile / SCRUM / Kanban,</li>\r\n<li>knowledge of patterns and algorithms,</li>\r\n<li>an active account on Github,</li>\r\n<li>team play and hearts for table football (or other sports),</li>\r\n<li>willingness to co-create a programming company and continuous development,</li>\r\n<li><strong>C1 knowledge of the Polish language,</strong></li>\r\n<li><strong>B2 knowledge of the English language,</strong></li>\r\n<li>analytical thinking skills,</li>\r\n<li>ability to solve problems independently,</li>\r\n<li>energy for self-improvement of your skills.</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<p>🟪&nbsp;<strong>Perks:</strong></p>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<li>We give you a full choice as to the contract under which you want to work,</li>\r\n<li>fresh MacBook + stickers :), 2 monitors with handles,</li>\r\n<li>flexible working hours, task-based approach,</li>\r\n<li>free English lessons (native speaker),</li>\r\n<li>well stocked kitchen including great espresso coffee,</li>\r\n<li>private healthcare, free gym, spotify premium, multisport surcharge,</li>\r\n<li>a chance for a delegation abroad (on the radar of Los Angeles, Florida, Barcelona, ​​Cologne, Edinburgh),</li>\r\n<li>we care about good relations with clients,</li>\r\n<li>we are constantly improving, enlarging and equipping the office in the very Market Square of Gliwice + our own parking lot,</li>\r\n<li>relocation package - you do not have to be from Gliwice or Silesia, we will help you move comfortably.</li>\r\n</ul>\r\n<p>&nbsp;</p>",
+            "experience": "Mid",
+            "employment_type": "B2B",
+            "work_type": "Full time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 26,
+        "fields": {
+            "created_at": "2023-11-30T20:36:50.545Z",
+            "updated_at": "2023-11-30T20:36:50.545Z",
+            "company": 17,
+            "title": "Senior DevOps Engineer (remote)",
+            "salary_min": 23500,
+            "salary_max": 33000,
+            "currency": "PLN",
+            "description": "<p><strong>Appfire</strong>&nbsp;is an enterprise collaboration software company that enables teams to plan and deliver their best work. Since launching in 2005 as one of the original Atlassian ecosystem partners, Appfire has built a portfolio of&nbsp;<strong>top-selling apps for more than 30,000 customers &mdash; including 55% of Fortune 500 companies.</strong>&nbsp;As a&nbsp;<strong>product-led company</strong>, Appfire identifies gaps in industries serving developers and client support teams and then builds solutions that drive productivity and efficiency.</p>\r\n<p>&nbsp;</p>\r\n<p>Appfire continues to grow exponentially, with&nbsp;<strong>teams spanning 20+ countries</strong>. We are financially strong, continuously meeting or exceeding revenue targets, and we invest heavily in strengthening the foundation of our organisation. Being philanthropic is integral to operating our business, so we donate 1% of employee time, product, profit, and equity as part of our Pledge 1% commitment.</p>\r\n<p>&nbsp;</p>\r\n<p>Come join our team!</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Job Purpose and Overview:</strong></p>\r\n<p><strong>We are looking for experienced DevOps Engineers to join our&nbsp;</strong><a href=\"https://bigpicture.one/\" target=\"_blank\" rel=\"nofollow noreferrer noopener\">BigPicture</a>&nbsp;product team - one of the leading project management tools on the market. Our Portfolio, Product, and Project Management software helps thousands of teams on all continents plan work, coordinate execution, track progress, and report on results with outstanding efficiency, accuracy, and clarity.</p>\r\n<p>&nbsp;</p>\r\n<p>This role circles around a wide variety of challenges. Doing this job will not focus on doing only one type of task. Here, one day you will be creating a new solution in our AWS platform and on the next one you might be working on tasks related to other parts of our development, testing, and deployment/delivery infrastructure.</p>\r\n<p>&nbsp;</p>\r\n<p><strong>What we are would like to see:</strong></p>\r\n<ul>\r\n<li>Software engineering/Computer science degree or equivalent experience</li>\r\n<li>You have the &ldquo;Get things done&rdquo; gene</li>\r\n<li>You like working as part of a team</li>\r\n<li>You don&rsquo;t have problems communicating your ideas or needs</li>\r\n<li>Our technologies:</li>\r\n<li><strong>Must have:</strong>&nbsp;coding skills (Java or Python), OOP, AWS (EC2, ELB, RDS, Route53, IAM), Jenkins, Docker, Kubernetes, IaC (Terraform, Ansible)</li>\r\n<li><strong>Nice to have:&nbsp;</strong>GCP, Tomcat, JVM, ELK, Grafana, SOLID</li>\r\n<li>&nbsp;Fluent in English language (written and spoken)</li>\r\n</ul>",
+            "experience": "Senior",
+            "employment_type": "Permanent",
+            "work_type": "Full time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 27,
+        "fields": {
+            "created_at": "2023-11-30T20:40:04.768Z",
+            "updated_at": "2023-11-30T20:40:04.768Z",
+            "company": 18,
+            "title": "Senior DevOps Engineer",
+            "salary_min": 22240,
+            "salary_max": 27800,
+            "currency": "PLN",
+            "description": "<p>Salary range: B2B 36-44 E/h + VAT 💰</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Ciklum</strong>&nbsp;is looking for a&nbsp;<strong>Senior DevOps Engineer&nbsp;</strong>to join our team full-time in Poland.</p>\r\n<p>We are a leading global product engineering and digital services company that unites 4000+ seasoned professionals globally on various projects in healthcare, fintech, travel, sportswear, entertainment, and security. Ciklum delivers high-impact technology solutions to Fortune 500 and fast-growing organisations worldwide.</p>\r\n<p>&nbsp;</p>\r\n<p><strong>About the role:</strong></p>\r\n<p>As a Senior DevOps Engineer, become a part of a cross-functional development team working for our Client.</p>\r\n<h3>&nbsp;</h3>\r\n<h3><strong>Responsibilities:</strong></h3>\r\n<ul>\r\n<li>Delivery. Create and maintain modern interfaces according to unit standards</li>\r\n<li>Code Quality. Follow and improve code quality standards</li>\r\n<li>Contribute ideas through your knowledge of evolving front-end technologies</li>\r\n<li>Be proactive in communication with team members and clients</li>\r\n<li>Use industry best practices of development processes &amp; tools, adapt and improve them</li>\r\n</ul>\r\n<h3>&nbsp;</h3>\r\n<h3><strong>Requirements:</strong></h3>\r\n<p>You can name examples of use in different contexts. Are guided by best practices and specifications of such skills:</p>\r\n<ul>\r\n<li>5+ SDLC framework experience</li>\r\n<li>BE: Scala, Java build and deploy experience, from FE services: Closure, from Data Engineering: Databricks</li>\r\n<li>Performance assessment and monitoring</li>\r\n<li>Troubleshooting complex relationships between components of multi-tiered applications</li>\r\n</ul>\r\n<h3>&nbsp;</h3>",
+            "experience": "Senior",
+            "employment_type": "B2B",
+            "work_type": "Full time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 28,
+        "fields": {
+            "created_at": "2023-11-30T20:41:33.803Z",
+            "updated_at": "2023-11-30T20:41:33.803Z",
+            "company": 17,
+            "title": "Lead DevOps Engineer",
+            "salary_min": 17000,
+            "salary_max": 24500,
+            "currency": "PLN",
+            "description": "<p><strong>Appfire</strong>&nbsp;is an enterprise collaboration software company that enables teams to plan and deliver their best work. Since launching in 2005 as one of the original Atlassian ecosystem partners, Appfire has built a portfolio of top-selling apps for&nbsp;<strong>more than 30,000 customers</strong>&nbsp;&mdash; including 55% of Fortune 500 companies. As a product-led company, Appfire identifies gaps in industries serving developers and client support teams and then builds solutions that drive productivity and efficiency.</p>\r\n<p>&nbsp;</p>\r\n<p>Appfire continues to grow exponentially, with&nbsp;<strong>teams spanning 20+ countries</strong>. We are financially strong, continuously meeting or exceeding revenue targets, and we invest heavily in strengthening the foundation of our organisation. Being philanthropic is integral to operating our business, so we donate 1% of employee time, product, profit, and equity as part of our Pledge 1% commitment.</p>\r\n<p>&nbsp;</p>\r\n<p>Come join our team!</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Job purpose and overview:</strong></p>\r\n<p>We are looking for experienced Java developers to join our product team for&nbsp;<a href=\"https://bigpicture.one/\" target=\"_blank\" rel=\"nofollow noreferrer noopener\">BigPicture</a>&nbsp;&ndash; one of the leading project management tools used by CEOs, directors, project managers and team leaders of over 12 000 companies worldwide.</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p><strong>How we work:</strong></p>\r\n<ul>\r\n<li>100% remote work (from Poland) - however, it is always open if you want to work from our modern Warsaw office</li>\r\n<li>In agile and lean we trust - we keep our Sprints effective, and our Scrum teams small and decisive in practices that suit them best</li>\r\n<li>Ownership - we want everyone on our team to feel empowered to grab the reins in their positions and help push the company forward</li>\r\n<li>Daily communication with our product owners and UX / UI researchers and designers - who make informed business decisions based on continuous users behaviour monitoring</li>\r\n<li>Short time to market - we have major feature release every month</li>\r\n<li>Startup atmosphere with direct informal communication with everyone at the company and with elastic working hours - all to keep you comfortable and simply happy to be with us - get to know the BigPicture team better&nbsp;<a href=\"https://www.youtube.com/watch?v=TSvHw0ruMd4\" target=\"_blank\" rel=\"nofollow noreferrer noopener\">here</a>&nbsp;and&nbsp;<a href=\"https://www.youtube.com/watch?v=00NkMRoguNY\" target=\"_blank\" rel=\"nofollow noreferrer noopener\">here</a></li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<p><strong>What you will do:</strong></p>\r\n<ul>\r\n<li>Designing and implementing new functionalities for our products and maintaining existing ones</li>\r\n<li>Ensuring high code quality - through tests (unit, integration, e2e), code reviews and team brainstorming</li>\r\n<li>Working on features with product owners, UX / UI designers and frontend developers</li>\r\n<li>Sharing knowledge with other developers and helping them grow</li>\r\n<li>Technically supporting our customers (5-10% of your time)</li>\r\n</ul>",
+            "experience": "Senior",
+            "employment_type": "Permanent",
+            "work_type": "Full time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 29,
+        "fields": {
+            "created_at": "2023-11-30T20:44:56.940Z",
+            "updated_at": "2023-11-30T20:44:56.940Z",
+            "company": 19,
+            "title": "Third Line Solution Architect",
+            "salary_min": 5700,
+            "salary_max": 9250,
+            "currency": "PLN",
+            "description": "<p>At Centra, we have ambitious goals and are passionate about what we do. We have a lot of fun together during and outside of work. We've gotten to where we are today because of dedication, teamwork, raw talent, and our strong belief in driving innovation.</p>\r\n<p>English is our working language, so you need to be a fluent English speaker.</p>\r\n<h4>&nbsp;</h4>\r\n<h4><strong>Responsibilities</strong></h4>\r\n<ul>\r\n<li>Great specialization and an ease in dealing with various areas in our solution, such as front-end development (user interface) and more often back-end development (server-side logic)</li>\r\n<li>Outstanding understanding of our internal language and code and simplifying any technical issues that need server back-end support and access</li>\r\n<li>Work closely with Client Associate&rsquo;s people from the first line support and make more intelligible their understanding of technical issues and with second line Engineers creating synergy in the collaboration</li>\r\n<li>Debug and troubleshoot issues arise in the process and resolve them efficiently using clear communication about challenges and potential issues with all collaborators</li>\r\n<li>Provide in-depth technical support and guidance to our Clients and Partners</li>\r\n<li>Resolving incidents and fulfilling service requests or supporting the issue and change management function</li>\r\n</ul>",
+            "experience": "Junior",
+            "employment_type": "Internship",
+            "work_type": "Part time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 30,
+        "fields": {
+            "created_at": "2023-11-30T20:54:53.844Z",
+            "updated_at": "2023-11-30T20:54:53.844Z",
+            "company": 19,
+            "title": "Senior Linux Embedded Developer",
+            "salary_min": 16900,
+            "salary_max": 19000,
+            "currency": "PLN",
+            "description": "<p><a href=\"https://sigmait.pl/\" target=\"_blank\" rel=\"nofollow noreferrer noopener\">Sigma IT Poland</a>&nbsp;is a division within NEXER GROUP &ndash; a custom software development company. In Poland, we started in 2017 and now we are 170+ crew with an office in Wrocław, Warsaw, and Cracow. We have the opportunity to work with world-renowned brands from Scandinavia, the UK, and Western Europe. Our goal is to grow strong, rather in competencies than in pure numbers.</p>\r\n<p>&nbsp;</p>\r\n<p>If you like what we do, see our offer, maybe it is you we will have the pleasure to meet! :)</p>\r\n<p>&nbsp;</p>\r\n<p><strong>We are looking for:&nbsp;</strong></p>\r\n<p>Senior Linux Embedded Developer to join an international Scrum 5 person remote team to co-develop software for a new router device. The product will be distributed in Europe. Your work will mainly focus on coding for new development purposes.</p>\r\n<p>Depending on your experience, you will have the opportunity to work with some of the following technologies: VoIP, WiFi, RDK-B, prplOS, Yocto, OpenWRT, Embedded C, FiberOptics, LAN Secure Boot, Bring-Up Platform.</p>\r\n<p>&nbsp;</p>\r\n<p><strong>You might be the perfect match if you are/have:</strong></p>\r\n<ul>\r\n<li>6+ years of professional experience in building&nbsp;<strong>embedded Linux</strong>&nbsp;solutions, including&nbsp;<strong>Linux kernel</strong>;</li>\r\n<li>Hands-on experience in&nbsp;<strong>Linux networking stack</strong>&nbsp;and&nbsp;<strong>Firmware Image generation</strong>;</li>\r\n<li>Some experience in at least&nbsp;<strong>one of the following</strong>:&nbsp;<strong>VoIP(SIP, H-232), RDK-B, prplOS, Yocto, WiFi</strong>;</li>\r\n<li>Profound knowledge of&nbsp;<strong>OpenWRT, Embedded C</strong>;</li>\r\n<li>Solid knowledge of&nbsp;<strong>Flash layout,&nbsp;file system management and TR's</strong>&nbsp;(i.e. TR-181) ;</li>\r\n<li>Solid understanding of&nbsp;<strong>OSI model</strong>;</li>\r\n<li><strong>Team player&nbsp;</strong>with an openness to discussion and collaboration, but also able to work independently when required;</li>\r\n<li>Fluent communication in&nbsp;<strong>English</strong>&nbsp;to work effectively in an international team;</li>\r\n<li><strong>Location in Poland</strong>&nbsp;for easy signing of offers of cooperation and for occasional meetings of the team.</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<p><strong>Moreover, we appreciate skills in these areas:</strong></p>\r\n<ul>\r\n<li>Experience with&nbsp;<strong>u-boot&nbsp;</strong>and&nbsp;<strong>Wireshark</strong>;</li>\r\n<li>Knowledge of&nbsp;<strong>network certification process.</strong></li>\r\n</ul>",
+            "experience": "Mid",
+            "employment_type": "Permanent",
+            "work_type": "Freelance"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 31,
+        "fields": {
+            "created_at": "2023-11-30T20:57:05.280Z",
+            "updated_at": "2023-11-30T20:57:05.280Z",
+            "company": 17,
+            "title": "Java Developer",
+            "salary_min": 15000,
+            "salary_max": 22400,
+            "currency": "PLN",
+            "description": "<p><strong>PROJECT INFORMATION:</strong></p>\r\n<ul>\r\n<li><strong>Industry:&nbsp;</strong>banking</li>\r\n<li><strong>Type of contract:&nbsp;</strong>B2B</li>\r\n<li><strong>Location:&nbsp;</strong>hybrid (Gdańsk) 1 day per week in office</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<p><strong>Initiative scope:</strong></p>\r\n<ul>\r\n<li>The program focuses on migrating strategic flows to strategic applications. Work will focus on building layers, adapters to help separate legacy and strategic applications, as in migrating customers, accounts, etc.</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<p><strong>Competencies:</strong></p>\r\n<ul>\r\n<li><strong>3+ years</strong>&nbsp;of professional experience as a&nbsp;<strong>Java Developer</strong></li>\r\n<li>Completed university degree.</li>\r\n<li><strong>Experience working with technologies</strong>&nbsp;: Java 11, Spring Boot, Maven, MQ (IBM MQ, ActiveMQ) / JMS, Apache Kafka, SQL (Oracle) / JDBC, JUnit 5, Atlassian Stack (Bamboo, Bitbucket), GIT</li>\r\n<li>Experience in developing IT solutions and ability to take partial responsibility for projects.</li>\r\n<li>Ability to work independently with specific problems at a medium level in specific areas of expertise.</li>\r\n<li>Self-motivated approach to ongoing project tasks, proactive in communicating possible problems and taking initiative for appropriate solutions.</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<p><strong>WE OFFER:</strong></p>\r\n<ul>\r\n<li>Attractive remuneration&nbsp;in the B2B model depending on your competencies and experience,</li>\r\n<li>Co-financing of&nbsp;<strong>private medical care&nbsp;(Medicover)</strong>&nbsp;and the&nbsp;<strong>Multisport card,</strong></li>\r\n<li>Occasional company&nbsp;<strong>integration meetings,</strong></li>\r\n<li><strong>emagine mobile application</strong>&nbsp;- easy reporting of working time, quick access to new offers,</li>\r\n<li>Transparently built relations based on&nbsp;<strong>trust and fair play.</strong></li>\r\n</ul>\r\n<p>&nbsp;</p>",
+            "experience": "Mid",
+            "employment_type": "Permanent",
+            "work_type": "Full time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 32,
+        "fields": {
+            "created_at": "2023-11-30T20:58:28.757Z",
+            "updated_at": "2023-11-30T20:58:28.757Z",
+            "company": 18,
+            "title": "Full Stack Developer (React & Node.js)",
+            "salary_min": 11000,
+            "salary_max": 15000,
+            "currency": "PLN",
+            "description": "<p>Our team is searching for a versatile Full Stack Developer with a strong foundation in both React and Node.js development. In this role, you will have the opportunity to work on a diverse range of projects, including AI and Machine Learning applications (Agentx.so), innovative medical solutions, and cutting-edge fitness industry platforms. As a member of our team, you will collaborate to deliver exceptional user experiences across the entire application stack. You will be responsible for designing and implementing new features, enhancing existing functionalities, and addressing technical challenges.</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Responsibilities:</strong></p>\r\n<ul>\r\n<li>Architect and develop user-centric features using React for the frontend and Node.js for the backend,</li>\r\n<li>Create reusable components and libraries for efficient frontend development,</li>\r\n<li>Ensure seamless integration of UI/UX designs with technical feasibility,</li>\r\n<li>Collaborate closely with cross-functional teams to solve complex problems and drive projects forward,</li>\r\n<li>Optimize application performance for speed and scalability,</li>\r\n<li>Ensure compatibility across various browsers and devices,</li>\r\n<li>Develop and maintain unit tests and integration tests for both frontend and backend,</li>\r\n<li>Stay updated on emerging trends and technologies in both frontend and backend development.</li>\r\n</ul>\r\n<p>&nbsp;</p>",
+            "experience": "Mid",
+            "employment_type": "B2B",
+            "work_type": "Full time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 33,
+        "fields": {
+            "created_at": "2023-11-30T21:00:05.920Z",
+            "updated_at": "2023-11-30T21:00:05.920Z",
+            "company": 15,
+            "title": "System Analyst - Credit Engineering",
+            "salary_min": 14000,
+            "salary_max": 17000,
+            "currency": "PLN",
+            "description": "<h1>Join one of the fastest-growing financial brands in Poland!</h1>\r\n<p>&nbsp;</p>\r\n<p><em>Warsaw-based opportunity with a possibility to work&nbsp;</em><strong><em>100% remotely&nbsp;</em></strong><em>with 2 visit in Warsaw office per month</em></p>\r\n<p>&nbsp;</p>\r\n<p>As a&nbsp;<strong>System Analyst,&nbsp;</strong>you will be working on developing innovative digital banking solutions for our clients in the Financial Sector. You will take part in the development of online banking systems, setting up trends and new standards for the development of mobile and online banking. The Team is focusing on providing cutting-edge credit solutions for its clients.</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Your main responsibility: Provide the best credit solutions</strong></p>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<li>Building modern and innovative credit processes for clients in electronic and traditional banking</li>\r\n<li>Designing in a mature way, understanding the needs and directing them to customer satisfaction</li>\r\n<li>Learning about issues related to the security and performance of enterprise-class solutions in the banking environment</li>\r\n<li>Developing of solutions providing to business and system architecture</li>\r\n<li>Working in agile methodologies (SCRUM, Agile PM)</li>\r\n</ul>",
+            "experience": "Mid",
+            "employment_type": "B2B",
+            "work_type": "Full time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 34,
+        "fields": {
+            "created_at": "2023-11-30T21:03:06.460Z",
+            "updated_at": "2023-11-30T21:03:06.460Z",
+            "company": 11,
+            "title": "Frontend Developer (React.js)",
+            "salary_min": 10000,
+            "salary_max": 17000,
+            "currency": "PLN",
+            "description": "<p>Witaj ❗</p>\r\n<p>&nbsp;</p>\r\n<p>Jeśli chcesz dołączyć do projekt&oacute;w mających kluczowy wpływ na transport w Europie, dobrze trafiłeś. 👍 Poszukujemy programist&oacute;w JavaScript, kt&oacute;rzy wesprą nasze zespoły w rozwijaniu aplikacji webowych używanych do zbierania oraz przetwarzania i prezentacji danych z monitoringu kilkudziesięciu tysięcy pojazd&oacute;w oraz obsłudze i utrzymaniu wewnętrznych narzędzi.</p>\r\n<p>&nbsp;</p>\r\n<p>✨ Jeśli zależy Ci na rozwoju zawodowym to nasza oferta jest dla Ciebie 🔥 Dołączysz do zespołu os&oacute;b z wieloletnim doświadczeniem w tworzeniu aplikacji webowych. Będziesz m&oacute;gł poznawać rozwiązania i uczyć się od najlepszych.</p>\r\n<p>&nbsp;</p>\r\n<p>💥 Nasz proces rekrutacyjny jest kr&oacute;tki, prosty i przyjemny, spotykamy się zdalnie i po jednym spotkaniu podejmujemy decyzję! Spr&oacute;buj❗ Masz pytania ❓ Odpowiemy na wszystkie podczas rozmowy rekrutacyjnej 😎</p>",
+            "experience": "Mid",
+            "employment_type": "Permanent",
+            "work_type": "Freelance"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 35,
+        "fields": {
+            "created_at": "2023-11-30T21:04:40.157Z",
+            "updated_at": "2023-11-30T21:04:40.157Z",
+            "company": 10,
+            "title": "Senior Cloud Developer (SAP UI5)",
+            "salary_min": 27800,
+            "salary_max": 44300,
+            "currency": "PLN",
+            "description": "<p>For our customer located in Germany we are currently looking for a:&nbsp;<strong>Senior</strong>&nbsp;<strong>Cloud Developer&nbsp;(m/f/x)</strong></p>\r\n<p><strong>&nbsp;</strong></p>\r\n<ul>\r\n<li>Location: remote</li>\r\n<li>Duration: 6 months+</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<h3>Tasks &amp; Responsibilities:</h3>\r\n<ul>\r\n<li>In this role you will be developing modern User Interfaces and cloud applications running on BTP to enable Customer Self-Service scenarios.&nbsp;You will collaborate with cross-functional teams to design and develop scalable, clean, and secure solutions.&nbsp;While implementing best practices and clean code, you&rsquo;ll stay up-to-date with industry trends and technologies to drive problem solving and to adapt innovation.</li>\r\n<li>Technical implementation of the UI (SAPUI5, Three.js, React.js) with integration from SAP CAP and Commerce Cloud (item catalogue, quote, pricing, shopping cart) and related business requirements against the project timeline, working in agile mode (SAFe).</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<h3>Must Haves:</h3>\r\n<ul>\r\n<li>Strong proficiency in front-end frameworks (SAPUI5, Three.js, React.js) and front-end programming languages (HTML5, CSS, JavaScript)</li>\r\n<li>Strong cloud native development experience &ndash; BTP, strong proficiency in SAP Cloud Application Programming (CAP) using both JAVA and NodeJS/Typescript</li>\r\n<li>Working collaboratively with the project team and other workstreams towards a common solution, consulting with architects and product owners and post go-live technical support of the delivered software.</li>\r\n<li>Experience in SAP UI/CAP development for technical and commercial use-cases</li>\r\n<li>Experience with service request/service order handling is a plus</li>\r\n<li>Experience in Asset Management, Cloud Fulfilment/SaaS Delivery processes is a plus</li>\r\n<li>Demonstrate a high level of proficiency in algorithmic thinking and an understanding of complex data structures.</li>\r\n<li>Proficiency in modelling and organizing complex data structures beyond traditional relational databases.</li>\r\n<li>Demonstrate<strong>&nbsp;</strong>strong technical expertise in writing complex SQL queries to retrieve, manipulate, and analyze data stored in various forms.</li>\r\n<li>Familiarity with DevOps practices and tools like GitHub Actions, Honeycomb.</li>\r\n<li>Developing pipelines to drive and enhance our continuous integration and continuous delivery (CI/CD) practices.</li>\r\n<li>fluent english</li>\r\n</ul>",
+            "experience": "Mid",
+            "employment_type": "Permanent",
+            "work_type": "Freelance"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 36,
+        "fields": {
+            "created_at": "2023-11-30T21:16:00.375Z",
+            "updated_at": "2023-11-30T21:16:00.375Z",
+            "company": 12,
+            "title": "Frontend Slot Game Developer (Typescript)",
+            "salary_min": 12000,
+            "salary_max": 20000,
+            "currency": "PLN",
+            "description": "<p><strong>About the company</strong></p>\r\n<p>&nbsp;</p>\r\n<p>We are a young startup aiming to create a cutting-edge games for i-gaming and slot machines. The company was founded in 2017. At the moment the whole team is about 20 people.</p>\r\n<p>&nbsp;</p>\r\n<p><strong>About the job</strong></p>\r\n<p>&nbsp;</p>\r\n<p>We're on the lookout for a talented Front-End Game Developer who thrives in the exciting world of online slot game development. If you're skilled in Typescript and have a flair for creating engaging gaming experiences, we want you on our team.</p>\r\n<p><strong>&nbsp;</strong></p>\r\n<p><strong>What You'll Do:</strong></p>\r\n<ul>\r\n<li>Game Development: Lead the creation of slot games from concept to completion, using your expertise in game design and Typescript</li>\r\n<li>Problem Solving: Address challenging scenarios with minimal supervision, applying your skills to develop innovative gaming solutions</li>\r\n<li>Engine Enhancement: Contribute to our game engine, adding new features and refining existing ones</li>\r\n<li>Collaborative Design: Work alongside our top-notch designers to turn creative concepts into playable games</li>\r\n<li>Skill Development: Grow your knowledge in slot game development, whether you're building on existing skills or learning new ones</li>\r\n</ul>\r\n<p>&nbsp;</p>",
+            "experience": "Senior",
+            "employment_type": "B2B",
+            "work_type": "Full time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 37,
+        "fields": {
+            "created_at": "2023-12-02T11:27:25.082Z",
+            "updated_at": "2023-12-02T11:27:25.082Z",
+            "company": 15,
+            "title": "Lead Site Reliability Engineer",
+            "salary_min": 12500,
+            "salary_max": 16500,
+            "currency": "PLN",
+            "description": "<p>Lead Site Reliability Engineer<strong>&nbsp;(80-100%)</strong></p>\r\n<p>Warsaw | working from home up to 60% | Reference 5584</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>Within the Swiss exchange, Index IT is responsible for calculating all our indices such as \"SMI\" with high precision. We are an international team with more than 10 nationalities and are expanding to become a global index provider. Our index platform is of great importance to SIX as it is tightly coupled with the exchange: neither can run without the other.&nbsp;</p>\r\n<p>The Lead SRE will be at the heart of the Operations team by playing the role of Team Coach, owning priorities and ensuring operational stability.&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p><strong>What You Will Do&nbsp;</strong></p>\r\n<ul>\r\n<li>oversee and direct the day-to-day activities&nbsp;</li>\r\n<li>be the Agile Team Coach for the Operations team</li>\r\n<li>analyze and translate business and technical requirements into operational solutions to achieve the business objectives&nbsp;</li>\r\n<li>communicate, present, and iterate operational views and supporting materials with development teams, management, and business stakeholders</li>\r\n<li>ensure Operational stability of applications &amp; infrastructure</li>\r\n</ul>",
+            "experience": "Mid",
+            "employment_type": "Permanent",
+            "work_type": "Full time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 38,
+        "fields": {
+            "created_at": "2023-12-02T11:29:22.106Z",
+            "updated_at": "2023-12-02T11:29:22.106Z",
+            "company": 5,
+            "title": "Director of Technical Innovation",
+            "salary_min": 45000,
+            "salary_max": 52000,
+            "currency": "PLN",
+            "description": "<p>Our&nbsp;<strong>current BI solution</strong>&nbsp;is the trusted choice of&nbsp;<strong>30% of US restaurants</strong>, and now, we're set to&nbsp;<strong>rewrite it technologically</strong>, using the same tech stack that created our successful dev.shift4.com.</p>\r\n<p>We are looking for an&nbsp;<strong>experienced specialist</strong>&nbsp;to&nbsp;<strong>lead</strong>&nbsp;the development of our&nbsp;<strong>next-generation BI software.</strong>&nbsp;This individual will lead a team, playing a pivotal role in architecting and building this software from scratch, communicating with the business side to maximize the potential of our solution, while receiving technological support from the dev.shift4 team. The successful candidate will be&nbsp;<strong>responsible for the entire technical part of the project.</strong></p>\r\n<p>&nbsp;</p>\r\n<p>If you're passionate about leading innovation, driving technical excellence, and building transformative solutions, we'd love to have you on board.</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Responsibilities</strong>:</p>\r\n<ul>\r\n<li><strong>Lead and guide a team</strong>&nbsp;to develop a new BI product from the beginning to completion, leveraging our core technologies and integrating successful business strategies from our current project.</li>\r\n<li>Oversee the&nbsp;<strong>technical direction of the project</strong>, ensuring alignment with business goals and maintaining the stability of existing infrastructure.</li>\r\n<li>Drive the vision forward by harnessing technical expertise, problem-solving, and a deep understanding of BI systems.</li>\r\n<li><strong>Build new features and automated tests</strong>&nbsp;with the&nbsp;<strong>highest attention to code quality and Continuous Delivery&nbsp;</strong>rules</li>\r\n</ul>",
+            "experience": "Senior",
+            "employment_type": "B2B",
+            "work_type": "Full time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 39,
+        "fields": {
+            "created_at": "2023-12-02T11:30:52.009Z",
+            "updated_at": "2023-12-02T11:30:52.009Z",
+            "company": 19,
+            "title": "Product Owner",
+            "salary_min": 12000,
+            "salary_max": 14000,
+            "currency": "PLN",
+            "description": "<p><strong>About the Team</strong></p>\r\n<p>The Engineering team at Clari is an Agile shop that practices Scrum across all our teams. We layer in coordination practices such as Big Room Planning to stay aligned with Clari&rsquo;s KPIs quarterly across sites and teams. If you love working in an Agile environment that values collaboration and continuous improvement, we can&rsquo;t wait to meet you.</p>\r\n<p>&nbsp;</p>\r\n<p><strong>About the Role</strong></p>\r\n<p>We are looking for a Full Stack Software Engineer II who is passionate about building customer-facing features, designing and implementing APIs, and improving the performance, observability, and reliability of our systems as we rapidly scale our product and organization. You&rsquo;ll build a state-of-the-art workflow engine that powers the Clari Revenue Platform. You&rsquo;ll work with truly remarkable colleagues on complex problems at enterprise scale, quality, and reliability.&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>We develop Enterprise SaaS products fundamentally powered by AI and Analytics to transform how we track, forecast, and predict revenue. We are 100% cloud-native and build our product using reliable tools and technologies that our team knows and trusts, including Java, Javascript, GraphQL, PostgreSQL, MongoDB, AWS, and React.</p>\r\n<p>&nbsp;</p>\r\n<p>We&rsquo;re a collaborative team that genuinely enjoys working with a cross-functional team of product managers, designers, backend, frontend, mobile, automation, and quality engineers to make Clari a better product. We&rsquo;re looking for engineers who have a passion for building great products with simplicity, usability, scalability, and reliability in mind. You can work with and learn from senior engineers and architects and grow your technical skills and career.</p>",
+            "experience": "Mid",
+            "employment_type": "Permanent",
+            "work_type": "Freelance"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 40,
+        "fields": {
+            "created_at": "2023-12-02T11:33:08.990Z",
+            "updated_at": "2023-12-02T11:33:08.990Z",
+            "company": 8,
+            "title": "UX Designer",
+            "salary_min": 10000,
+            "salary_max": 13000,
+            "currency": "PLN",
+            "description": "<p>BlueRider.Software is a dynamic and innovative energy provider that is leading the way in developing cutting-edge technology solutions for the energy industry. Our mission is to create sustainable and efficient solutions that benefit our planet and help us stay ahead of the curve in a rapidly evolving industry.</p>\r\n<p>&nbsp;</p>\r\n<p>At the Digital department, we aim to accelerate TechnipFMC&rsquo;s digital transformation by providing hybrid solutions that combine our traditional offering with digital. We do this by infusing design thinking, agile methodologies, and lean principles into our delivery. Through balanced teams, comprised of Product Managers, UX Designers, Software Developers, and Data Scientists, we unwrap complexity, target real user needs, and deliver scalable services.</p>\r\n<p>&nbsp;</p>\r\n<p>We are searching for a talented UX Designer to join the UX team and take part in the exciting endeavor of building digital products &amp; services at TechnipFMC.</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Responsibilities</strong></p>\r\n<p>Working as UX Designer you will be designing user and customer experience following our best practices and design methodologies.</p>",
+            "experience": "Mid",
+            "employment_type": "Permanent",
+            "work_type": "Part time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 41,
+        "fields": {
+            "created_at": "2023-12-02T11:35:13.797Z",
+            "updated_at": "2023-12-02T11:35:13.797Z",
+            "company": 12,
+            "title": "Software Eng C/C++",
+            "salary_min": 13000,
+            "salary_max": 20000,
+            "currency": "EUR",
+            "description": "<p><strong>Responsibilities:</strong></p>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<li>Writing high quality, secure, clean, and high performing code</li>\r\n<li>Creating new functionalities and developing existing ones</li>\r\n<li>Being a part of gathering requirements team</li>\r\n<li>Idefining project solution architecture</li>\r\n<li>Introducing innovations to company projects</li>\r\n<li>Supporting devops tasks</li>\r\n<li>Identify bottlenecks and bugs, and devise solutions to these problems</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<p><strong>Preferred qualifications and skills:</strong>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<li>5+ years experience in object-oriented PHP design and development</li>\r\n<li>Solid experience in Laravel framework</li>\r\n<li>Experience working with LINUX based systems</li>\r\n<li>Knowledge of relational databases (postgres) and ORM libraries</li>\r\n<li>Experience in creating APIs</li>\r\n<li>Knowledge of the GIT version control system</li>\r\n<li>Experience in a full CI/CD environment</li>\r\n<li>Experience with cloud based providers</li>\r\n<li>Experience with other programming languages - python, typescript, golang</li>\r\n<li>Good analytical and problem-solving skills and the ability to function well in a self-directed, team-oriented environment</li>\r\n<li>Knowledge of English at a level not lower than B2</li>\r\n<li>Code testing skills, application design knowledge</li>\r\n</ul>",
+            "experience": "Mid",
+            "employment_type": "Internship",
+            "work_type": "Part time"
+        }
+    },
+    {
+        "model": "offers.offer",
+        "pk": 42,
+        "fields": {
+            "created_at": "2023-12-02T11:37:22.491Z",
+            "updated_at": "2023-12-02T11:37:22.491Z",
+            "company": 18,
+            "title": "Senior Software Engineer",
+            "salary_min": 30000,
+            "salary_max": 40000,
+            "currency": "PLN",
+            "description": "<p>We are looking for a Senior Software Engineer to be part of our growing engineering team. You will have the opportunity to be a part of building new infrastructure-related features and directly impact the future of our product from UI to database.</p>\r\n<p>&nbsp;</p>\r\n<p><strong>About The Role</strong></p>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<li>Work closely with Product and Design, taking full responsibility and ownership from conception to post-deployment in a fast-paced, collaborative environment.</li>\r\n<li>Work on an end-to-end design and implementation of features - from database to UI.</li>\r\n<li>Work towards impact - achieve customer satisfaction while taking into consideration scaling, performance and UX</li>\r\n<li><strong>Our Stack -&nbsp;</strong>React.JS, Redux, Node.js, Ruby on Rails, AWS, Elastic Search, Redis, MySQL</li>\r\n<li>Hybrid working model: 3 days from the office, 2 days from home</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<p><strong>Your Experience &amp; Skills</strong></p>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<li>Strong technical skills and a passion for developing features end-to-end (client and server).</li>\r\n<li>Experience building a web application from scratch.</li>\r\n<li>Understanding of product and a passion for building software that provides a great experience.</li>\r\n<li>Strive for excellence, biased for action and collaboration with team members.</li>\r\n<li>Team player, strong communication skills, and empathetic.</li>\r\n</ul>",
+            "experience": "Senior",
+            "employment_type": "Permanent",
+            "work_type": "Full time"
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 1,
+        "fields": {
+            "title": "SQL",
+            "advancement": "Master",
+            "offer": 1
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 2,
+        "fields": {
+            "title": "Docker",
+            "advancement": "Advanced",
+            "offer": 2
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 3,
+        "fields": {
+            "title": "Kubernetes",
+            "advancement": "Master",
+            "offer": 2
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 4,
+        "fields": {
+            "title": "Node.js",
+            "advancement": "Master",
+            "offer": 3
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 5,
+        "fields": {
+            "title": "TypeScript",
+            "advancement": "Junior",
+            "offer": 3
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 6,
+        "fields": {
+            "title": "Docker",
+            "advancement": "Regular",
+            "offer": 3
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 7,
+        "fields": {
+            "title": "React.js",
+            "advancement": "Advanced",
+            "offer": 4
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 8,
+        "fields": {
+            "title": "Vue.js",
+            "advancement": "Advanced",
+            "offer": 4
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 9,
+        "fields": {
+            "title": "Angular",
+            "advancement": "Regular",
+            "offer": 4
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 10,
+        "fields": {
+            "title": "Java",
+            "advancement": "Advanced",
+            "offer": 5
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 11,
+        "fields": {
+            "title": "Spring",
+            "advancement": "Advanced",
+            "offer": 5
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 12,
+        "fields": {
+            "title": "HTML",
+            "advancement": "Master",
+            "offer": 5
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 13,
+        "fields": {
+            "title": "Terraform",
+            "advancement": "Master",
+            "offer": 6
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 14,
+        "fields": {
+            "title": "DevOps",
+            "advancement": "Regular",
+            "offer": 6
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 15,
+        "fields": {
+            "title": "CyberSecurity",
+            "advancement": "Advanced",
+            "offer": 6
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 16,
+        "fields": {
+            "title": "Pandas",
+            "advancement": "Advanced",
+            "offer": 7
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 17,
+        "fields": {
+            "title": "Numpy",
+            "advancement": "Nice to have",
+            "offer": 7
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 18,
+        "fields": {
+            "title": "AWS",
+            "advancement": "Regular",
+            "offer": 8
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 19,
+        "fields": {
+            "title": "EC2 Instances",
+            "advancement": "Master",
+            "offer": 8
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 20,
+        "fields": {
+            "title": "Elastic Cloud",
+            "advancement": "Regular",
+            "offer": 8
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 21,
+        "fields": {
+            "title": "Figma",
+            "advancement": "Nice to have",
+            "offer": 9
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 22,
+        "fields": {
+            "title": "UNIX",
+            "advancement": "Master",
+            "offer": 9
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 23,
+        "fields": {
+            "title": "MySQL",
+            "advancement": "Advanced",
+            "offer": 9
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 24,
+        "fields": {
+            "title": "Cloud Engineering",
+            "advancement": "Regular",
+            "offer": 9
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 25,
+        "fields": {
+            "title": "Django",
+            "advancement": "Master",
+            "offer": 10
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 26,
+        "fields": {
+            "title": "Django Rest Framework",
+            "advancement": "Junior",
+            "offer": 10
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 27,
+        "fields": {
+            "title": "React.js",
+            "advancement": "Advanced",
+            "offer": 10
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 28,
+        "fields": {
+            "title": "Svelte.js",
+            "advancement": "Advanced",
+            "offer": 10
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 29,
+        "fields": {
+            "title": "Vue.js",
+            "advancement": "Nice to have",
+            "offer": 10
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 30,
+        "fields": {
+            "title": ".NET",
+            "advancement": "Regular",
+            "offer": 11
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 31,
+        "fields": {
+            "title": ".NET Core",
+            "advancement": "Junior",
+            "offer": 11
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 32,
+        "fields": {
+            "title": "Entity Framework",
+            "advancement": "Nice to have",
+            "offer": 11
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 33,
+        "fields": {
+            "title": "PostgreSQL",
+            "advancement": "Nice to have",
+            "offer": 11
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 34,
+        "fields": {
+            "title": "K8s",
+            "advancement": "Advanced",
+            "offer": 12
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 35,
+        "fields": {
+            "title": "Automation",
+            "advancement": "Nice to have",
+            "offer": 12
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 36,
+        "fields": {
+            "title": "Microsoft SQL",
+            "advancement": "Advanced",
+            "offer": 13
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 37,
+        "fields": {
+            "title": "Snowflake",
+            "advancement": "Advanced",
+            "offer": 13
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 38,
+        "fields": {
+            "title": "Python",
+            "advancement": "Junior",
+            "offer": 13
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 39,
+        "fields": {
+            "title": "Manual Testing",
+            "advancement": "Regular",
+            "offer": 14
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 40,
+        "fields": {
+            "title": "English",
+            "advancement": "Advanced",
+            "offer": 14
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 41,
+        "fields": {
+            "title": "API Testing",
+            "advancement": "Nice to have",
+            "offer": 14
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 42,
+        "fields": {
+            "title": "T-SQL",
+            "advancement": "Junior",
+            "offer": 15
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 43,
+        "fields": {
+            "title": "Linux",
+            "advancement": "Regular",
+            "offer": 15
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 44,
+        "fields": {
+            "title": "Bash",
+            "advancement": "Master",
+            "offer": 15
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 45,
+        "fields": {
+            "title": "Java",
+            "advancement": "Regular",
+            "offer": 15
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 46,
+        "fields": {
+            "title": "Cucumber",
+            "advancement": "Regular",
+            "offer": 16
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 47,
+        "fields": {
+            "title": "Postman",
+            "advancement": "Master",
+            "offer": 16
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 48,
+        "fields": {
+            "title": "PyTest",
+            "advancement": "Nice to have",
+            "offer": 16
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 49,
+        "fields": {
+            "title": "C#",
+            "advancement": "Advanced",
+            "offer": 17
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 50,
+        "fields": {
+            "title": "Unity",
+            "advancement": "Regular",
+            "offer": 17
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 51,
+        "fields": {
+            "title": "Agile",
+            "advancement": "Regular",
+            "offer": 17
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 52,
+        "fields": {
+            "title": "PHP",
+            "advancement": "Advanced",
+            "offer": 18
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 53,
+        "fields": {
+            "title": "OOP",
+            "advancement": "Nice to have",
+            "offer": 18
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 54,
+        "fields": {
+            "title": "Elasticsearch",
+            "advancement": "Regular",
+            "offer": 18
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 55,
+        "fields": {
+            "title": "Cypress",
+            "advancement": "Regular",
+            "offer": 19
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 56,
+        "fields": {
+            "title": "Python",
+            "advancement": "Junior",
+            "offer": 19
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 57,
+        "fields": {
+            "title": "Jenkins",
+            "advancement": "Master",
+            "offer": 19
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 58,
+        "fields": {
+            "title": "English",
+            "advancement": "Advanced",
+            "offer": 19
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 59,
+        "fields": {
+            "title": "Agile",
+            "advancement": "Advanced",
+            "offer": 20
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 60,
+        "fields": {
+            "title": "Scrum",
+            "advancement": "Regular",
+            "offer": 20
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 61,
+        "fields": {
+            "title": "Product Owner",
+            "advancement": "Junior",
+            "offer": 20
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 62,
+        "fields": {
+            "title": "Docker",
+            "advancement": "Regular",
+            "offer": 21
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 63,
+        "fields": {
+            "title": "Kubernetes",
+            "advancement": "Advanced",
+            "offer": 21
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 64,
+        "fields": {
+            "title": "AWS",
+            "advancement": "Master",
+            "offer": 21
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 65,
+        "fields": {
+            "title": "UNIX",
+            "advancement": "Junior",
+            "offer": 21
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 66,
+        "fields": {
+            "title": "PHP",
+            "advancement": "Advanced",
+            "offer": 22
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 67,
+        "fields": {
+            "title": "Wordpress",
+            "advancement": "Regular",
+            "offer": 22
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 68,
+        "fields": {
+            "title": "Testing",
+            "advancement": "Junior",
+            "offer": 15
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 69,
+        "fields": {
+            "title": ".NET",
+            "advancement": "Master",
+            "offer": 22
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 70,
+        "fields": {
+            "title": "HTML/CSS",
+            "advancement": "Regular",
+            "offer": 22
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 72,
+        "fields": {
+            "title": "Testing",
+            "advancement": "Junior",
+            "offer": 22
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 73,
+        "fields": {
+            "title": "C#",
+            "advancement": "Master",
+            "offer": 22
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 74,
+        "fields": {
+            "title": "GO",
+            "advancement": "Master",
+            "offer": 23
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 75,
+        "fields": {
+            "title": "Cloud environment",
+            "advancement": "Advanced",
+            "offer": 23
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 76,
+        "fields": {
+            "title": "Linux",
+            "advancement": "Junior",
+            "offer": 23
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 77,
+        "fields": {
+            "title": "Data Warehousing",
+            "advancement": "Regular",
+            "offer": 24
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 78,
+        "fields": {
+            "title": "Azue / AWS / GCP",
+            "advancement": "Master",
+            "offer": 24
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 79,
+        "fields": {
+            "title": "SQL",
+            "advancement": "Nice to have",
+            "offer": 24
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 80,
+        "fields": {
+            "title": "GCP",
+            "advancement": "Nice to have",
+            "offer": 23
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 81,
+        "fields": {
+            "title": "Svelte",
+            "advancement": "Nice to have",
+            "offer": 4
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 82,
+        "fields": {
+            "title": "UNIX",
+            "advancement": "Nice to have",
+            "offer": 5
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 83,
+        "fields": {
+            "title": "Git",
+            "advancement": "Regular",
+            "offer": 25
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 84,
+        "fields": {
+            "title": "GitFlow",
+            "advancement": "Regular",
+            "offer": 25
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 85,
+        "fields": {
+            "title": "Django",
+            "advancement": "Advanced",
+            "offer": 25
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 86,
+        "fields": {
+            "title": "Django Rest Framework",
+            "advancement": "Regular",
+            "offer": 25
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 87,
+        "fields": {
+            "title": "Docker",
+            "advancement": "Master",
+            "offer": 26
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 88,
+        "fields": {
+            "title": "Python/Java",
+            "advancement": "Advanced",
+            "offer": 26
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 89,
+        "fields": {
+            "title": "AWS",
+            "advancement": "Advanced",
+            "offer": 26
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 90,
+        "fields": {
+            "title": "Kubernetes",
+            "advancement": "Advanced",
+            "offer": 26
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 91,
+        "fields": {
+            "title": "Terraform",
+            "advancement": "Advanced",
+            "offer": 26
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 92,
+        "fields": {
+            "title": "Ansible",
+            "advancement": "Advanced",
+            "offer": 26
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 93,
+        "fields": {
+            "title": "Jenkins",
+            "advancement": "Advanced",
+            "offer": 26
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 94,
+        "fields": {
+            "title": "JVM",
+            "advancement": "Nice to have",
+            "offer": 26
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 95,
+        "fields": {
+            "title": "Java",
+            "advancement": "Regular",
+            "offer": 27
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 96,
+        "fields": {
+            "title": "Scala",
+            "advancement": "Regular",
+            "offer": 27
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 97,
+        "fields": {
+            "title": "Clojure",
+            "advancement": "Regular",
+            "offer": 27
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 98,
+        "fields": {
+            "title": "Java",
+            "advancement": "Advanced",
+            "offer": 28
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 99,
+        "fields": {
+            "title": "Spring",
+            "advancement": "Advanced",
+            "offer": 28
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 100,
+        "fields": {
+            "title": "REST",
+            "advancement": "Advanced",
+            "offer": 28
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 101,
+        "fields": {
+            "title": "Hibernate/JPA",
+            "advancement": "Advanced",
+            "offer": 28
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 102,
+        "fields": {
+            "title": "Docker",
+            "advancement": "Advanced",
+            "offer": 28
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 103,
+        "fields": {
+            "title": "Databases",
+            "advancement": "Advanced",
+            "offer": 28
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 104,
+        "fields": {
+            "title": "Maven",
+            "advancement": "Advanced",
+            "offer": 28
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 105,
+        "fields": {
+            "title": "Problem Solving",
+            "advancement": "Advanced",
+            "offer": 29
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 106,
+        "fields": {
+            "title": "API",
+            "advancement": "Regular",
+            "offer": 29
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 107,
+        "fields": {
+            "title": "Linux networking",
+            "advancement": "Advanced",
+            "offer": 30
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 108,
+        "fields": {
+            "title": "Embedded C",
+            "advancement": "Regular",
+            "offer": 30
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 109,
+        "fields": {
+            "title": "Linux Kernel",
+            "advancement": "Regular",
+            "offer": 30
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 110,
+        "fields": {
+            "title": "OpenWrt",
+            "advancement": "Regular",
+            "offer": 30
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 111,
+        "fields": {
+            "title": "VoIP or WiFi",
+            "advancement": "Nice to have",
+            "offer": 30
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 112,
+        "fields": {
+            "title": "Java 11",
+            "advancement": "Advanced",
+            "offer": 31
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 113,
+        "fields": {
+            "title": "Spring Boot",
+            "advancement": "Regular",
+            "offer": 31
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 114,
+        "fields": {
+            "title": "Maven",
+            "advancement": "Regular",
+            "offer": 31
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 115,
+        "fields": {
+            "title": "MQ",
+            "advancement": "Junior",
+            "offer": 31
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 116,
+        "fields": {
+            "title": "Kafka",
+            "advancement": "Regular",
+            "offer": 31
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 117,
+        "fields": {
+            "title": "SQL",
+            "advancement": "Junior",
+            "offer": 31
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 118,
+        "fields": {
+            "title": "React",
+            "advancement": "Advanced",
+            "offer": 32
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 119,
+        "fields": {
+            "title": "JavaScript",
+            "advancement": "Master",
+            "offer": 32
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 120,
+        "fields": {
+            "title": "Node.js",
+            "advancement": "Advanced",
+            "offer": 32
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 121,
+        "fields": {
+            "title": "MongoDB",
+            "advancement": "Regular",
+            "offer": 32
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 122,
+        "fields": {
+            "title": "Git",
+            "advancement": "Junior",
+            "offer": 32
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 123,
+        "fields": {
+            "title": "Agile",
+            "advancement": "Junior",
+            "offer": 32
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 124,
+        "fields": {
+            "title": "System Analysis",
+            "advancement": "Advanced",
+            "offer": 33
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 125,
+        "fields": {
+            "title": "SQL",
+            "advancement": "Advanced",
+            "offer": 33
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 126,
+        "fields": {
+            "title": "BPMN",
+            "advancement": "Regular",
+            "offer": 33
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 127,
+        "fields": {
+            "title": "UML",
+            "advancement": "Regular",
+            "offer": 33
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 128,
+        "fields": {
+            "title": "SOA",
+            "advancement": "Junior",
+            "offer": 33
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 129,
+        "fields": {
+            "title": "WebService",
+            "advancement": "Regular",
+            "offer": 33
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 130,
+        "fields": {
+            "title": "SoapUI",
+            "advancement": "Junior",
+            "offer": 33
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 131,
+        "fields": {
+            "title": "HTML5",
+            "advancement": "Advanced",
+            "offer": 34
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 132,
+        "fields": {
+            "title": "CSS3",
+            "advancement": "Advanced",
+            "offer": 34
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 133,
+        "fields": {
+            "title": "JavaScript",
+            "advancement": "Regular",
+            "offer": 34
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 134,
+        "fields": {
+            "title": "React.js",
+            "advancement": "Advanced",
+            "offer": 34
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 135,
+        "fields": {
+            "title": "Git",
+            "advancement": "Regular",
+            "offer": 34
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 136,
+        "fields": {
+            "title": "Angular",
+            "advancement": "Nice to have",
+            "offer": 34
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 137,
+        "fields": {
+            "title": "GraphQL",
+            "advancement": "Nice to have",
+            "offer": 34
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 138,
+        "fields": {
+            "title": "SAP UI5",
+            "advancement": "Advanced",
+            "offer": 35
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 139,
+        "fields": {
+            "title": "SAP CAP",
+            "advancement": "Advanced",
+            "offer": 35
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 140,
+        "fields": {
+            "title": "React.js",
+            "advancement": "Regular",
+            "offer": 35
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 141,
+        "fields": {
+            "title": "JavaScript",
+            "advancement": "Regular",
+            "offer": 35
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 142,
+        "fields": {
+            "title": "DevOps",
+            "advancement": "Regular",
+            "offer": 35
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 143,
+        "fields": {
+            "title": "SQL",
+            "advancement": "Regular",
+            "offer": 35
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 144,
+        "fields": {
+            "title": "Three.js",
+            "advancement": "Nice to have",
+            "offer": 35
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 145,
+        "fields": {
+            "title": "TypeScript",
+            "advancement": "Advanced",
+            "offer": 36
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 146,
+        "fields": {
+            "title": "PixiJS",
+            "advancement": "Regular",
+            "offer": 36
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 147,
+        "fields": {
+            "title": "HTML5",
+            "advancement": "Regular",
+            "offer": 36
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 148,
+        "fields": {
+            "title": "Linux",
+            "advancement": "Master",
+            "offer": 37
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 149,
+        "fields": {
+            "title": "Team Management",
+            "advancement": "Regular",
+            "offer": 37
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 150,
+        "fields": {
+            "title": "DevOps",
+            "advancement": "Advanced",
+            "offer": 37
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 151,
+        "fields": {
+            "title": "Python",
+            "advancement": "Regular",
+            "offer": 37
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 152,
+        "fields": {
+            "title": "Java",
+            "advancement": "Advanced",
+            "offer": 37
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 153,
+        "fields": {
+            "title": "OpenShift",
+            "advancement": "Regular",
+            "offer": 37
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 154,
+        "fields": {
+            "title": "Java",
+            "advancement": "Master",
+            "offer": 38
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 155,
+        "fields": {
+            "title": "Kotlin",
+            "advancement": "Master",
+            "offer": 38
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 156,
+        "fields": {
+            "title": "Spring",
+            "advancement": "Master",
+            "offer": 38
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 157,
+        "fields": {
+            "title": "Hibernate",
+            "advancement": "Master",
+            "offer": 38
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 158,
+        "fields": {
+            "title": "SQL",
+            "advancement": "Master",
+            "offer": 38
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 159,
+        "fields": {
+            "title": "AWS",
+            "advancement": "Master",
+            "offer": 38
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 160,
+        "fields": {
+            "title": "Scrum",
+            "advancement": "Advanced",
+            "offer": 39
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 161,
+        "fields": {
+            "title": "Agile",
+            "advancement": "Advanced",
+            "offer": 39
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 162,
+        "fields": {
+            "title": "Kafka",
+            "advancement": "Regular",
+            "offer": 39
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 163,
+        "fields": {
+            "title": "Figma",
+            "advancement": "Advanced",
+            "offer": 40
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 164,
+        "fields": {
+            "title": "Design Thinking",
+            "advancement": "Advanced",
+            "offer": 40
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 165,
+        "fields": {
+            "title": "UX Design",
+            "advancement": "Advanced",
+            "offer": 40
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 166,
+        "fields": {
+            "title": "C++",
+            "advancement": "Master",
+            "offer": 41
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 167,
+        "fields": {
+            "title": "C",
+            "advancement": "Regular",
+            "offer": 41
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 168,
+        "fields": {
+            "title": "Linux",
+            "advancement": "Regular",
+            "offer": 41
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 169,
+        "fields": {
+            "title": "REST API",
+            "advancement": "Regular",
+            "offer": 41
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 170,
+        "fields": {
+            "title": "CI/CD",
+            "advancement": "Advanced",
+            "offer": 41
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 171,
+        "fields": {
+            "title": "Golang",
+            "advancement": "Nice to have",
+            "offer": 41
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 172,
+        "fields": {
+            "title": "Python",
+            "advancement": "Nice to have",
+            "offer": 41
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 173,
+        "fields": {
+            "title": "Web application",
+            "advancement": "Advanced",
+            "offer": 42
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 174,
+        "fields": {
+            "title": "React.js",
+            "advancement": "Advanced",
+            "offer": 42
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 175,
+        "fields": {
+            "title": "Redux",
+            "advancement": "Regular",
+            "offer": 42
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 176,
+        "fields": {
+            "title": "Communication skills",
+            "advancement": "Regular",
+            "offer": 42
+        }
+    },
+    {
+        "model": "offers.techstack",
+        "pk": 177,
+        "fields": {
+            "title": "Ruby on Rails",
+            "advancement": "Regular",
+            "offer": 42
+        }
+    },
+    {
+        "model": "offers.offerapplicationhistory",
+        "pk": 69,
+        "fields": {
+            "candidate": 20,
+            "offer": 32,
+            "application_date": "2023-12-28T11:58:50.914Z"
+        }
+    },
+    {
+        "model": "offers.offerapplicationhistory",
+        "pk": 70,
+        "fields": {
+            "candidate": 20,
+            "offer": 25,
+            "application_date": "2023-12-28T11:58:59.791Z"
+        }
+    },
+    {
+        "model": "offers.offerapplicationhistory",
+        "pk": 71,
+        "fields": {
+            "candidate": 20,
+            "offer": 8,
+            "application_date": "2023-12-28T11:59:07.471Z"
+        }
+    },
+    {
+        "model": "offers.offerapplicationhistory",
+        "pk": 72,
+        "fields": {
+            "candidate": 23,
+            "offer": 37,
+            "application_date": "2023-12-28T12:00:10.702Z"
+        }
+    },
+    {
+        "model": "offers.offerapplicationhistory",
+        "pk": 73,
+        "fields": {
+            "candidate": 23,
+            "offer": 2,
+            "application_date": "2023-12-28T12:00:15.573Z"
+        }
+    },
+    {
+        "model": "offers.offerapplicationhistory",
+        "pk": 74,
+        "fields": {
+            "candidate": 23,
+            "offer": 20,
+            "application_date": "2023-12-28T12:00:20.586Z"
+        }
+    },
+    {
+        "model": "offers.offerapplicationhistory",
+        "pk": 75,
+        "fields": {
+            "candidate": 22,
+            "offer": 42,
+            "application_date": "2023-12-28T12:00:56.889Z"
+        }
+    },
+    {
+        "model": "offers.offerapplicationhistory",
+        "pk": 76,
+        "fields": {
+            "candidate": 22,
+            "offer": 38,
+            "application_date": "2023-12-28T12:01:00.243Z"
+        }
+    },
+    {
+        "model": "offers.offerapplicationhistory",
+        "pk": 77,
+        "fields": {
+            "candidate": 22,
+            "offer": 7,
+            "application_date": "2023-12-28T12:01:05.963Z"
+        }
+    },
+    {
+        "model": "offers.offerapplicationhistory",
+        "pk": 78,
+        "fields": {
+            "candidate": 22,
+            "offer": 5,
+            "application_date": "2023-12-28T12:01:09.678Z"
+        }
     }
 ]
