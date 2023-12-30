@@ -50,6 +50,39 @@ build, run, and test the project. The most important commands include:
 - `frontcheck`: performs frontend static code checks.
 - `clear`: stops the currently running services and removes the volumes.
 
+### Application setup
+
+After running the application, the following actions must be executed:
+
+Run `make initial_data` to initialize database with example data including: <br />
+If `make` isn't supported run: `docker compose run --rm web python manage.py initialize_data`
+
+- global superuser (admin@admin.com)
+- companies, containing:
+  - (appfire@appfire.com),
+  - (apple@apple.com),
+  - (bluerider@software.com),
+  - (centra@centra.com),
+  - (ciklum@ciklum.com),
+  - (facebook@facebook.com),
+  - (google@google.com),
+  - (microsoft@microsoft.com),
+  - (mindpal@mindpal.com),
+  - (netflix@netflix.com),
+  - (netstation@netstation.com),
+  - (zeto@zeto.com)
+- candidates, containing:
+  - (anna@candidate.com)
+  - (kamil@candidate.com)
+  - (krzysztof@candidate.com)
+  - (mateusz@candidate.com)
+
+Companies can log in to the admin panel with their associated email and password`(Admin-123)` <br />
+Candidates can log in to their profile with their associated email and password`(Admin-123)`
+
+Admin panel is available under `localhost:8000/admin` <br />
+The site is available under `localhost:3000`
+
 #### Troubleshooting
 
 In case of errors with typing or missing dependencies, try to rebuild the
