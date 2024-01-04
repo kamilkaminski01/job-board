@@ -16,8 +16,7 @@ Frontend building tool is handled by [Vite](https://vitejs.dev/)
 The project is maintained in a containerized environment with [Docker](https://www.docker.com/)
 
 Time-consuming tasks such as sending emails are
-handled by an asynchronous worker. Currently, [`rq`](https://python-rq.org/)
-is used to perform asynchronous operations.
+handled by an asynchronous worker - [rq](https://python-rq.org/)
 
 - You can verify the running task statuses by using the RQ dashboard
   at [localhost:9181](http://localhost:9181). The dashboard should refresh
@@ -59,29 +58,29 @@ If `make` isn't supported run: `docker compose run --rm web python manage.py ini
 
 - global superuser (admin@admin.com)
 - companies, containing:
-  - (appfire@appfire.com),
-  - (apple@apple.com),
-  - (bluerider@software.com),
-  - (centra@centra.com),
-  - (ciklum@ciklum.com),
-  - (facebook@facebook.com),
-  - (google@google.com),
-  - (microsoft@microsoft.com),
-  - (mindpal@mindpal.com),
-  - (netflix@netflix.com),
-  - (netstation@netstation.com),
-  - (zeto@zeto.com)
+  - appfire@appfire.com,
+  - apple@apple.com,
+  - bluerider@software.com,
+  - centra@centra.com,
+  - ciklum@ciklum.com,
+  - facebook@facebook.com,
+  - google@google.com,
+  - microsoft@microsoft.com,
+  - mindpal@mindpal.com,
+  - netflix@netflix.com,
+  - netstation@netstation.com,
+  - zeto@zeto.com
 - candidates, containing:
-  - (anna@candidate.com)
-  - (kamil@candidate.com)
-  - (krzysztof@candidate.com)
-  - (mateusz@candidate.com)
+  - anna@candidate.com
+  - kamil@candidate.com
+  - krzysztof@candidate.com
+  - mateusz@candidate.com
 
-Companies can log in to the admin panel with their associated email and password`(Admin-123)` <br />
-Candidates can log in to their profile with their associated email and password`(Admin-123)`
+Companies can log in to the admin panel with their associated email and password `Admin-123` <br />
+Candidates can log in to their profile with their associated email and password `Admin-123`
 
-Admin panel is available under `localhost:8000/admin` <br />
-The site is available under `localhost:3000`
+Admin panel is available at [localhost:8000/admin](http://localhost:8000/admin) <br />
+Frontend application is available at [localhost:3000](http://localhost:3000)
 
 #### Troubleshooting
 
