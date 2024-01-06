@@ -7,6 +7,7 @@ import { formatNumber } from 'utils/formatNumber'
 
 const OfferCard = ({
   id,
+  isPromoted,
   company,
   image,
   title,
@@ -39,6 +40,7 @@ const OfferCard = ({
         <div className="offer-card-tile__company-items">
           <img src={BuildingIcon} />
           <span className="offer-card-tile__company">{company}</span>
+          {isPromoted && <p className="offer-card-tile__promotion">Promoted</p>}
         </div>
       </div>
       <div className="offer-card-tile__extra-details">

@@ -4,6 +4,7 @@ import { IOfferDetails } from 'models/offerDetails'
 
 export interface OfferCardProps {
   id: number
+  isPromoted: boolean
   company: string
   image: string
   title: string

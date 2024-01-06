@@ -47,6 +47,15 @@
       .offer-card-tile__company {
         margin-left: 0.5em;
       }
+
+      .offer-card-tile__promotion {
+        padding: 0.15em 0.5em;
+        margin-left: 0.5em;
+        border: 1px solid;
+        border-radius: 1em;
+        background: $gold;
+        color: white;
+      }
     }
   }
 
