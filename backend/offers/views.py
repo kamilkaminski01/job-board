@@ -25,7 +25,7 @@ class OfferListView(ListAPIView):
     serializer_class = OfferListSerializer
     pagination_class = OfferPagination
     filter_backends = [filters.OrderingFilter]
-    ordering_fields = ["created_at", "salary_max"]
+    ordering_fields = ["is_promoted", "order", "created_at", "salary_max"]
 
     def get_queryset(self):
         queryset = Offer.objects.all()

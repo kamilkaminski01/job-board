@@ -1395,6 +1395,7 @@
         "fields": {
             "created_at": "2023-11-04T19:29:09.501Z",
             "updated_at": "2023-11-18T11:31:59.869Z",
+            "order": 10,
             "company": 5,
             "title": "Senior SQL Developer",
             "salary_min": 2000,
@@ -1412,6 +1413,7 @@
         "fields": {
             "created_at": "2023-11-04T19:30:02.111Z",
             "updated_at": "2023-11-18T11:31:06.455Z",
+            "order": 20,
             "company": 4,
             "title": "Mid DevOps",
             "salary_min": 10000,
@@ -1429,6 +1431,7 @@
         "fields": {
             "created_at": "2023-11-04T20:22:16.279Z",
             "updated_at": "2023-11-18T11:30:44.226Z",
+            "order": 30,
             "company": 8,
             "title": "Mid/Senior Node.js Developer",
             "salary_min": 16800,
@@ -1446,6 +1449,7 @@
         "fields": {
             "created_at": "2023-11-04T20:23:56.665Z",
             "updated_at": "2023-11-18T11:30:06.600Z",
+            "order": 40,
             "company": 7,
             "title": "Tech Lead Software Engineering",
             "salary_min": 15000,
@@ -1463,6 +1467,7 @@
         "fields": {
             "created_at": "2023-11-04T20:28:03.718Z",
             "updated_at": "2023-11-18T11:29:34.682Z",
+            "order": 50,
             "company": 3,
             "title": "Java / Backend Software Developer",
             "salary_min": 16000,
@@ -1480,6 +1485,7 @@
         "fields": {
             "created_at": "2023-11-04T20:29:17.659Z",
             "updated_at": "2023-11-18T11:29:09.344Z",
+            "order": 60,
             "company": 7,
             "title": "Lead Cloud Security Engineer",
             "salary_min": 32000,
@@ -1497,6 +1503,7 @@
         "fields": {
             "created_at": "2023-11-04T20:30:06.996Z",
             "updated_at": "2023-11-18T11:28:34.240Z",
+            "order": 70,
             "company": 8,
             "title": "Data Analyst",
             "salary_min": 9530,
@@ -1514,6 +1521,7 @@
         "fields": {
             "created_at": "2023-11-04T20:31:09.147Z",
             "updated_at": "2023-11-18T11:28:01.429Z",
+            "order": 80,
             "company": 4,
             "title": "Cloud Developer with AWS",
             "salary_min": 6000,
@@ -1531,6 +1539,7 @@
         "fields": {
             "created_at": "2023-11-04T20:32:30.946Z",
             "updated_at": "2023-11-18T11:27:15.738Z",
+            "order": 90,
             "company": 5,
             "title": "Business System Specialist",
             "salary_min": 28000,
@@ -1548,6 +1557,7 @@
         "fields": {
             "created_at": "2023-11-04T20:33:54.030Z",
             "updated_at": "2023-11-18T11:54:25.874Z",
+            "order": 100,
             "company": 3,
             "title": "Full-stack Engineer (React oriented)",
             "salary_min": 31200,
@@ -1565,6 +1575,7 @@
         "fields": {
             "created_at": "2023-11-04T20:35:13.965Z",
             "updated_at": "2023-11-18T11:26:11.258Z",
+            "order": 110,
             "company": 5,
             "title": "Junior .NET Developer",
             "salary_min": 17000,
@@ -1582,6 +1593,7 @@
         "fields": {
             "created_at": "2023-11-04T22:41:23.445Z",
             "updated_at": "2023-11-18T11:25:32.681Z",
+            "order": 120,
             "company": 4,
             "title": "Senior Application Security Engineer",
             "salary_min": 12000,
@@ -1599,6 +1611,7 @@
         "fields": {
             "created_at": "2023-11-04T22:42:53.358Z",
             "updated_at": "2023-11-18T11:24:51.427Z",
+            "order": 130,
             "company": 8,
             "title": "Senior Data Engineer",
             "salary_min": 22000,
@@ -1616,6 +1629,7 @@
         "fields": {
             "created_at": "2023-11-04T22:44:12.132Z",
             "updated_at": "2023-11-18T11:24:13.377Z",
+            "order": 140,
             "company": 5,
             "title": "Quality Assurance",
             "salary_min": 4000,
@@ -1633,6 +1647,7 @@
         "fields": {
             "created_at": "2023-11-04T22:45:37.563Z",
             "updated_at": "2023-11-18T11:23:20.071Z",
+            "order": 150,
             "company": 3,
             "title": "Junior/Mid Consultant Data Integration",
             "salary_min": 6000,
@@ -1650,6 +1665,7 @@
         "fields": {
             "created_at": "2023-11-04T22:48:27.650Z",
             "updated_at": "2023-11-18T11:21:20.841Z",
+            "order": 160,
             "company": 10,
             "title": "Software Quality Engineer",
             "salary_min": 8000,
@@ -1667,6 +1683,7 @@
         "fields": {
             "created_at": "2023-11-04T22:49:20.592Z",
             "updated_at": "2023-11-18T11:19:28.007Z",
+            "order": 170,
             "company": 3,
             "title": "Unity Developer",
             "salary_min": 13000,
@@ -1684,6 +1701,7 @@
         "fields": {
             "created_at": "2023-11-04T22:50:45.940Z",
             "updated_at": "2023-11-18T11:18:31.537Z",
+            "order": 180,
             "company": 10,
             "title": "AWS DevOps Engineer",
             "salary_min": 12100,
@@ -1701,6 +1719,7 @@
         "fields": {
             "created_at": "2023-11-04T22:52:03.122Z",
             "updated_at": "2023-11-26T13:36:50.758Z",
+            "order": 190,
             "company": 5,
             "title": "Mid Python Engineer",
             "salary_min": 16800,
@@ -1718,6 +1737,7 @@
         "fields": {
             "created_at": "2023-11-04T22:53:13.355Z",
             "updated_at": "2023-11-18T11:15:59.134Z",
+            "order": 200,
             "company": 7,
             "title": "Scrum Master",
             "salary_min": 10000,
@@ -1735,6 +1755,7 @@
         "fields": {
             "created_at": "2023-11-04T22:54:18.504Z",
             "updated_at": "2023-11-18T11:15:19.338Z",
+            "order": 210,
             "company": 8,
             "title": "DevOps Engineer",
             "salary_min": 27000,
@@ -1752,6 +1773,7 @@
         "fields": {
             "created_at": "2023-11-05T21:16:30.217Z",
             "updated_at": "2023-11-26T13:36:43.293Z",
+            "order": 220,
             "company": 11,
             "title": "PHP Developer Junior",
             "salary_min": 1050,
@@ -1769,6 +1791,7 @@
         "fields": {
             "created_at": "2023-11-12T18:30:14.916Z",
             "updated_at": "2023-11-18T11:11:09.970Z",
+            "order": 230,
             "company": 12,
             "title": "GO Lang Developer",
             "salary_min": 25000,
@@ -1786,6 +1809,7 @@
         "fields": {
             "created_at": "2023-11-12T18:31:33.622Z",
             "updated_at": "2023-11-18T11:13:32.062Z",
+            "order": 240,
             "company": 12,
             "title": "Solution Architect (Data & Analytics)",
             "salary_min": 24000,
@@ -1803,6 +1827,7 @@
         "fields": {
             "created_at": "2023-11-26T16:48:13.317Z",
             "updated_at": "2023-11-26T16:48:13.317Z",
+            "order": 250,
             "company": 15,
             "title": "Mid Python Developer",
             "salary_min": 8000,
@@ -1820,6 +1845,7 @@
         "fields": {
             "created_at": "2023-11-30T20:36:50.545Z",
             "updated_at": "2023-11-30T20:36:50.545Z",
+            "order": 260,
             "company": 17,
             "title": "Senior DevOps Engineer (remote)",
             "salary_min": 23500,
@@ -1837,6 +1863,7 @@
         "fields": {
             "created_at": "2023-11-30T20:40:04.768Z",
             "updated_at": "2023-11-30T20:40:04.768Z",
+            "order": 270,
             "company": 18,
             "title": "Senior DevOps Engineer",
             "salary_min": 22240,
@@ -1854,6 +1881,7 @@
         "fields": {
             "created_at": "2023-11-30T20:41:33.803Z",
             "updated_at": "2023-11-30T20:41:33.803Z",
+            "order": 280,
             "company": 17,
             "title": "Lead DevOps Engineer",
             "salary_min": 17000,
@@ -1871,6 +1899,7 @@
         "fields": {
             "created_at": "2023-11-30T20:44:56.940Z",
             "updated_at": "2023-11-30T20:44:56.940Z",
+            "order": 290,
             "company": 19,
             "title": "Third Line Solution Architect",
             "salary_min": 5700,
@@ -1888,6 +1917,7 @@
         "fields": {
             "created_at": "2023-11-30T20:54:53.844Z",
             "updated_at": "2023-11-30T20:54:53.844Z",
+            "order": 300,
             "company": 19,
             "title": "Senior Linux Embedded Developer",
             "salary_min": 16900,
@@ -1905,6 +1935,7 @@
         "fields": {
             "created_at": "2023-11-30T20:57:05.280Z",
             "updated_at": "2023-11-30T20:57:05.280Z",
+            "order": 310,
             "company": 17,
             "title": "Java Developer",
             "salary_min": 15000,
@@ -1922,6 +1953,7 @@
         "fields": {
             "created_at": "2023-11-30T20:58:28.757Z",
             "updated_at": "2023-11-30T20:58:28.757Z",
+            "order": 320,
             "company": 18,
             "title": "Full Stack Developer (React & Node.js)",
             "salary_min": 11000,
@@ -1939,6 +1971,7 @@
         "fields": {
             "created_at": "2023-11-30T21:00:05.920Z",
             "updated_at": "2023-11-30T21:00:05.920Z",
+            "order": 330,
             "company": 15,
             "title": "System Analyst - Credit Engineering",
             "salary_min": 14000,
@@ -1956,6 +1989,7 @@
         "fields": {
             "created_at": "2023-11-30T21:03:06.460Z",
             "updated_at": "2023-11-30T21:03:06.460Z",
+            "order": 340,
             "company": 11,
             "title": "Frontend Developer (React.js)",
             "salary_min": 10000,
@@ -1973,6 +2007,7 @@
         "fields": {
             "created_at": "2023-11-30T21:04:40.157Z",
             "updated_at": "2023-11-30T21:04:40.157Z",
+            "order": 350,
             "company": 10,
             "title": "Senior Cloud Developer (SAP UI5)",
             "salary_min": 27800,
@@ -1990,6 +2025,7 @@
         "fields": {
             "created_at": "2023-11-30T21:16:00.375Z",
             "updated_at": "2023-11-30T21:16:00.375Z",
+            "order": 360,
             "company": 12,
             "title": "Frontend Slot Game Developer (Typescript)",
             "salary_min": 12000,
@@ -2007,6 +2043,7 @@
         "fields": {
             "created_at": "2023-12-02T11:27:25.082Z",
             "updated_at": "2023-12-02T11:27:25.082Z",
+            "order": 370,
             "company": 15,
             "title": "Lead Site Reliability Engineer",
             "salary_min": 12500,
@@ -2024,6 +2061,7 @@
         "fields": {
             "created_at": "2023-12-02T11:29:22.106Z",
             "updated_at": "2023-12-02T11:29:22.106Z",
+            "order": 380,
             "company": 5,
             "title": "Director of Technical Innovation",
             "salary_min": 45000,
@@ -2041,6 +2079,7 @@
         "fields": {
             "created_at": "2023-12-02T11:30:52.009Z",
             "updated_at": "2023-12-02T11:30:52.009Z",
+            "order": 390,
             "company": 19,
             "title": "Product Owner",
             "salary_min": 12000,
@@ -2058,6 +2097,7 @@
         "fields": {
             "created_at": "2023-12-02T11:33:08.990Z",
             "updated_at": "2023-12-02T11:33:08.990Z",
+            "order": 400,
             "company": 8,
             "title": "UX Designer",
             "salary_min": 10000,
@@ -2075,6 +2115,7 @@
         "fields": {
             "created_at": "2023-12-02T11:35:13.797Z",
             "updated_at": "2023-12-02T11:35:13.797Z",
+            "order": 410,
             "company": 12,
             "title": "Software Engineer C/C++",
             "salary_min": 13000,
@@ -2092,6 +2133,7 @@
         "fields": {
             "created_at": "2023-12-02T11:37:22.491Z",
             "updated_at": "2023-12-02T11:37:22.491Z",
+            "order": 420,
             "company": 18,
             "title": "Senior Software Engineer",
             "salary_min": 30000,

@@ -1,4 +1,5 @@
 from django.db import models
+from sort_order_field import SortOrderField
 from tinymce.models import HTMLField
 
 from backend.mixins import TimeStampMixin
@@ -27,6 +28,8 @@ class Offer(TimeStampMixin):
         PART_TIME = "Part time"
         FREELANCE = "Freelance"
 
+    is_promoted = models.BooleanField(default=False)
+    order = models.PositiveIntegerField(default=0)
     company = models.ForeignKey(
         Company,
         on_delete=models.CASCADE,
@@ -80,6 +83,7 @@ class Offer(TimeStampMixin):
     class Meta:
         verbose_name = "Offer"
         verbose_name_plural = "Offers"
+        ordering = ("-is_promoted", "order", "-created_at")
 
 
 class TechStack(models.Model):
@@ -90,6 +94,7 @@ class TechStack(models.Model):
         ADVANCED = "Advanced"
         MASTER = "Master"
 
+    order = SortOrderField("order")
     title = models.CharField(
         max_length=40,
         verbose_name="tech stack",
@@ -114,6 +119,7 @@ class TechStack(models.Model):
     class Meta:
         verbose_name = "Tech stack"
         verbose_name_plural = "Tech stacks"
+        ordering = ("order",)
 
 
 class OfferApplicationHistory(models.Model):

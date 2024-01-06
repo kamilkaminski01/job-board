@@ -20,6 +20,7 @@ class BaseOfferSerializer(serializers.ModelSerializer):
         model = Offer
         fields = [
             "id",
+            "is_promoted",
             "company",
             "image",
             "title",

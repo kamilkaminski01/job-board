@@ -29,6 +29,7 @@ const OfferFilters = ({ offersCount }: OfferFiltersProps) => {
           className="offer-filters__select"
           onChange={onSelectChange}
           value={sortType}>
+          <option value={OfferOrder.DEFAULT}>Default</option>
           <option value={OfferOrder.NEWEST}>Newest</option>
           <option value={OfferOrder.SALARY_DOWN}>Lowest salary</option>
           <option value={OfferOrder.SALARY_UP}>Highest salary</option>

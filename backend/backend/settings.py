@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django_rq",
+    "sort_order_field",
     "tinymce",
     "colorfield",
     "customization",

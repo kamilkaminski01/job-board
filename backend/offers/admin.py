@@ -29,12 +29,14 @@ class OfferAdmin(admin.ModelAdmin):
     inlines = [TechStackAdminInline, OfferApplicationHistoryInline]
     form = OfferForm
     list_display = [
+        "order",
+        "is_promoted",
         "title",
         "company",
         "candidates_applied",
         "created_at",
     ]
-    ordering = ["-created_at"]
+    list_display_links = ["title"]
     search_fields = ["title", "company__name"]
 
     def get_form(self, request, obj=None, change=False, **kwargs):
@@ -43,6 +45,8 @@ class OfferAdmin(admin.ModelAdmin):
             company = Company.objects.get(id=request.user.id)
             form.base_fields["company"].queryset = Company.objects.filter(id=company.id)
             form.base_fields["company"].initial = company
+            form.base_fields["order"].disabled = True
+            form.base_fields["is_promoted"].disabled = True
         return form
 
     def get_queryset(self, request) -> QuerySet[Offer]:
@@ -60,6 +64,14 @@ class OfferAdmin(admin.ModelAdmin):
 
     def candidates_applied(self, obj: Offer) -> int:
         return obj.offer_application_history.count()
+
+    def save_model(
+        self, request: HttpRequest, obj: Offer, form: OfferForm, change: bool
+    ):
+        if obj.order == 0:
+            last_offer = Offer.objects.all().order_by("-order").first()
+            obj.order = last_offer.order + 1 if last_offer else 1
+        super().save_model(request, obj, form, change)
 
     candidates_applied.short_description = "Candidates applied"  # type: ignore
 
