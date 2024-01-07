@@ -1,0 +1,16 @@
+.landing-section {
+  position: relative;
+  display: flex;
+
+  height: 736px;
+
+  .landing-section__bg-image {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    z-index: -1;
+  }
+}

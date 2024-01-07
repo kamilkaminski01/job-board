@@ -1,0 +1,17 @@
+.landing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+
+  top: 2em;
+  width: 35em;
+  margin: auto 10% 0 10%;
+  padding: 2.5em;
+
+  .landing-card__btn {
+    width: fit-content;
+    margin-top: 0.75em;
+    margin-left: auto;
+  }
+}

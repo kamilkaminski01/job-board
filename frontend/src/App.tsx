@@ -10,6 +10,7 @@ import SharedLayout from './components/atoms/SharedLayout'
 import ProfilePage from './pages/ProfilePage'
 import SettingsPage from './pages/SettingsPage'
 import AlertContainer from 'components/atoms/AlertContainer'
+import AboutPage from './pages/AboutPage'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
 
         <Route element={<SharedLayout />}>
           <Route path={PATHS.home} element={<HomePage />} />
+          <Route path={PATHS.about} element={<AboutPage />} />
 
           <Route element={<ProtectedRoutes />}>
             <Route path={PATHS.profile} element={<ProfilePage />} />

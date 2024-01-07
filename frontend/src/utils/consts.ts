@@ -22,7 +22,8 @@ export const PATHS = {
   login: '/login',
   register: '/register',
   profile: '/profile',
-  settings: '/settings'
+  settings: '/settings',
+  about: '/about'
 }
 
 export const RECORDS_PER_PAGE = {

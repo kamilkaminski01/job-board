@@ -19,7 +19,7 @@ const Navbar = () => {
       {isLogged ? (
         <div className="nav__menu">
           <div className="nav__links">
-            <Link to={'#'}>About</Link>
+            <Link to={PATHS.about}>About</Link>
           </div>
 
           <NavDropdown />

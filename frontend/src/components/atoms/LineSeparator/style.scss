@@ -1,0 +1,14 @@
+.line-separator {
+  width: 2em;
+  height: 3px;
+
+  background-color: $carbon;
+}
+
+.line-separator--white {
+  background-color: $snow;
+}
+
+.line-separator--primary-color {
+  background-color: $primary-color;
+}
