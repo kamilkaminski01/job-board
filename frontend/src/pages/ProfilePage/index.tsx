@@ -18,11 +18,6 @@ const ProfilePage = () => {
             isActive={visibleContent === EProfilePageContentType.OffersApplied}>
             Applied
           </ContentSwitcherButton>
-          <ContentSwitcherButton
-            onClick={() => setVisibleContent(EProfilePageContentType.Offers)}
-            isActive={visibleContent === EProfilePageContentType.Offers}>
-            Other offers
-          </ContentSwitcherButton>
         </div>
         {visibleContent === EProfilePageContentType.OffersApplied ? (
           <OfferApplicationHistory />

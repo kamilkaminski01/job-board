@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { UserContext } from 'providers/user/context'
 import { PATHS } from 'utils/consts'
-import Logo from 'assets/icons/x_logo.svg'
+import Logo from 'assets/icons/logo.png'
 import './style.scss'
 import Button from 'components/atoms/Button'
 import NavDropdown from 'components/molecules/NavDropdown'
@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <nav>
       <Link className="nav__brand" to={PATHS.home}>
-        <img src={Logo} width="35" height="35" />
+        <img src={Logo} alt="logo" />
       </Link>
 
       {isLogged ? (
