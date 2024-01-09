@@ -1,6 +1,6 @@
 import './style.scss'
 import LandingImage from 'assets/images/landing-image.png'
-import LandingCard from 'pages/AboutPage/partials/sections/components/LandingCard'
+import LandingCard from 'pages/AboutPage/partials/components/LandingCard'
 
 const LandingSection = () => {
   return (

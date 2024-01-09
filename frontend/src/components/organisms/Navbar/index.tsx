@@ -26,6 +26,9 @@ const Navbar = () => {
         </div>
       ) : (
         <div className="nav__menu">
+          <Link className="nav__link" to={PATHS.about}>
+            About
+          </Link>
           <Link className="nav__link" to={PATHS.login}>
             <Button className="nav__btn">Login</Button>
           </Link>

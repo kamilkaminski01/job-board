@@ -1,0 +1,31 @@
+.introduction-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  max-width: 30em;
+  padding: 3em;
+
+  .introduction-step__bg-index {
+    position: absolute;
+
+    top: 0;
+    right: 1.25rem;
+
+    color: $moon;
+    font-size: 7.5em;
+    font-weight: 700;
+    opacity: 0.3;
+  }
+
+  .introduction-step__title,
+  .introduction-step__content {
+    z-index: 1;
+  }
+
+  .introduction-step__btn {
+    width: fit-content;
+    margin-top: auto;
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,38 @@
+.introduction-section {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 2em;
+
+  .introduction-section__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+    padding: 6.5em 0;
+
+    background-color: $wild-sand;
+
+    .description__content {
+      width: 40em;
+
+      text-align: center;
+    }
+  }
+
+  .introduction-section__steps {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 2.25em;
+
+    top: -3em;
+    padding: 0 4em;
+
+    & > * {
+      flex: 1;
+    }
+  }
+}

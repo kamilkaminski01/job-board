@@ -6,4 +6,5 @@ export interface TileProps {
   className?: string
   shadow?: 'normal' | 'light'
   style?: CSSProperties
+  borderTop?: boolean
 }
