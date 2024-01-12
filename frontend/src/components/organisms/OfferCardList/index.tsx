@@ -12,7 +12,7 @@ const OfferCardList = ({ offers, isLoading, setOfferDetails }: OfferCardListProp
         {Array(20)
           .fill(null)
           .map((_, index) => (
-            <li className="offer-card-list__item offer-card-list__item--skeleton" key={index}>
+            <li className="offer-card-list__item--skeleton" key={index}>
               <div className="offer-card-list-skeleton">
                 <Skeleton height={50} width={50} />
                 <div className="offer-card-list-skeleton__description">

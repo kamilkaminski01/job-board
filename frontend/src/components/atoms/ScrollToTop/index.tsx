@@ -5,11 +5,7 @@ const ScrollToTop: React.FC<PropsWithChildren> = ({ children }) => {
   const { pathname } = useLocation()
 
   useEffect(() => {
-    document.documentElement.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    })
+    document.documentElement.scrollTo({ top: 0, left: 0 })
   }, [pathname])
 
   return <>{children}</>
