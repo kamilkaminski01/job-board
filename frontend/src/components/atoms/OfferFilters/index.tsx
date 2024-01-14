@@ -9,7 +9,8 @@ const minRange = 0
 const maxRange = 100000
 
 const OfferFilters = ({ offersCount }: OfferFiltersProps) => {
-  const { salaryRange, setSalaryRange, setSortType, sortType } = useContext(OfferFiltersContext)
+  const { salaryRange, setSalaryRange, sortType, setSortType, setRemountPagination } =
+    useContext(OfferFiltersContext)
   const [value, setValue] = useState(salaryRange)
   const { themeColors } = useContext(ThemeContext)
 
@@ -17,6 +18,7 @@ const OfferFilters = ({ offersCount }: OfferFiltersProps) => {
 
   const onSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSortType(event.target.value as OfferOrder)
+    setRemountPagination(Math.random())
   }
 
   return (

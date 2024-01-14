@@ -6,5 +6,7 @@ export interface OfferFiltersContextProps {
   setSalaryRange: React.Dispatch<React.SetStateAction<[number, number]>>
   sortType: OfferOrder
   setSortType: React.Dispatch<React.SetStateAction<OfferOrder>>
+  remountPagination: number
+  setRemountPagination: React.Dispatch<React.SetStateAction<number>>
   params: string
 }

@@ -5,6 +5,7 @@ import { OfferFiltersContext } from './context'
 export const OfferFiltersContextProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const [salaryRange, setSalaryRange] = useState<[number, number]>([0, 100000])
   const [sortType, setSortType] = useState(OfferOrder.DEFAULT)
+  const [remountPagination, setRemountPagination] = useState(0)
 
   const params = useMemo(
     () =>
@@ -22,9 +23,11 @@ export const OfferFiltersContextProvider: React.FC<PropsWithChildren> = ({ child
       setSalaryRange,
       sortType,
       setSortType,
+      remountPagination,
+      setRemountPagination,
       params
     }),
-    [salaryRange, sortType, params]
+    [salaryRange, sortType, remountPagination, params]
   )
 
   return (
