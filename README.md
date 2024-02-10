@@ -1,7 +1,11 @@
-# Job Board
+<h1 align="center">Job Board</h1>
+
 Job Board is a recruitment platform aimed at the IT industry and recruiters
 that seek for employees who will meet their expectations. It allows registered
 users to find their dream job and recruiters to advertise their job positions.
+
+![demo](https://raw.githubusercontent.com/kamilkaminski01/job-board/main/frontend/src/assets/images/demo1.png)
+![demo](https://raw.githubusercontent.com/kamilkaminski01/job-board/main/frontend/src/assets/images/demo2.png)
 
 ## Resources
 
