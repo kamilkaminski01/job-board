@@ -1,3 +1,50 @@
+.offer__skeleton {
+  position: sticky;
+  top: $scroll-padding-top;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  padding: 0.735em 1.5em 0.72em;
+  border-radius: 0.5em;
+  box-shadow: 0 0 0.25em 0.25em rgba(0, 0, 0, 0.05);
+  gap: 1em;
+
+  max-height: 85vh;
+  overflow-y: auto;
+
+  .skeleton__item {
+    display: flex;
+    justify-content: center;
+  }
+
+  .skeleton__header {
+    border-radius: 0.5em;
+    height: 12em;
+  }
+
+  .skeleton__icons,
+  .skeleton__description {
+    border-radius: 0.5em;
+    height: 5em;
+  }
+
+  .skeleton__company,
+  .skeleton__tech-stack {
+    border-radius: 0.5em;
+    height: 10em;
+  }
+
+  .skeleton__apply {
+    border-radius: 0.5em;
+    width: 40%;
+    height: 2.5em;
+  }
+
+  @include for-desktop {
+    display: none;
+  }
+}
+
 .offer-content__offer-details {
   position: sticky;
   top: $scroll-padding-top;
@@ -28,37 +75,6 @@
       align-items: center;
       gap: 0.25em;
       width: 50%;
-    }
-  }
-
-  @include for-desktop {
-    display: none;
-  }
-}
-
-.offer-content__no-details {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 0.5em;
-  background-color: $alabaster;
-
-  border-radius: 0.5em;
-  box-shadow: 0 0 0.2em 0.2em rgba(0, 0, 0, 0.05);
-
-  .offer-details__message {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2em;
-
-    font-size: 1em;
-    text-align: center;
-
-    & > svg {
-      width: 10em;
-      height: 10em;
     }
   }
 

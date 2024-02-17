@@ -24,6 +24,12 @@ const Button = ({
     backgroundColor: hover ? themeColors.hoverColor : themeColors.primaryColor
   }
 
+  const buttonStyles = disable
+    ? {}
+    : className.includes('btn--outline')
+      ? outlineStyles
+      : regularStyles
+
   return (
     <button
       className={`btn ${className}`}
@@ -31,7 +37,7 @@ const Button = ({
       form={form}
       disabled={disable}
       onClick={onClick}
-      style={className.includes('btn--outline') ? outlineStyles : regularStyles}
+      style={buttonStyles}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}>
       {children || 'Button'}

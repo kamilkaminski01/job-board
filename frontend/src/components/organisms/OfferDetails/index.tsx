@@ -1,6 +1,5 @@
 import './style.scss'
 import { OfferDetailsProps } from './interface'
-import { BsCodeSlash } from 'react-icons/bs'
 import OfferDetailsHeader from './partials/OfferDetailsHeader'
 import OfferDetailsCompany from './partials/OfferDetailsCompany'
 import OfferDetailsTechStack from './partials/OfferDetailsTechStack'
@@ -13,11 +12,11 @@ import { IApplyOffer } from 'models/applyOffer'
 import { useContext } from 'react'
 import { UserContext } from 'providers/user/context'
 import { toast } from 'react-toastify'
-import { ThemeContext } from 'providers/theme/context.ts'
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
-const OfferDetails = ({ offer, setOfferDetails }: OfferDetailsProps) => {
+const OfferDetails = ({ offer }: OfferDetailsProps) => {
   const { isLogged } = useContext(UserContext)
-  const { themeColors } = useContext(ThemeContext)
   const { applyOffer } = useApplyOffer()
 
   const handleApply = async () => {
@@ -34,16 +33,18 @@ const OfferDetails = ({ offer, setOfferDetails }: OfferDetailsProps) => {
   return (
     <>
       {offer.id === undefined ? (
-        <div className="offer-content__no-details">
-          <div className="offer-details__message">
-            <BsCodeSlash color={themeColors.primaryColor} />
-            Choose an offer for more details...
-          </div>
+        <div className="offer__skeleton">
+          <Skeleton className="skeleton__header" containerClassName="skeleton__item" />
+          <Skeleton className="skeleton__icons" containerClassName="skeleton__item" />
+          <Skeleton className="skeleton__company" containerClassName="skeleton__item" />
+          <Skeleton className="skeleton__tech-stack" containerClassName="skeleton__item" />
+          <Skeleton className="skeleton__description" containerClassName="skeleton__item" />
+          <Skeleton className="skeleton__apply" containerClassName="skeleton__item" />
         </div>
       ) : (
         <div className="offer-content__offer-details">
           <div className="offer-details__items">
-            <OfferDetailsHeader {...offer} setOfferDetails={setOfferDetails} />
+            <OfferDetailsHeader {...offer} />
             <OfferDetailsIcons {...offer} />
             <OfferDetailsCompany {...offer} />
             <OfferDetailsTechStack {...offer} />
