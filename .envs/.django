@@ -15,6 +15,7 @@ SOCIAL_AUTH_GITHUB_SECRET=12d492b635b1dbfa2f1c8553b620557f30939de0
 
 # AWS
 # ------------------------------------------------------------------------------
+USE_SES=False
 AWS_ACCESS_KEY_ID=AWS_ACCESS_KEY_ID
 AWS_REGION=eu-central-1
 AWS_SECRET_ACCESS_KEY=AWS_SECRET_ACCESS_KEY

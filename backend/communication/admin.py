@@ -14,6 +14,7 @@ from django_rq import get_connection
 from django_rq.jobs import Job
 from rq.exceptions import NoSuchJobError
 
+from backend.settings import USE_SES
 from candidates.models import Candidate
 from companies.models import Company
 from tasks.emails import schedule_communicational_email_task
@@ -146,4 +147,5 @@ class CommunicationAdmin(admin.ModelAdmin):
         obj.save()
 
 
-admin.site.register(Message, CommunicationAdmin)
+if USE_SES:
+    admin.site.register(Message, CommunicationAdmin)

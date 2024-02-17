@@ -132,6 +132,8 @@ if not os.path.isdir(STATIC_DIR):
 MEDIA_ROOT = os.path.join(BASE_DIR, "/media/")
 MEDIA_URL = "/media/"
 
+USE_SES = env.bool("USE_SES")
+
 # AWS keys
 AWS_ACCESS_KEY_ID = env("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = env("AWS_SECRET_ACCESS_KEY")
