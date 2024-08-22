@@ -27,7 +27,7 @@ const refreshAuthLogic = async (failedRequest: any) => {
 
   if (response.succeed) {
     const accessToken = localStorage.getItem(LOCAL_STORAGE.accessToken)
-    failedRequest.response.config.headers = `Bearer ${accessToken}`
+    failedRequest.response.config.headers.Authorization = `Bearer ${accessToken}`
 
     return Promise.resolve()
   } else {
